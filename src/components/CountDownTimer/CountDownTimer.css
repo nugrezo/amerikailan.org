@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.timer_container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: flex-start;
+  margin-left: 1rem;
+}
+
+.timer_icon {
+  height: 30px;
+  width: 30px;
+}
+
+.remaining_time {
+  font-size: 16px;
+}

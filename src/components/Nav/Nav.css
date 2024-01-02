@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  align-items: center;
+  background-image: url("../../library/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  font-family: "montserrat", sans-serif;
+  justify-content: space-between;
+  padding: 10px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.nav-logo {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.nav-logo a img {
+  height: 60px;
+  width: 250px;
+}
+.nav-search {
+  align-items: center;
+  display: flex;
+  width: 40%;
+}
+
+.nav-search form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.search-input-field {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  width: 75%;
+  font-size: 15px;
+  font-family: "montserrat", sans-serif;
+  height: 49px;
+  padding: 16px;
+}
+
+.search-input-field:focus {
+  border: 2px solid #0066cc; /* Replace with your desired color */
+  /* Add any other styles you want to apply on focus */
+}
+
+.search-button {
+  background-color: #438ed8;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  color: #fff;
+  cursor: pointer;
+  height: 2.99rem;
+  margin-left: 0.9px; /* Add margin between the input and button */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  opacity: 1;
+  width: 10%;
+}
+
+.search-button:hover {
+  box-shadow: 0 0 5px rgba(1, 82, 162, 0.8);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.nav-auth ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.nav-auth ul li {
+  background-color: rgb(219, 216, 216);
+  border: 0.1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.nav-auth ul li:hover {
+  background-color: grey;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.nav-auth ul:first-child {
+  background-color: initial;
+  border: none;
+}
+
+.nav-auth ul li:first-child {
+  background-color: initial;
+  border: none;
+}
+
+.giris-yap-btn {
+  background-color: #438ed8;
+  border: 1px solid rgb(192, 192, 245);
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  opacity: 1;
+  text-align: center;
+  width: 100px;
+}
+
+.giris-yap-btn li {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-auth ul a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.giris-yap-btn:hover {
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.8);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.nav-auth ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.kayit-ol-btn {
+  background-color: #438ed8;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.4);
+  border: 1px solid rgb(192, 192, 245);
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 1;
+  text-align: center;
+  width: 100px;
+}
+
+.kayit-ol-btn li {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.kayit-ol-btn:hover {
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.8);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.nav-auth ul li a {
+  color: rgb(3, 3, 137);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-auth ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.btn-primary {
+  background-color: #b110a9;
+  border: 1px solid #842ea4;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "montserrat", sans-serif;
+  height: 60px;
+  margin-left: 10px;
+  padding: 12px 12px;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.btn-primary:hover {
+  background-color: #660961;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.enBtn {
+  background-image: url("../../library/americanflag.png"); /* Replace with the path to your American flag image */
+  background-size: cover; /* Options: cover, contain, auto, or specific values like 100% 100% */
+  background-position: center;
+  border: 1px solid #1363a9;
+  border-radius: 30px;
+  color: darkblue;
+  cursor: pointer;
+  height: 40px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-top: 5px;
+  opacity: 0.85;
+  padding: 8px 12px;
+  width: 40px;
+}
+
+.enBtn:hover {
+  border: 1px solid red;
+  opacity: 1;
+}
+/* Add media query for iPhone XR */
+@media only screen and (max-width: 414px) {
+  .container {
+    flex-direction: column; /* Change to a column layout for smaller screens */
+  }
+
+  .nav-logo {
+    margin-bottom: 25px;
+  }
+
+  .nav-search {
+    width: 100%; /* Full width for smaller screens */
+    display: flex;
+  }
+}
+
+.google-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 30px;
+}

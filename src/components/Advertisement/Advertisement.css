@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.navbar-box {
+  background-image: url("../../library/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.navbar {
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  font-family: "montserrat", sans-serif;
+  height: 128px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main-box {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.nav-userProfile {
+  padding-right: 50px;
+}
+
+.nav-advertisement {
+  padding-right: 50px;
+}
+
+.nav-advertisement a img {
+  height: 60px;
+  width: 250px;
+}
+
+.category h3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.category-select-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 40px;
+}
+.category-select-body {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.category {
+  background-color: white;
+  border: 0.1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  box-shadow: 0 0 10px rgba(83, 67, 67, 0.1) inset;
+  height: 150px;
+  width: 150px;
+}
+
+.category-select-body a {
+  color: #4f2727cc;
+  text-decoration: none;
+}
+
+.category:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.category-select-body-emlak {
+  border-top: 8px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-select-body-vasita {
+  border-top: 8px solid #ff6666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-select-body-elektronikcihaz {
+  border-top: 8px solid rgb(109, 151, 170);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-select-body-hizmet {
+  border-top: 8px solid rgb(16, 88, 146);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-select-body-isilanlari {
+  border-top: 8px solid green;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 auto;
+}
+
+.icon img {
+  width: 50px;
+}
+
+.electronic-icon img {
+  margin-top: 15px;
+}
+
+.vehicle-icon img {
+  margin-top: 5px;
+}
+
+.services-icon img {
+  width: 70px;
+}
+.job-icon img {
+  margin-top: 15px;
+}
+
+.category-select-body-isilanlari h3 {
+  margin-bottom: 25px;
+}
+
+/* Style for the emlak-content */
+.emlak-content {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px 0 0 20px;
+}
+
+.emlak-content h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.emlak-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.emlak-content li {
+  margin-bottom: 10px;
+}
+
+.emlak-content button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.emlak-content button:hover {
+  background-color: orangered;
+  color: white;
+}

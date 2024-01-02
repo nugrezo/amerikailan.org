@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f7f7;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 450px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 120px;
+  font-family: "montserrat", sans-serif;
+}
+
+.nav-login a img {
+  width: 250px;
+  height: 60px;
+}
+
+.login-container h2 {
+  margin: 20px 0;
+}
+
+.login-container h2 {
+  color: #4594de;
+  font-weight: bold;
+}
+
+.login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.email input {
+  width: 100%;
+  padding: 8px;
+  height: 50px;
+  background-color: rgb(232, 240, 254);
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+  border-radius: 2px;
+}
+
+.password input {
+  width: 100%;
+  padding: 8px;
+  height: 50px;
+  background-color: rgb(232, 240, 254);
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+  border-radius: 2px;
+}
+
+.btn {
+  background-color: #4594de;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 100%;
+  font-family: "montserrat", sans-serif;
+  opacity: 1;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.register p {
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  height: 50px;
+}
+
+span.arrow {
+  color: rgb(0, 60, 255);
+  position: absolute;
+  padding-left: 2px;
+  font-size: 15px;
+}
+
+.custom-space {
+  padding: 5px;
+  color: #2e88dd;
+}
+
+.google-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.google-button {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 50px;
+  font-family: "montserrat", sans-serif;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.google-button:hover {
+  background-color: #fbf9f9;
+  cursor: pointer;
+}
+
+.google-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.split-line {
+  width: 402px;
+  margin: 10px 0 50px 0;
+  padding-top: 3.5px;
+}
+
+.line {
+  width: 180px;
+  border-top: 1px solid #dedede;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 5px;
+}
+
+.split-text {
+  color: #707070;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.box {
+  position: relative;
+}
+
+.nav-login {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* Adjust as needed to ensure it appears above other content */
+}
+
+.email-input.invalid {
+  background-color: #ffcccc; /* Light red */
+}

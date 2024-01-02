@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+#emlak_category-selection {
+  background-color: orange;
+  color: #4f2727cc;
+  padding: 7.5px;
+}
+
+.backtoselection {
+  display: flex;
+  padding: 20px 0 20px 10px;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.backtoselection a {
+  margin-right: 5px;
+}
+
+.backtoselection span {
+  margin-right: 5px;
+}
+.backtoselection p {
+  margin-right: 5px;
+}
+
+.adv-emlak-body {
+  display: flex;
+}
+
+.adv-emlak-body ul {
+  list-style: none;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  margin-left: 20px;
+  background-color: rgb(251, 234, 202);
+  border: solid 1px #dedede;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.adv-emlak-body ul li {
+  color: #4f2727cc;
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #ddd;
+}
+
+.adv-emlak-body ul li:hover {
+  background-color: orange;
+}
+
+.adv-emlak-body ul li:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.emlak-content {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset; /* Add an inset box shadow around the border */
+}
+
+.adv-emlak-body .lastchild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 1rem;
+}
+
+.adv-emlak-body p {
+  color: #4f2727cc;
+  text-align: center;
+  font-size: 13px;
+}
+
+.adv-emlak-body button {
+  text-align: center;
+  font-size: 13px;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  opacity: 1;
+  color: #4f2727cc;
+  font-weight: bold;
+  box-shadow: 1px 0 2px 0 orange;
+  border: 2px solid rgb(236, 170, 46);
+  box-shadow: 0 0 5px rgba(204, 54, 0, 0.3);
+}
+
+.adv-emlak-body button:hover {
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}

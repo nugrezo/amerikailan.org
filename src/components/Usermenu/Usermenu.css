@@ -1,0 +1,52 @@
+.user-menu {
+  position: relative;
+  font-family: "Arial", sans-serif;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: "montserrat", sans-serif;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 24px; /* Adjust the font size to make the icon larger */
+}
+
+.dropdown-menu {
+  width: 200px;
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1;
+  min-width: 120px;
+  font-family: "montserrat", sans-serif;
+}
+
+.dropdown-menu div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #ddd; /* Add a line between each menu item */
+}
+
+.dropdown-menu div:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.dropdown-menu div:hover {
+  background-color: #f0f0f0;
+}

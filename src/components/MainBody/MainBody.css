@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: blue;
+}
+
+#main-body {
+  flex-direction: row;
+  font-family: "montserrat", sans-serif;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.left-menu {
+  background-color: #f1efef;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  margin-top: 5px;
+  padding: 1rem;
+  width: 25%;
+}
+
+.left-menu-alt ul {
+  list-style: none;
+}
+
+.left-menu ul li {
+  font-size: 15px;
+}
+
+.left-menu ul li a {
+  text-decoration: none;
+}
+
+.left-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.vitrin {
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 75%;
+}
+
+.vitrin-row1 {
+  border: 1px solid #ccc;
+  height: 30%;
+  margin-right: 0.2rem;
+  width: auto;
+  border-left: none;
+  border-right: none;
+}
+
+.vitrin-row2 {
+  border: 1px solid #ccc;
+  height: 70%;
+  margin-top: 10px;
+  margin-right: 0.2rem;
+  width: auto;
+  height: auto;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.h3-vitrin-row1 {
+  background-image: url("../../library/populer.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border: 1px solid #cccccc;
+  color: #ffea00;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.h3-vitrin-row2 {
+  background-image: url("../../library/header.png");
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+}

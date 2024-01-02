@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.stepbystep {
+  padding-top: 40px;
+  padding-left: 25px;
+}
+
+.navbar-box {
+  width: 100%;
+  background-image: url("../../library/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  margin: 0 auto;
+  width: 80%;
+  height: 128px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "montserrat", sans-serif;
+}
+
+.backtoselection {
+  display: flex;
+  padding: 20px 0 20px 10px;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.emlak-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
