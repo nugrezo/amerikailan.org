@@ -45,6 +45,18 @@ const Address = () => {
               placeHolder="Sehir seciniz"
             />
           </div>
+          <div className="address_wrapper">
+            <h6>Address</h6>
+            <div className="address_wrapper_main">
+              <input placeholder="Adres giriniz"></input>
+            </div>
+          </div>
+          <div className="zipcode_wrapper">
+            <h6>Posta Kodu</h6>
+            <div className="zipcode_wrapper_main">
+              <input placeholder="Posta kodu giriniz"></input>
+            </div>
+          </div>
         </div>
       </div>
     </div>
