@@ -57,3 +57,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+.map_container_wrapper {
+  height: 420px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.map_address_container_wrapper {
+  display: flex;
+}

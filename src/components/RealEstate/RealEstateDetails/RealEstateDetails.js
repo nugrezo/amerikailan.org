@@ -10,9 +10,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="select_whose_adv">Kimden </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Sahibinden</option>
               <option value="2">Emlak Ofisinden</option>
               <option value="3">Bankadan</option>
@@ -21,9 +19,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="roomnumber_label">Oda Sayisi </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Studio</option>
               <option value="2">1+1</option>
               <option value="3">2+1</option>
@@ -48,9 +44,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="parking_label">Otopark </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Var</option>
               <option value="2">Yok</option>
             </select>
@@ -58,9 +52,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="elevator_label">Asansor </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Var</option>
               <option value="2">Yok</option>
             </select>
@@ -68,9 +60,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="furniture_label">Esya Durumu </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Var</option>
               <option value="2">Yok</option>
               <option value="3">Kismen Esyali</option>
@@ -79,9 +69,7 @@ const RealEstateDetails = () => {
           <div className="realestate_row">
             <label htmlFor="site_label">Site Icerisinde </label>
             <select>
-              <option value="" selected>
-                Seciniz
-              </option>
+              <option value="">Seciniz</option>
               <option value="1">Evet</option>
               <option value="2">Hayir</option>
             </select>

@@ -77,7 +77,7 @@ body {
 .adv-realestate_step_three_main {
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 10px rgba(245, 201, 154, 0.833) inset;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -276,4 +276,25 @@ body {
   border-radius: 5px;
   background-color: #fff;
   width: 150px;
+}
+
+.adv_realestate_continue_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.adv_realestate_continue_btn button {
+  background-color: orange;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  opacity: 1;
+  cursor: pointer;
+  color: #624848;
+  font-weight: bold;
+  margin: 1rem;
+  width: 150px;
+}
+
+.adv_realestate_continue_btn button:hover {
+  opacity: 0.8;
 }

@@ -7,6 +7,9 @@ import Advertisement from "./components/Advertisement/Advertisement";
 import RealEstateMain from "./components/RealEstate/RealEstateMain";
 import RealEstateSubStepTwo from "./components/RealEstate/RealEstateSubStepTwo";
 import RealEstateSubStepThree from "./components/RealEstate/RealEstateSubStepThree";
+import RealEstateSubStepFour from "./components/RealEstate/RealEstateSubStepFour";
+import RealEstateSubStepFive from "./components/RealEstate/RealEstateSubStepFive";
+import Payment from "./components/Payment/Payment";
 
 function App() {
   return (
@@ -29,6 +32,18 @@ function App() {
           <Route
             path="/advertisement/realestate_main/step_three"
             element={<RealEstateSubStepThree />}
+          />
+          <Route
+            path="/advertisement/realestate_main/step_four"
+            element={<RealEstateSubStepFour />}
+          />
+          <Route
+            path="/advertisement/realestate_main/step_five"
+            element={<RealEstateSubStepFive />}
+          />
+          <Route
+            path="/advertisement/realestate_main/secure_payment"
+            element={<Payment />}
           />
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./RealEstateSubStepThree.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
@@ -11,6 +12,10 @@ import Address from "../Address/Address";
 // import Footer from "../Footer/Footer";
 
 const RealEstateSubStepThree = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/advertisement/realestate_main/step_four");
+  };
   return (
     <div className="adv-realestate_step_three">
       <div className="navbar-box">
@@ -32,11 +37,19 @@ const RealEstateSubStepThree = () => {
           <div className="adv_realestate-contact_info">
             <div className="firstname">
               <p>Isim</p>
-              <input className="firstname_input"></input>
+              <input
+                className="firstname_input"
+                placeholder="isim giriniz"
+                style={{ fontStyle: "italic" }}
+              ></input>
             </div>
             <div className="lastname">
-              <p>Soyisim</p>
-              <input className="lastname_input"></input>
+              <p>Soyad</p>
+              <input
+                className="lastname_input"
+                placeholder="soyad giriniz"
+                style={{ fontStyle: "italic" }}
+              ></input>
             </div>
             <div className="user_email">
               <p>Email</p>
@@ -90,9 +103,7 @@ const RealEstateSubStepThree = () => {
                 <label htmlFor="price_info">
                   <p>Para Birimi</p>
                   <select>
-                    <option value="" selected>
-                      Seciniz
-                    </option>
+                    <option value="">Seciniz</option>
                     <option value="1">$ USD</option>
                   </select>
                 </label>
@@ -101,9 +112,7 @@ const RealEstateSubStepThree = () => {
                 <label htmlFor="price_info">
                   <p>Sure</p>
                   <select>
-                    <option value="" selected>
-                      Seciniz
-                    </option>
+                    <option value="">Seciniz</option>
                     <option value="1">$ Gunluk</option>
                     <option value="2">$ Haftalik</option>
                     <option value="3">$ Aylik</option>
@@ -115,6 +124,9 @@ const RealEstateSubStepThree = () => {
           </div>
           <RealEstateDetails />
           <Address />
+        </div>
+        <div className="adv_realestate_continue_btn">
+          <button onClick={handleNavigate}>Devam</button>
         </div>
       </div>
     </div>
