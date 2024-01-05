@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../library/logo.png";
-
 import "./Register.css";
 import googleIcon from "../../library/google.png";
 import Footer from "../Footer/Footer";
+import { AppContext } from "../ContextProvider";
 
 const Register = () => {
+  const { updateUserEmail, updateUserName, updateUserLastname } =
+    useContext(AppContext);
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -97,10 +100,15 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    console.log("Email:", email);
+    console.log("Name:", userName);
+    console.log("Lastname:", userLastname);
     if (email.trim() === "" || password.trim() === "") {
       alert("Lutfen gecerli bir email adresi veya sifre giriniz");
     } else if (emailIsValid && passwordIsValid) {
-      // Perform login logic here
+      updateUserEmail(email);
+      updateUserName(userName);
+      updateUserLastname(userLastname);
       alert(
         "Kayit isleminiz basariyla gerceklestirilmistir. Giris yapmak icin email adresinize gonderilen aktivasyon linkini tiklayiniz."
       );

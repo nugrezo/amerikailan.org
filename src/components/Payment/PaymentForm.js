@@ -84,7 +84,7 @@ export default function Form(props) {
   };
 
   return (
-    <form ref={form} className="form" onSubmit={handleSubmit}>
+    <form ref={form} className="payment_form" onSubmit={handleSubmit}>
       <header>
         <div className="TitleSecure">
           <h3>Payment Details </h3>

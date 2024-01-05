@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RealEstateSubStepThree.css";
 import Usermenu from "../Usermenu/Usermenu";
@@ -9,9 +9,15 @@ import ReactQuill from "react-quill";
 import PhotoUpload from "./PhotoUpload/PhotoUpload";
 import RealEstateDetails from "./RealEstateDetails/RealEstateDetails";
 import Address from "../Address/Address";
+import { AppContext } from "../ContextProvider";
 // import Footer from "../Footer/Footer";
 
 const RealEstateSubStepThree = () => {
+  const { userEmail, userName, userLastname } = useContext(AppContext);
+
+  console.log("User Email from resst:", userEmail);
+  console.log("User Name from resst:", userName);
+  console.log("User Lastname from resst:", userLastname);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/advertisement/realestate_main/step_four");
@@ -32,6 +38,10 @@ const RealEstateSubStepThree = () => {
       </div>
       <div className="adv-realestate_step_three_main">
         <h3 id="emlak_description">3-Ilan Detaylari</h3>
+        {console.log("Rendering RealEstateSubStepThree")}
+        {console.log("User Email:", userEmail)}
+        {console.log("User Name:", userName)}
+        {console.log("User Lastname:", userLastname)}
         <div className="adv-realestate_wrapper">
           <h4>Ilan Iletisim Bilgileri</h4>
           <div className="adv_realestate-contact_info">
@@ -41,6 +51,8 @@ const RealEstateSubStepThree = () => {
                 className="firstname_input"
                 placeholder="isim giriniz"
                 style={{ fontStyle: "italic" }}
+                value={userName}
+                readOnly
               ></input>
             </div>
             <div className="lastname">
@@ -49,11 +61,17 @@ const RealEstateSubStepThree = () => {
                 className="lastname_input"
                 placeholder="soyad giriniz"
                 style={{ fontStyle: "italic" }}
+                value={userLastname}
+                readOnly
               ></input>
             </div>
             <div className="user_email">
               <p>Email</p>
-              <input className="user_email_input"></input>
+              <input
+                className="user_email_input"
+                value={userEmail}
+                readOnly
+              ></input>
             </div>
             <div className="cellPhone">
               <p>Telefon No</p>

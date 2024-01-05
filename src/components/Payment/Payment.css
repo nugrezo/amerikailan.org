@@ -54,7 +54,7 @@ header {
 header p {
   margin: 5px;
 }
-form {
+.payment_form {
   /* border: 1px solid blueviolet; */
   width: 300px;
   margin: 20px auto;
@@ -75,7 +75,6 @@ main .span {
 }
 
 input {
-  margin-top: 10px;
   padding: 5px;
 }
 .NomDuClient,
@@ -112,8 +111,8 @@ input {
   font-size: 12px;
 }
 /* .TermeConfidentialite {
-  cursor: pointer
-} */
+    cursor: pointer
+    } */
 
 input .btn {
   display: flex;
