@@ -12,11 +12,11 @@ import Footer from "../Footer/Footer";
 const Advertisement = () => {
   return (
     <div className="advertisement">
-      <div className="navbar-box">
+      <div className="container">
         <nav className="navbar">
-          <div className="nav-advertisement">
+          <div className="nav-logo">
             <a className="navbar-brand" href="http://localhost:3000">
-              <img src={logo} alt="logo" />
+              <img src={logo} width="200px;" height="60px;" alt="logo" />
             </a>
           </div>
           <div className="nav-userProfile">
@@ -25,7 +25,7 @@ const Advertisement = () => {
         </nav>
       </div>
       <div className="main-box">
-        <main>
+        <main className="advertisement_main">
           <div>
             <div className="category-select-header">
               <h2>Ilan vermek istediginiz kategoriyi secin</h2>

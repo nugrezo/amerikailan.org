@@ -14,27 +14,6 @@ body {
   padding-left: 25px;
 }
 
-.navbar-box {
-  width: 100%;
-  background-image: url("../../library/header.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.navbar {
-  margin: 0 auto;
-  width: 80%;
-  height: 128px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: "montserrat", sans-serif;
-}
-
 .backtoselection {
   display: flex;
   padding: 20px 0 20px 10px;

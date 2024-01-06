@@ -59,7 +59,7 @@ header p {
   width: 300px;
   margin: 20px auto;
 }
-main {
+.payment_main {
   margin: 10px 0;
   box-shadow: 0 0 2px black;
   padding: 15px;

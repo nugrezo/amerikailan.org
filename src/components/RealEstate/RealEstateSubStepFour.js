@@ -45,9 +45,9 @@ const RealEstateSubStepFour = () => {
 
   return (
     <div className="adv-realestate_step_four">
-      <div className="navbar-box">
+      <div className="container">
         <nav className="navbar">
-          <div className="nav-advertisement">
+          <div className="nav-logo">
             <a className="navbar-brand" href="http://localhost:3000">
               <img src={logo} alt="logo" />
             </a>

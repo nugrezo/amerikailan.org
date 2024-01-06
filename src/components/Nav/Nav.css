@@ -15,7 +15,6 @@
   display: flex;
   font-family: "montserrat", sans-serif;
   justify-content: space-between;
-  padding: 10px;
   padding-right: 30px;
   width: 100%;
 }
@@ -26,13 +25,13 @@
 }
 
 .nav-logo a img {
-  height: 60px;
-  width: 250px;
+  height: 40px;
+  width: 200px;
 }
 .nav-search {
   align-items: center;
   display: flex;
-  width: 40%;
+  width: 50%;
 }
 
 .nav-search form {
@@ -48,8 +47,8 @@
   width: 75%;
   font-size: 15px;
   font-family: "montserrat", sans-serif;
-  height: 49px;
-  padding: 16px;
+  height: 1rem;
+  padding: 1rem;
 }
 
 .search-input-field:focus {
@@ -59,12 +58,12 @@
 
 .search-button {
   background-color: #438ed8;
-  border: none;
+  border: 1px solid #ccc;
+  border-left: none;
   border-radius: 0 25px 25px 0;
   color: #fff;
   cursor: pointer;
-  height: 2.99rem;
-  margin-left: 0.9px; /* Add margin between the input and button */
+  height: 2.1rem;
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
   opacity: 1;
   width: 10%;
@@ -87,7 +86,7 @@
   border: 0.1px solid grey;
   border-radius: 4px;
   cursor: pointer;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
 
 .nav-auth ul li:hover {
@@ -113,7 +112,6 @@
   cursor: pointer;
   color: #fff;
   font-weight: bold;
-  font-size: 13px;
   opacity: 1;
   text-align: center;
   width: 100px;
@@ -121,7 +119,7 @@
 
 .giris-yap-btn li {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .nav-auth ul a {
@@ -158,7 +156,7 @@
 
 .kayit-ol-btn li {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .kayit-ol-btn:hover {
