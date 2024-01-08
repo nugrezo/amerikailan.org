@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./RealEstateSubStepTwo.css";
+import "./PhoneApproval.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import cellphoneimage from "../../library/advicons/phone.png";
@@ -9,7 +9,7 @@ import checkmark from "../../library/advicons/greencheckmark.png";
 import Footer from "../Footer/Footer";
 import CountDownTimer from "../CountDownTimer/CountDownTimer";
 
-const RealEstateSubStepTwo = () => {
+const PhoneApproval = () => {
   const [showContent, setShowContent] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [textCode, setTextCode] = useState("");
@@ -295,4 +295,4 @@ const RealEstateSubStepTwo = () => {
   );
 };
 
-export default RealEstateSubStepTwo;
+export default PhoneApproval;

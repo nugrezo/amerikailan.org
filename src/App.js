@@ -5,11 +5,12 @@ import Login from "./components/Login/SignIn";
 import Register from "./components/Register/Register";
 import Advertisement from "./components/Advertisement/Advertisement";
 import RealEstateMain from "./components/RealEstate/RealEstateMain";
-import RealEstateSubStepTwo from "./components/RealEstate/RealEstateSubStepTwo";
 import RealEstateSubStepThree from "./components/RealEstate/RealEstateSubStepThree";
 import RealEstateSubStepFour from "./components/RealEstate/RealEstateSubStepFour";
 import RealEstateSubStepFive from "./components/RealEstate/RealEstateSubStepFive";
 import Payment from "./components/Payment/Payment";
+import Vehicle from "./components/Vehicle/Vehicle";
+import PhoneApproval from "./components/PhoneApproval/PhoneApproval";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           />
           <Route
             path="/advertisement/realestate_main/step_two"
-            element={<RealEstateSubStepTwo />}
+            element={<PhoneApproval />}
           />
           <Route
             path="/advertisement/realestate_main/step_three"
@@ -44,6 +45,11 @@ function App() {
           <Route
             path="/advertisement/realestate_main/secure_payment"
             element={<Payment />}
+          />
+          <Route path="/advertisement/vehicle" element={<Vehicle />} />
+          <Route
+            path="/advertisement/vehicle/step_two"
+            element={<PhoneApproval />}
           />
         </Routes>
       </BrowserRouter>

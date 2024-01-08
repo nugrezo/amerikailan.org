@@ -9899,6 +9899,11 @@
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
 
+"switch@^0.0.0":
+  "integrity" "sha512-Pvi4hlAXWHEIT+4XlQEPPIQ02hRzvn38K/cnZ5sZeM11FsDPoXvBD6i/zyVxFK6cgqSlS8sA5/sIwUGp9+ZMhw=="
+  "resolved" "https://registry.npmjs.org/switch/-/switch-0.0.0.tgz"
+  "version" "0.0.0"
+
 "symbol-tree@^3.2.4":
   "integrity" "sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw=="
   "resolved" "https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz"

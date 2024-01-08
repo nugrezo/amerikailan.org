@@ -42,7 +42,10 @@ const Advertisement = () => {
                   <h3>Emlak</h3>
                 </div>
               </a>
-              <a href="#" alt="vasita">
+              <a
+                href="http://localhost:3000/advertisement/vehicle"
+                alt="vehicle"
+              >
                 <div className="category category-select-body-vasita">
                   <i className="icon vehicle-icon">
                     <img src={vehicleicon} alt="vehicle-icon" />
