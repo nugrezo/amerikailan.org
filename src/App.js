@@ -6,11 +6,15 @@ import Register from "./components/Register/Register";
 import Advertisement from "./components/Advertisement/Advertisement";
 import RealEstateMain from "./components/RealEstate/RealEstateMain";
 import RealEstateSubStepThree from "./components/RealEstate/RealEstateSubStepThree";
-import RealEstateSubStepFour from "./components/RealEstate/RealEstateSubStepFour";
 import RealEstateSubStepFive from "./components/RealEstate/RealEstateSubStepFive";
 import Payment from "./components/Payment/Payment";
 import Vehicle from "./components/Vehicle/Vehicle";
-import PhoneApproval from "./components/PhoneApproval/PhoneApproval";
+import PhoneApprovalRealEstate from "./components/RealEstate/PhoneApprovalRealEstate";
+import PhoneApprovalVehicle from "./components/Vehicle/PhoneApprovalVehicle";
+import VehicleDetail from "./components/Vehicle/VehicleDetail";
+import PromoteAdvertisement from "./components/RealEstate/PromoteAdvertisement";
+import PromoteVehicleAdvertisement from "./components/Vehicle/PromoteVehicleAdvertisement";
+import VehicleAdvPublish from "./components/Vehicle/VehicleAdvPublish";
 
 function App() {
   return (
@@ -28,7 +32,7 @@ function App() {
           />
           <Route
             path="/advertisement/realestate_main/step_two"
-            element={<PhoneApproval />}
+            element={<PhoneApprovalRealEstate />}
           />
           <Route
             path="/advertisement/realestate_main/step_three"
@@ -36,7 +40,7 @@ function App() {
           />
           <Route
             path="/advertisement/realestate_main/step_four"
-            element={<RealEstateSubStepFour />}
+            element={<PromoteAdvertisement />}
           />
           <Route
             path="/advertisement/realestate_main/step_five"
@@ -49,7 +53,23 @@ function App() {
           <Route path="/advertisement/vehicle" element={<Vehicle />} />
           <Route
             path="/advertisement/vehicle/step_two"
-            element={<PhoneApproval />}
+            element={<PhoneApprovalVehicle />}
+          />
+          <Route
+            path="/advertisement/vehicle/step_three"
+            element={<VehicleDetail />}
+          />
+          <Route
+            path="/advertisement/vehicle/step_four"
+            element={<PromoteVehicleAdvertisement />}
+          />
+          <Route
+            path="/advertisement/vehicle/step_five"
+            element={<VehicleAdvPublish />}
+          />
+          <Route
+            path="/advertisement/vehicle/secure_payment"
+            element={<Payment />}
           />
         </Routes>
       </BrowserRouter>

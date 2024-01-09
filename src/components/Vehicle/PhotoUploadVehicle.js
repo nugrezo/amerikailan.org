@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./PhotoUpload.css";
+import "./PhotoUploadVehicle.css";
 import { Watermark } from "antd";
-import uploadicon from "../../../library/advicons/upload-icon.png";
-import trash_icon from "../../../library/advicons/trash_icon.png";
+import uploadicon from "../../library/advicons/upload-icon.png";
+import trash_icon from "../../library/advicons/trash_icon.png";
 
-const PhotoUpload = () => {
+const PhotoUploadVehicle = () => {
   const [photos, setPhotos] = useState([]);
   const [photoError, setPhotoError] = useState("");
   const fileInputRef = useRef(null);
@@ -48,7 +48,8 @@ const PhotoUpload = () => {
     setPhotos(updatedPhotos);
   };
 
-  const handleUpload = () => {
+  const handleUpload = (e) => {
+    e.preventDefault();
     // Programmatically click the file input
     if (fileInputRef.current) {
       fileInputRef.current.click();
@@ -124,4 +125,4 @@ const PhotoUpload = () => {
   );
 };
 
-export default PhotoUpload;
+export default PhotoUploadVehicle;

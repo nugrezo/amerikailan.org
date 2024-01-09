@@ -3,9 +3,9 @@ import Usermenu from "../Usermenu/Usermenu";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../../library/logo.png";
-import "./RealEstateSubStepFour.css";
+import "./PromoteAdvertisement.css";
 
-const RealEstateSubStepFour = () => {
+const PromoteAdvertisement = () => {
   const [populerSelectValue, setPopulerSelectValue] = useState("");
   const [vitrinSelectValue, setVitrinSelectValue] = useState("");
   const navigate = useNavigate();
@@ -124,4 +124,4 @@ const RealEstateSubStepFour = () => {
   );
 };
 
-export default RealEstateSubStepFour;
+export default PromoteAdvertisement;

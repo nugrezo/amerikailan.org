@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+.navbar-box {
+  background-image: url("../../library/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.navbar {
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  font-family: "montserrat", sans-serif;
+  height: 125px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.step_two_header {
+  padding-left: 10px;
+}
+
+.adv-vehicle_step_two_main {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(236, 36, 36, 0.2) inset; /* Add an inset box shadow around the border */
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+}
+
+#vehicle_cellphoneapr {
+  background-color: #ff6666;
+  color: #fff;
+  padding: 7.5px;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  gap: 5rem;
+  height: 450px;
+}
+
+.cellphone_approval {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 auto;
+  margin-left: 20px;
+}
+
+.cellphone_form ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.cellphone_form ul li {
+  list-style: none;
+  padding: 5px;
+}
+.cellphone_form ul li:first-child {
+  font-size: 13px;
+}
+
+.cellphone_form input:focus {
+  border: 2px solid #bed7f0;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.cellphone_form input {
+  border: solid 1px #bcbbbb;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 20px;
+  width: 250px;
+}
+
+.cellphone_form input:focus {
+  outline: none;
+}
+
+.submit_cellphone_btn_vehicle {
+  background-color: #ff6666;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  cursor: pointer;
+  opacity: 1;
+  color: #fff;
+  font-weight: bold;
+  font-family: "montserrat", sans-serif;
+  font-size: 13px;
+  padding: 10px;
+  text-align: center;
+}
+
+.submit_cellphone_btn:hover {
+  box-shadow: 0 0 5px rgba(1, 82, 162, 0.3);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.phoneimage {
+  margin: 0 auto;
+  margin-left: 20px;
+  width: 180px;
+}
+
+.cellphone_images {
+  display: flex;
+}
+
+.lockimage {
+  margin-top: 100px;
+  margin-left: 60px;
+  position: absolute;
+  width: 100px;
+}
+
+.adv-emlak-body .lastchild img {
+  height: 50px;
+  width: 50px;
+}
+
+.green {
+  margin-top: 140px;
+  margin-left: 85px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+/* Styles for the textcode_approval */
+
+.textcode_approval {
+  display: flex;
+  margin: 0 auto;
+  margin-left: 20px;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.textcode_form ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.textcode_form ul li {
+  list-style: none;
+  padding: 5px;
+}
+.textcode_form ul li:first-child {
+  font-size: 13px;
+}
+
+.textcode_form input:focus {
+  border: 2px solid #bed7f0;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.textcode_form input {
+  border: solid 1px #bcbbbb;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 20px;
+  width: 250px;
+}
+
+.textcode_form input:focus {
+  outline: none;
+}
+
+.change_cellphone_btn {
+  background-color: #f5f6f7;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(239, 241, 244, 0.1);
+  cursor: pointer;
+  color: #624848;
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 2px;
+  opacity: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.change_cellphone_btn:hover {
+  box-shadow: 0 0 5px rgba(1, 82, 162, 0.3);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.approve_cellphone_btn_vehicle {
+  background-color: #ff6666;
+  border: 2px solid #bed7f0;
+  box-shadow: 0 0 5px rgba(239, 241, 244, 0.3);
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.approve_cellphone_btn:hover {
+  box-shadow: 0 0 5px rgba(1, 82, 162, 0.3);
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
