@@ -10,6 +10,7 @@ import PhotoUpload from "./PhotoUpload/PhotoUploadRealEstate";
 import RealEstateDetails from "./RealEstateDetails/RealEstateDetails";
 import Address from "../Address/Address";
 import { AppContext } from "../ContextProvider";
+import ProgressBar from "../ProgressBar/ProgressBar";
 // import Footer from "../Footer/Footer";
 
 const RealEstateSubStepThree = () => {
@@ -36,6 +37,7 @@ const RealEstateSubStepThree = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-realestate_step_three_main">
         <h3 id="emlak_description">3-Ilan Detaylari</h3>
         {console.log("Rendering RealEstateSubStepThree")}

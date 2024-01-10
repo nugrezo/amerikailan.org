@@ -4,6 +4,7 @@ import "./RealEstateSubStepFive.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const RealEstateSubStepFive = () => {
   const [publish, setPublish] = useState(false);
@@ -38,6 +39,7 @@ const RealEstateSubStepFive = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv_publish_main">
         <h3 id="adv_publish_header">5-Ilani Yayinla</h3>
         <div className="adv_publish_form_main_wrapper">

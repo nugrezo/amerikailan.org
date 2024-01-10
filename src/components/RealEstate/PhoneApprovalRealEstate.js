@@ -8,6 +8,7 @@ import lockimage from "../../library/advicons/lock.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import Footer from "../Footer/Footer";
 import CountDownTimer from "../CountDownTimer/CountDownTimer";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const PhoneApprovalRealEstate = () => {
   const [showContent, setShowContent] = useState(true);
@@ -116,6 +117,7 @@ const PhoneApprovalRealEstate = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-realestate_step_two_main">
         <h3 id="emlak_cellphoneapr">2-Cep Telefon Numarasi Onayi</h3>
         <div className="wrapper">

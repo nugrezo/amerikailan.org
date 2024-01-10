@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import logo from "../../library/logo.png";
 import "./PromoteAdvertisement.css";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const PromoteAdvertisement = () => {
   const [populerSelectValue, setPopulerSelectValue] = useState("");
@@ -57,6 +58,7 @@ const PromoteAdvertisement = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-realestate_step_four_main">
         <h2>Ilaninizi On Plana Cikartin</h2>
         <div className="adv-realestate_step_four_main_wrapper">

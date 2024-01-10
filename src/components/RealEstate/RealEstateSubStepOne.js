@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./RealEstateSubStepOne.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import Usermenu from "../Usermenu/Usermenu";
+import logo from "../../library/logo.png";
 
 const RealEstateSubStepOne = () => {
+  const navigate = useNavigate();
   const [openBox2, setOpenBox2] = useState(false);
   const [openBox3, setOpenBox3] = useState(false);
   const [openBox4, setOpenBox4] = useState(false);
@@ -45,9 +49,22 @@ const RealEstateSubStepOne = () => {
     setOpenBox4(false);
     setBackToSelectionVisible(false);
     setAdvEmlakBodyVisible(false);
+    navigate("/advertisement/realestate_main/step_two");
   };
   return (
     <div className="adv-realestate">
+      <div className="container">
+        <nav className="navbar">
+          <div className="nav-logo">
+            <a className="navbar-brand" href="http://localhost:3000">
+              <img src={logo} width="200px;" height="60px;" alt="logo" />
+            </a>
+          </div>
+          <div className="nav-userProfile">
+            <Usermenu />
+          </div>
+        </nav>
+      </div>
       <ProgressBar />
       <div>
         <div className="emlak-box">
@@ -132,18 +149,12 @@ const RealEstateSubStepOne = () => {
                     {openBox4 && (
                       <ul className="lastchild">
                         <img src={checkmark} alt="checkmark" />
-                        <p>Kategori secimi tamamlanmistir</p>
-                        <a
-                          href="http://localhost:3000/advertisement/realestate_main/step_two"
-                          alt="realestate_steptwo"
+                        <p>Kategori secimi tamamlanmistir</p>{" "}
+                        <button
+                          onClick={() => handleFourthBoxClick("Devam edin")}
                         >
-                          {" "}
-                          <button
-                            onClick={() => handleFourthBoxClick("Devam edin")}
-                          >
-                            Devam ediniz
-                          </button>
-                        </a>
+                          Devam ediniz
+                        </button>
                       </ul>
                     )}
                   </div>
