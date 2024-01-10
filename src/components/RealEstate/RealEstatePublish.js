@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./RealEstateSubStepFive.css";
+import "./RealEstatePublish.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
-const RealEstateSubStepFive = () => {
+const RealEstatePublish = () => {
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
 
@@ -118,4 +118,4 @@ const RealEstateSubStepFive = () => {
   );
 };
 
-export default RealEstateSubStepFive;
+export default RealEstatePublish;

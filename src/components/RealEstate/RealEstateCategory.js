@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import checkmark from "../../library/advicons/greencheckmark.png";
-import "./RealEstateSubStepOne.css";
+import "./RealEstateCategory.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
+import Footer from "../Footer/Footer";
 
-const RealEstateSubStepOne = () => {
+const RealEstateCategory = () => {
   const navigate = useNavigate();
   const [openBox2, setOpenBox2] = useState(false);
   const [openBox3, setOpenBox3] = useState(false);
@@ -49,7 +50,7 @@ const RealEstateSubStepOne = () => {
     setOpenBox4(false);
     setBackToSelectionVisible(false);
     setAdvEmlakBodyVisible(false);
-    navigate("/advertisement/realestate_main/step_two");
+    navigate("/advertisement/realestate/cellaprv_s2");
   };
   return (
     <div className="adv-realestate">
@@ -164,8 +165,9 @@ const RealEstateSubStepOne = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
 
-export default RealEstateSubStepOne;
+export default RealEstateCategory;

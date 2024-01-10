@@ -32,7 +32,7 @@ const Advertisement = () => {
             </div>
             <div className="category-select-body">
               <a
-                href="http://localhost:3000/advertisement/realestate_main/step_one"
+                href="http://localhost:3000/advertisement/realestate/category_s1"
                 alt="emlak_stepone"
               >
                 <div className="category category-select-body-emlak">

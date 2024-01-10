@@ -96,7 +96,7 @@ const PhoneApprovalRealEstate = () => {
   useEffect(() => {
     if (isCodeMatched) {
       const timeoutId = setTimeout(() => {
-        navigate("/advertisement/realestate_main/step_three");
+        navigate("/advertisement/realestate/realestate_details_s3");
       }, 5000);
 
       return () => clearTimeout(timeoutId);

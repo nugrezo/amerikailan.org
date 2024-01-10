@@ -36,11 +36,11 @@ const PromoteAdvertisement = () => {
     }
 
     if (populerSelectValue || vitrinSelectValue) {
-      navigate("/advertisement/realestate_main/secure_payment", {
+      navigate("/advertisement/realestate/secure_payment", {
         state: { amount: isNaN(amount) ? "" : amount },
       });
     } else {
-      navigate("/advertisement/realestate_main/step_five");
+      navigate("/advertisement/realestate/publish_s5");
     }
   };
 

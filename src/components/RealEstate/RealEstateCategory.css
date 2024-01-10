@@ -5,6 +5,15 @@
   font-family: "montserrat", sans-serif;
 }
 
+body {
+  background-color: #fafafa;
+}
+
+.stepbystep {
+  padding-top: 40px;
+  padding-left: 25px;
+}
+
 #emlak_category-selection {
   background-color: orange;
   color: #4f2727cc;
@@ -31,6 +40,12 @@
 
 .adv-emlak-body {
   display: flex;
+}
+
+.emlak-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .adv-emlak-body ul {

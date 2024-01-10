@@ -1,7 +1,7 @@
 import React from "react";
-import "./RealEstateDetails.css";
+import "./RealEstateSubDetails.css";
 
-const RealEstateDetails = () => {
+const RealEstateSubDetails = () => {
   return (
     <div className="adv_realestate_details">
       <h4>Detay Bilgiler</h4>
@@ -274,4 +274,4 @@ const RealEstateDetails = () => {
   );
 };
 
-export default RealEstateDetails;
+export default RealEstateSubDetails;

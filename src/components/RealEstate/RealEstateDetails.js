@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import "./RealEstateSubStepThree.css";
+import "./RealEstateDetails.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 
 import PhotoUpload from "./PhotoUpload/PhotoUploadRealEstate";
-import RealEstateDetails from "./RealEstateDetails/RealEstateDetails";
+import RealEstateSubDetails from "./RealEstateSubDetails/RealEstateSubDetails";
 import Address from "../Address/Address";
 import { AppContext } from "../ContextProvider";
 import ProgressBar from "../ProgressBar/ProgressBar";
 // import Footer from "../Footer/Footer";
 
-const RealEstateSubStepThree = () => {
+const RealEstateDetails = () => {
   const { userEmail, userName, userLastname } = useContext(AppContext);
 
   console.log("User Email from resst:", userEmail);
@@ -21,7 +21,7 @@ const RealEstateSubStepThree = () => {
   console.log("User Lastname from resst:", userLastname);
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/advertisement/realestate_main/step_four");
+    navigate("/advertisement/realestate/promote_s4");
   };
   return (
     <div className="adv-realestate_step_three">
@@ -142,7 +142,7 @@ const RealEstateSubStepThree = () => {
               </li>
             </ul>
           </div>
-          <RealEstateDetails />
+          <RealEstateSubDetails />
           <Address />
         </div>
         <div className="adv_realestate_continue_btn">
@@ -153,4 +153,4 @@ const RealEstateSubStepThree = () => {
   );
 };
 
-export default RealEstateSubStepThree;
+export default RealEstateDetails;
