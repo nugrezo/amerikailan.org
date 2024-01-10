@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./RealEstateSubStepOne.css";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const RealEstateSubStepOne = () => {
   const [openBox2, setOpenBox2] = useState(false);
@@ -47,6 +48,7 @@ const RealEstateSubStepOne = () => {
   };
   return (
     <div className="adv-realestate">
+      <ProgressBar />
       <div>
         <div className="emlak-box">
           <div className="emlak-content">

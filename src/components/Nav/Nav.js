@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="container">
         <div className="nav nav-logo">
           <a className="navbar-brand" href="https://www.amerikailan.org">
-            <img src={logo} width="200px;" height="60px;" alt="logo" />
+            <img src={logo} width="200px;" height="40px;" alt="logo" />
           </a>
         </div>
         <div className="nav nav-search">

@@ -26,6 +26,11 @@
   width: 80%;
 }
 
+.navbar-brand {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 body {
   background-color: #fafafa;
 }

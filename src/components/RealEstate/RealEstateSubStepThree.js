@@ -5,10 +5,11 @@ import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
+
+import PhotoUpload from "./PhotoUpload/PhotoUploadRealEstate";
 import RealEstateDetails from "./RealEstateDetails/RealEstateDetails";
 import Address from "../Address/Address";
 import { AppContext } from "../ContextProvider";
-import PhotoUploadRealEstate from "./PhotoUpload/PhotoUploadRealEstate";
 // import Footer from "../Footer/Footer";
 
 const RealEstateSubStepThree = () => {
@@ -27,7 +28,7 @@ const RealEstateSubStepThree = () => {
         <nav className="navbar">
           <div className="nav-logo">
             <a className="navbar-brand" href="http://localhost:3000">
-              <img src={logo} alt="logo" />
+              <img src={logo} width="200px;" height="60px;" alt="logo" />
             </a>
           </div>
           <div className="nav-userProfile">
@@ -100,7 +101,7 @@ const RealEstateSubStepThree = () => {
           <div className="adv_realestate-visuals">
             <h4>Ilana ait Gorseller</h4>
             <div className="adv_realestate_visuals_photo">
-              <PhotoUploadRealEstate />
+              <PhotoUpload />
             </div>
           </div>
           <div className="price_container">

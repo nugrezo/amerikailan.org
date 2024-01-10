@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./PhotoUpload.css";
 import { Watermark } from "antd";
 import uploadicon from "../../../library/advicons/upload-icon.png";
@@ -9,11 +9,12 @@ const PhotoUpload = () => {
   const [photoError, setPhotoError] = useState("");
   const fileInputRef = useRef(null);
 
-  useEffect(() => {
-    // Trigger file input on component mount
-    fileInputRef.current.click();
-  }, []);
-
+  const handleUpload = () => {
+    // Trigger file input when the "Fotograf Yukle" button is clicked
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
   const handlePhotoChange = (e) => {
     const selectedPhoto = e.target.files[0];
 
@@ -46,13 +47,6 @@ const PhotoUpload = () => {
     const updatedPhotos = [...photos];
     updatedPhotos.splice(index, 1);
     setPhotos(updatedPhotos);
-  };
-
-  const handleUpload = () => {
-    // Programmatically click the file input
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
   };
 
   return (
