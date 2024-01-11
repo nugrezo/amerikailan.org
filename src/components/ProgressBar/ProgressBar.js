@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+// ProgressBar.js
+import React, { useContext } from "react";
 import "./ProgressBar.css";
+import { AppContext } from "../ContextProvider";
 
 const ProgressBar = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [buttonClicked, setButtonClicked] = useState(false);
-  const totalSteps = 5;
+  const { currentStep, buttonClicked } = useContext(AppContext);
 
   const steps = [
     { number: 1, name: "Kategori Sec" },
@@ -13,13 +13,6 @@ const ProgressBar = () => {
     { number: 4, name: "Promosyon" },
     { number: 5, name: "Ilan Yayinla" },
   ];
-
-  const handleNext = () => {
-    if (currentStep < totalSteps) {
-      setCurrentStep((prevStep) => prevStep + 1);
-      setButtonClicked(true);
-    }
-  };
 
   const getProgressBarColor = (step) => {
     if (step < currentStep || (buttonClicked && step === currentStep)) {
@@ -52,10 +45,6 @@ const ProgressBar = () => {
           </React.Fragment>
         ))}
       </div>
-
-      <button onClick={handleNext} disabled={currentStep === totalSteps}>
-        Next
-      </button>
     </div>
   );
 };

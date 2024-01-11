@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import { Link } from "react-router-dom";
 import "./RealEstatePublish.css";
 import Usermenu from "../Usermenu/Usermenu";
@@ -7,6 +9,8 @@ import checkmark from "../../library/advicons/greencheckmark.png";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const RealEstatePublish = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
 
@@ -23,6 +27,7 @@ const RealEstatePublish = () => {
     e.preventDefault();
     generateRandomNumber();
     setPublish(true);
+    handleNext();
   };
 
   return (

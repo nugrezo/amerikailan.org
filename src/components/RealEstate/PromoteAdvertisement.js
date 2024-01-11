@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Usermenu from "../Usermenu/Usermenu";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import { useNavigate } from "react-router-dom";
 
 import logo from "../../library/logo.png";
@@ -7,6 +9,8 @@ import "./PromoteAdvertisement.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const PromoteAdvertisement = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const [populerSelectValue, setPopulerSelectValue] = useState("");
   const [vitrinSelectValue, setVitrinSelectValue] = useState("");
   const navigate = useNavigate();
@@ -36,10 +40,12 @@ const PromoteAdvertisement = () => {
     }
 
     if (populerSelectValue || vitrinSelectValue) {
+      handleNext();
       navigate("/advertisement/realestate/secure_payment", {
         state: { amount: isNaN(amount) ? "" : amount },
       });
     } else {
+      handleNext();
       navigate("/advertisement/realestate/publish_s5");
     }
   };

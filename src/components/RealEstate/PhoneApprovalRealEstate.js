@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import "./PhoneApprovalRealEstate.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
@@ -11,6 +13,8 @@ import CountDownTimer from "../CountDownTimer/CountDownTimer";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const PhoneApprovalRealEstate = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const [showContent, setShowContent] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [textCode, setTextCode] = useState("");
@@ -60,6 +64,8 @@ const PhoneApprovalRealEstate = () => {
       setIsCodeMatched(true);
       setError("");
       setShowContent(false);
+      handleNext();
+      navigate("/advertisement/realestate/realestate_details_s3");
     } else {
       setIsCodeMatched(false);
       setError("Numara eslesmedi tekrar deneyiniz");
@@ -92,16 +98,6 @@ const PhoneApprovalRealEstate = () => {
       setError("");
     }, 0);
   };
-
-  useEffect(() => {
-    if (isCodeMatched) {
-      const timeoutId = setTimeout(() => {
-        navigate("/advertisement/realestate/realestate_details_s3");
-      }, 5000);
-
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isCodeMatched, navigate]);
 
   return (
     <div className="adv-realestate_step_two">

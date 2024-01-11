@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
 import "./RealEstateDetails.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
@@ -9,20 +10,30 @@ import ReactQuill from "react-quill";
 import PhotoUpload from "./PhotoUpload/PhotoUploadRealEstate";
 import RealEstateSubDetails from "./RealEstateSubDetails/RealEstateSubDetails";
 import Address from "../Address/Address";
-import { AppContext } from "../ContextProvider";
 import ProgressBar from "../ProgressBar/ProgressBar";
 // import Footer from "../Footer/Footer";
 
 const RealEstateDetails = () => {
   const { userEmail, userName, userLastname } = useContext(AppContext);
-
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
   console.log("User Email from resst:", userEmail);
   console.log("User Name from resst:", userName);
   console.log("User Lastname from resst:", userLastname);
+
+  useEffect(() => {
+    console.log("RealEstateDetails component mounted");
+
+    return () => {
+      console.log("RealEstateDetails component unmounted");
+    };
+  }, []); // Empty dependency array to run this effect only once on mount
+
   const navigate = useNavigate();
   const handleNavigate = () => {
+    handleNext();
     navigate("/advertisement/realestate/promote_s4");
   };
+
   return (
     <div className="adv-realestate_step_three">
       <div className="container">

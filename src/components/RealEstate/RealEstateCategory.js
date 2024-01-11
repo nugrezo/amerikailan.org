@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./RealEstateCategory.css";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import Footer from "../Footer/Footer";
 
 const RealEstateCategory = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const navigate = useNavigate();
   const [openBox2, setOpenBox2] = useState(false);
   const [openBox3, setOpenBox3] = useState(false);
@@ -49,7 +53,9 @@ const RealEstateCategory = () => {
     setOpenBox3(false);
     setOpenBox4(false);
     setBackToSelectionVisible(false);
+
     setAdvEmlakBodyVisible(false);
+    handleNext();
     navigate("/advertisement/realestate/cellaprv_s2");
   };
   return (

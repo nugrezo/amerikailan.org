@@ -1,3 +1,4 @@
+// ContextProvider.js
 import React, { createContext, useState } from "react";
 
 const AppContext = createContext();
@@ -7,30 +8,41 @@ const ContextProvider = ({ children }) => {
   const [userName, setUserName] = useState("");
   const [userLastname, setUserLastname] = useState("");
 
-  const updateUserEmail = (email) => {
-    console.log("Updating User Email:", email);
-    setUserEmail(email);
-  };
+  // Progress bar-related state and functions
+  const [currentStep, setCurrentStep] = useState(0);
+  const [buttonClicked, setButtonClicked] = useState(false);
+  const totalSteps = 5; // Ensure totalSteps is defined here
 
-  const updateUserName = (name) => {
-    console.log("Updating User Name:", name);
-    setUserName(name);
-  };
-
-  const updateUserLastname = (lastname) => {
-    console.log("Updating User Lastname:", lastname);
-    setUserLastname(lastname);
+  const handleNext = () => {
+    if (currentStep < totalSteps) {
+      setCurrentStep((prevStep) => prevStep + 1);
+      setButtonClicked(true);
+    }
   };
 
   return (
     <AppContext.Provider
       value={{
         userEmail,
-        updateUserEmail,
+        updateUserEmail: (email) => {
+          console.log("Updating User Email:", email);
+          setUserEmail(email);
+        },
         userName,
-        updateUserName,
+        updateUserName: (name) => {
+          console.log("Updating User Name:", name);
+          setUserName(name);
+        },
         userLastname,
-        updateUserLastname,
+        updateUserLastname: (lastname) => {
+          console.log("Updating User Lastname:", lastname);
+          setUserLastname(lastname);
+        },
+        // Progress bar-related state and functions
+        currentStep,
+        totalSteps,
+        buttonClicked,
+        handleNext,
       }}
     >
       {children}
