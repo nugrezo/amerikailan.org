@@ -9,8 +9,8 @@ import checkmark from "../../library/advicons/greencheckmark.png";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const RealEstatePublish = () => {
-  const { handleNext } = useContext(AppContext); // Access handleNext from context
-
+  const { handleNext, setFormSubmitted, formSubmitted } =
+    useContext(AppContext); // Access handleNext from context
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
 
@@ -28,6 +28,7 @@ const RealEstatePublish = () => {
     generateRandomNumber();
     setPublish(true);
     handleNext();
+    setFormSubmitted(true);
   };
 
   return (
@@ -89,7 +90,11 @@ const RealEstatePublish = () => {
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish_btn">
-                    <button type="submit" className="publish_btn">
+                    <button
+                      type="submit"
+                      className="publish_btn"
+                      disabled={formSubmitted}
+                    >
                       Ilani Yayinla
                     </button>
                   </div>
@@ -104,7 +109,7 @@ const RealEstatePublish = () => {
                     Ilaniniz editorlerimiz tarafindan incelendikten sonra yayina
                     alinacaktir.
                   </p>
-                  <div>
+                  <div className="publish_number">
                     <label htmlFor="publish_number">Ilan Yayin Numarasi</label>
                     <input type="text" value={publishNumber}></input>
                   </div>

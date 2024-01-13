@@ -297,8 +297,11 @@ body {
   font-weight: bold;
   margin: 1rem;
   width: 150px;
+  box-shadow: 0 0 5px rgba(204, 54, 0, 0.3);
+  border: 2px solid rgb(236, 170, 46);
 }
 
 .adv_realestate_continue_btn button:hover {
-  opacity: 0.8;
+  background-color: orangered;
+  color: white;
 }

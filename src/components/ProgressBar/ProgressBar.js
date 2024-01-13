@@ -5,7 +5,7 @@ import { AppContext } from "../ContextProvider";
 
 const ProgressBar = () => {
   const { currentStep, buttonClicked } = useContext(AppContext);
-
+  console.log("ProgressBar is rendering with currentStep:", currentStep);
   const steps = [
     { number: 1, name: "Kategori Sec" },
     { number: 2, name: "Telefon onayi" },
@@ -17,6 +17,8 @@ const ProgressBar = () => {
   const getProgressBarColor = (step) => {
     if (step < currentStep || (buttonClicked && step === currentStep)) {
       return "#3CB043"; // Completed steps are colored green, or current step if button clicked
+    } else if (step === currentStep && !buttonClicked) {
+      return "#3CB043"; // Color current step to green if not buttonClicked
     } else {
       return "#eee9e9"; // Future steps are greyed out
     }

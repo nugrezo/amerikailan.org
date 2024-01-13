@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import checkmark from "../../library/advicons/greencheckmark.png";
-import "./Vehicle.css";
+import "./VehicleCategory.css";
 import Footer from "../Footer/Footer";
 import logo from "../../library/logo.png";
 import Usermenu from "../Usermenu/Usermenu";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import { AppContext } from "../ContextProvider";
 
-const Vehicle = () => {
+const VehicleCategory = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+  const navigate = useNavigate();
   const [openBox2, setOpenBox2] = useState(false);
   const [openBox3, setOpenBox3] = useState(false);
-  const [openBox4, setOpenBox4] = useState(false);
   const [selectedWordsFromBox1, setSelectedWordsFromBox1] = useState([]);
   const [selectedWordsFromBox2, setSelectedWordsFromBox2] = useState([]);
   const [selectedWordsFromBox3, setSelectedWordsFromBox3] = useState([]);
-  const [selectedWordsFromBox4, setSelectedWordsFromBox4] = useState([]);
-  console.log(selectedWordsFromBox4);
+  console.log(selectedWordsFromBox3);
   const [backToSelectionVisible, setBackToSelectionVisible] = useState(true);
   const [advVehicleBodyVisible, setAdvVehcileBodyVisible] = useState(true);
 
@@ -23,7 +27,6 @@ const Vehicle = () => {
     setSelectedWordsFromBox3([""]);
     setOpenBox2(true);
     setOpenBox3(false);
-    setOpenBox4(false);
   };
 
   const handleSecondBoxClick = (value) => {
@@ -33,12 +36,14 @@ const Vehicle = () => {
   };
 
   const handleThirdBoxClick = (value) => {
-    setSelectedWordsFromBox4([value]);
+    setSelectedWordsFromBox3([value]);
     console.log("button is clicked");
     setOpenBox2(false);
     setOpenBox3(false);
     setBackToSelectionVisible(false);
     setAdvVehcileBodyVisible(false);
+    handleNext();
+    navigate("/advertisement/vehicle/cellaprv_s2");
   };
   return (
     <div className="adv-vehicle">
@@ -56,6 +61,7 @@ const Vehicle = () => {
               </div>
             </nav>
           </div>
+          <ProgressBar />
           <div className="vehicle-content">
             <main>
               <div>
@@ -80,42 +86,82 @@ const Vehicle = () => {
                         <p>{word}</p>
                       </React.Fragment>
                     ))}
-                    {openBox4 && <span>&gt;</span>}
-                    {selectedWordsFromBox3.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
                   </div>
                 )}
                 {advVehicleBodyVisible && (
                   <div className="adv-vehicle-body">
                     <ul>
-                      <li onClick={() => handleFirstBoxClick("Otomobil")}>
+                      <li
+                        onClick={() => handleFirstBoxClick("Otomobil")}
+                        className={
+                          selectedWordsFromBox1.includes("Otomobil")
+                            ? "veh_selected"
+                            : ""
+                        }
+                      >
                         Otomobil
                       </li>
-                      <li onClick={() => handleFirstBoxClick("Motosiklet")}>
+                      <li
+                        onClick={() => handleFirstBoxClick("Motosiklet")}
+                        className={
+                          selectedWordsFromBox1.includes("Motosiklet")
+                            ? "veh_selected"
+                            : ""
+                        }
+                      >
                         Motosiklet
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Arazi&SUV&Pick-Up")}
+                        className={
+                          selectedWordsFromBox1.includes("Arazi&SUV&Pick-Up")
+                            ? "veh_selected"
+                            : ""
+                        }
                       >
                         Arazi & SUV & Pick-Up
                       </li>
-                      <li onClick={() => handleFirstBoxClick("Ticari Arac")}>
+                      <li
+                        onClick={() => handleFirstBoxClick("Ticari Arac")}
+                        className={
+                          selectedWordsFromBox1.includes("Ticari Arac")
+                            ? "veh_selected"
+                            : ""
+                        }
+                      >
                         Ticari Arac
                       </li>
-                      <li onClick={() => handleFirstBoxClick("Kiralik Arac")}>
+                      <li
+                        onClick={() => handleFirstBoxClick("Kiralik Arac")}
+                        className={
+                          selectedWordsFromBox1.includes("Kiralik Arac")
+                            ? "veh_selected"
+                            : ""
+                        }
+                      >
                         Kiralik Arac
                       </li>
                     </ul>
                     {openBox2 && (
                       <ul>
-                        <li onClick={() => handleSecondBoxClick("Satilik")}>
+                        <li
+                          onClick={() => handleSecondBoxClick("Satilik")}
+                          className={
+                            selectedWordsFromBox2.includes("Satilik")
+                              ? "veh_selected"
+                              : ""
+                          }
+                        >
                           Satilik
                         </li>
-                        <li onClick={() => handleSecondBoxClick("Kiralik")}>
+                        <li
+                          onClick={() => handleSecondBoxClick("Kiralik")}
+                          className={
+                            selectedWordsFromBox2.includes("Kiralik")
+                              ? "veh_selected"
+                              : ""
+                          }
+                        >
                           Kiralik
                         </li>
                       </ul>
@@ -124,17 +170,11 @@ const Vehicle = () => {
                       <ul className="lastchild">
                         <img src={checkmark} alt="checkmark" />
                         <p>Kategori secimi tamamlanmistir</p>
-                        <a
-                          href="http://localhost:3000/advertisement/vehicle/step_two"
-                          alt="realestate_steptwo"
+                        <button
+                          onClick={() => handleThirdBoxClick("Devam edin")}
                         >
-                          {" "}
-                          <button
-                            onClick={() => handleThirdBoxClick("Devam edin")}
-                          >
-                            Devam ediniz
-                          </button>
-                        </a>
+                          Devam ediniz
+                        </button>
                       </ul>
                     )}
                   </div>
@@ -149,4 +189,4 @@ const Vehicle = () => {
   );
 };
 
-export default Vehicle;
+export default VehicleCategory;

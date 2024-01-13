@@ -9,7 +9,6 @@
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(236, 36, 36, 0.2) inset;
   margin: 0 auto;
-  margin-top: 50px;
   margin-bottom: 50px;
   width: 80%;
   height: 610px;
@@ -75,8 +74,15 @@
   width: 265px;
 }
 
-.vehicle_publish_btn:hover {
-  opacity: 0.9;
+.vehicle_publish_btn:disabled {
+  opacity: 0.5; /* Adjust the opacity to make it visually inactive */
+  cursor: not-allowed; /* Change the cursor to indicate the button is not clickable */
+  /* Add any other styles to visually indicate the inactive state */
+}
+
+.vehicle_publish_btn:disabled:hover {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .vehicle_adv_publish_btn {

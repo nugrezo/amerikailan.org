@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Usermenu from "../Usermenu/Usermenu";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../../library/logo.png";
 import "./PromoteVehicleAdvertisement.css";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import { AppContext } from "../ContextProvider";
 
 const PromoteVehicleAdvertisement = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const [populerSelectValue, setPopulerSelectValue] = useState("");
   const [vitrinSelectValue, setVitrinSelectValue] = useState("");
   const navigate = useNavigate();
@@ -35,11 +39,13 @@ const PromoteVehicleAdvertisement = () => {
     }
 
     if (populerSelectValue || vitrinSelectValue) {
+      handleNext();
       navigate("/advertisement/vehicle/secure_payment", {
         state: { amount: isNaN(amount) ? "" : amount },
       });
     } else {
-      navigate("/advertisement/vehicle/step_five");
+      handleNext();
+      navigate("/advertisement/vehicle/publish_s5");
     }
   };
 
@@ -57,6 +63,7 @@ const PromoteVehicleAdvertisement = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-vehicle_step_four_main">
         <h2>Ilaninizi On Plana Cikartin</h2>
         <div className="adv-vehicle_step_four_main_wrapper">

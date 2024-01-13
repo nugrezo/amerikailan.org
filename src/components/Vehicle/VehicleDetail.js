@@ -9,18 +9,21 @@ import PhotoUploadVehicle from "./PhotoUploadVehicle";
 import VehicleDetailSubComponent from "./VehicleDetailSubComponent";
 import { AppContext } from "../ContextProvider";
 import VehicleAddress from "./VehicleAddress";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 // import Footer from "../Footer/Footer";
 
 const VehicleDetail = () => {
-  const { userEmail, userName, userLastname } = useContext(AppContext);
+  const { userEmail, userName, userLastname, handleNext } =
+    useContext(AppContext);
 
   console.log("User Email from resst:", userEmail);
   console.log("User Name from resst:", userName);
   console.log("User Lastname from resst:", userLastname);
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/advertisement/vehicle/step_four");
+    handleNext();
+    navigate("/advertisement/vehicle/promote_s4");
   };
   return (
     <div className="adv-vehicle_step_three">
@@ -36,6 +39,7 @@ const VehicleDetail = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-vehicle_step_three_main">
         <h3 id="vehicle_description">3-Ilan Detaylari</h3>
         {console.log("Rendering vehicleSubStepThree")}

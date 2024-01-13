@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./VehicleAdvPublish.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import { AppContext } from "../ContextProvider";
 
 const VehicleAdvPublish = () => {
+  const { handleNext, setFormSubmitted, formSubmitted } =
+    useContext(AppContext); // Access handleNext from context
+
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
 
@@ -22,6 +27,8 @@ const VehicleAdvPublish = () => {
     e.preventDefault();
     generateRandomNumber();
     setPublish(true);
+    handleNext();
+    setFormSubmitted(true);
   };
 
   return (
@@ -38,6 +45,7 @@ const VehicleAdvPublish = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="vehicle_adv_publish_main">
         <h3 id="vehicle_adv_publish_header">5-Ilani Yayinla</h3>
         <div className="vehicle_adv_publish_form_main_wrapper">
@@ -82,7 +90,11 @@ const VehicleAdvPublish = () => {
                     <input type="text"></input>
                   </div>
                   <div className="vehicle_adv_publish_btn">
-                    <button type="submit" className="vehicle_publish_btn">
+                    <button
+                      type="submit"
+                      className="vehicle_publish_btn"
+                      disabled={formSubmitted}
+                    >
                       Ilani Yayinla
                     </button>
                   </div>

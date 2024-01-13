@@ -6,6 +6,7 @@
 .user-info {
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 .username {

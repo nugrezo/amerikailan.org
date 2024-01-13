@@ -72,10 +72,19 @@
   margin: 1rem;
   margin-right: 0;
   width: 265px;
+  box-shadow: 0 0 5px rgba(204, 54, 0, 0.3);
+  border: 2px solid rgb(236, 170, 46);
 }
 
-.publish_btn:hover {
-  opacity: 0.9;
+.publish_btn:disabled {
+  opacity: 0.5; /* Adjust the opacity to make it visually inactive */
+  cursor: not-allowed; /* Change the cursor to indicate the button is not clickable */
+  /* Add any other styles to visually indicate the inactive state */
+}
+
+.publish_btn:disabled:hover {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .adv_publish_btn {
@@ -98,7 +107,7 @@
   border: 1px solid #ccc;
   height: 480px;
   margin: 1rem;
-  background-color: #ded9d9;
+  background-color: rgb(32, 28, 28);
   box-shadow: 3px 3px 3px 3px #ccc;
 }
 
@@ -148,4 +157,8 @@
 
 .publish_result_btn:hover {
   opacity: 0.9;
+}
+
+.publish_number label {
+  color: #fff;
 }

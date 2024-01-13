@@ -5,7 +5,6 @@ import Login from "./components/Login/SignIn";
 import Register from "./components/Register/Register";
 import Advertisement from "./components/Advertisement/Advertisement";
 import Payment from "./components/Payment/Payment";
-import Vehicle from "./components/Vehicle/Vehicle";
 import PhoneApprovalRealEstate from "./components/RealEstate/PhoneApprovalRealEstate";
 import PhoneApprovalVehicle from "./components/Vehicle/PhoneApprovalVehicle";
 import VehicleDetail from "./components/Vehicle/VehicleDetail";
@@ -15,6 +14,7 @@ import VehicleAdvPublish from "./components/Vehicle/VehicleAdvPublish";
 import RealEstateCategory from "./components/RealEstate/RealEstateCategory";
 import RealEstateDetails from "./components/RealEstate/RealEstateDetails";
 import RealEstatePublish from "./components/RealEstate/RealEstatePublish";
+import VehicleCategory from "./components/Vehicle/VehicleCategory";
 
 function App() {
   return (
@@ -50,21 +50,21 @@ function App() {
             path="/advertisement/realestate/secure_payment"
             element={<Payment />}
           />
-          <Route path="/advertisement/vehicle" element={<Vehicle />} />
+          <Route path="/advertisement/vehicle" element={<VehicleCategory />} />
           <Route
-            path="/advertisement/vehicle/step_two"
+            path="/advertisement/vehicle/cellaprv_s2"
             element={<PhoneApprovalVehicle />}
           />
           <Route
-            path="/advertisement/vehicle/step_three"
+            path="/advertisement/vehicle/vehicle_details_s3"
             element={<VehicleDetail />}
           />
           <Route
-            path="/advertisement/vehicle/step_four"
+            path="/advertisement/vehicle/promote_s4"
             element={<PromoteVehicleAdvertisement />}
           />
           <Route
-            path="/advertisement/vehicle/step_five"
+            path="/advertisement/vehicle/publish_s5"
             element={<VehicleAdvPublish />}
           />
           <Route

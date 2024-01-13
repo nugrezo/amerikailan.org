@@ -1,5 +1,5 @@
 // ContextProvider.js
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect, useCallback } from "react";
 
 const AppContext = createContext();
 
@@ -11,6 +11,10 @@ const ContextProvider = ({ children }) => {
   // Progress bar-related state and functions
   const [currentStep, setCurrentStep] = useState(0);
   const [buttonClicked, setButtonClicked] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  //prevent handleback state
+
   const totalSteps = 5; // Ensure totalSteps is defined here
 
   const handleNext = () => {
@@ -19,6 +23,33 @@ const ContextProvider = ({ children }) => {
       setButtonClicked(true);
     }
   };
+
+  const handleBack = useCallback(() => {
+    if (currentStep > 0 && !formSubmitted) {
+      setCurrentStep((prevStep) => prevStep - 1);
+      console.log("currentStep when the back is clicked:", currentStep);
+      setButtonClicked(false);
+    }
+  }, [currentStep, setButtonClicked, formSubmitted]);
+
+  useEffect(() => {
+    const handlePopstate = () => {
+      // Handle popstate event (user clicks back button)
+      handleBack();
+    };
+    const handleHashchange = () => {
+      // Handle hashchange event (user navigates using anchor links)
+      handleBack();
+    };
+
+    window.addEventListener("popstate", handlePopstate);
+    window.addEventListener("hashchange", handleHashchange);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopstate);
+      window.removeEventListener("hashchange", handleHashchange);
+    };
+  }, [handleBack]);
 
   return (
     <AppContext.Provider
@@ -43,6 +74,9 @@ const ContextProvider = ({ children }) => {
         totalSteps,
         buttonClicked,
         handleNext,
+        handleBack,
+        formSubmitted,
+        setFormSubmitted,
       }}
     >
       {children}

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import "./PhoneApprovalVehicle.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
@@ -8,8 +10,11 @@ import lockimage from "../../library/advicons/lock.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import Footer from "../Footer/Footer";
 import CountDownTimer from "../CountDownTimer/CountDownTimer";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const PhoneApprovalVehicle = () => {
+  const { handleNext } = useContext(AppContext); // Access handleNext from context
+
   const [showContent, setShowContent] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [textCode, setTextCode] = useState("");
@@ -24,7 +29,6 @@ const PhoneApprovalVehicle = () => {
   const originalCode = "123456";
 
   const handlePhoneNumberChange = (event) => {
-    event.preventDefault();
     setPhoneNumber(event.target.value);
   };
 
@@ -48,7 +52,6 @@ const PhoneApprovalVehicle = () => {
   };
 
   const handleTextCodeChange = (event) => {
-    event.preventDefault();
     const enteredCode = event.target.value;
     setTextCode(enteredCode);
   };
@@ -61,6 +64,8 @@ const PhoneApprovalVehicle = () => {
       setIsCodeMatched(true);
       setError("");
       setShowContent(false);
+      handleNext();
+      navigate("/advertisement/vehicle/vehicle_details_s3");
     } else {
       setIsCodeMatched(false);
       setError("Numara eslesmedi tekrar deneyiniz");
@@ -94,16 +99,6 @@ const PhoneApprovalVehicle = () => {
     }, 0);
   };
 
-  useEffect(() => {
-    if (isCodeMatched) {
-      const timeoutId = setTimeout(() => {
-        navigate("/advertisement/vehicle/step_three");
-      }, 5000);
-
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isCodeMatched, navigate]);
-
   return (
     <div className="adv-vehicle_step_two">
       <div className="container">
@@ -118,6 +113,7 @@ const PhoneApprovalVehicle = () => {
           </div>
         </nav>
       </div>
+      <ProgressBar />
       <div className="adv-vehicle_step_two_main">
         <h3 id="vehicle_cellphoneapr">2-Cep Telefon Numarasi Onayi</h3>
         <div className="wrapper">

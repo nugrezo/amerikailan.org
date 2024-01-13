@@ -53,6 +53,7 @@ body {
   padding: 10px;
   width: 200px;
   height: 300px;
+  overflow-y: scroll;
   margin-left: 20px;
   background-color: rgb(251, 234, 202);
   border: solid 1px #dedede;
@@ -73,6 +74,15 @@ body {
 
 .adv-emlak-body ul li:hover {
   background-color: orange;
+}
+
+.selected {
+  background-color: orange;
+  border-radius: 0 50% 50% 0;
+}
+
+.adv-emlak-body ul .selected {
+  font-weight: bold;
 }
 
 .adv-emlak-body ul li:last-child {

@@ -24,7 +24,6 @@ body {
 .vehicle-box {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
 }
 
 #vehicle_category-selection {
@@ -80,6 +79,16 @@ body {
 
 .adv-vehicle-body ul li:hover {
   background-color: #ff6666;
+  color: white;
+  font-weight: bold;
+}
+
+.veh_selected {
+  background-color: #ff6666;
+  border-radius: 0 50% 50% 0;
+}
+
+.adv-vehicle-body ul .veh_selected {
   color: white;
   font-weight: bold;
 }

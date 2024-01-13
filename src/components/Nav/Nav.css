@@ -8,7 +8,7 @@
 
 .container {
   align-items: center;
-  background-image: url("../../library/header.png");
+  background-color: rgb(32, 28, 28);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,6 +27,8 @@
 .nav-logo a img {
   height: 40px;
   width: 200px;
+  border: 1px solid white;
+  box-shadow: 0 0 10px #fff;
 }
 .nav-search {
   align-items: center;
@@ -128,7 +130,7 @@
 }
 
 .giris-yap-btn:hover {
-  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px greenyellow;
   opacity: 0.9;
   transition: opacity 0.3 ease;
 }
@@ -160,7 +162,7 @@
 }
 
 .kayit-ol-btn:hover {
-  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px greenyellow;
   opacity: 0.9;
   transition: opacity 0.3 ease;
 }

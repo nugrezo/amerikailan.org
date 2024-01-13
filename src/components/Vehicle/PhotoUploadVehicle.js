@@ -7,12 +7,16 @@ import trash_icon from "../../library/advicons/trash_icon.png";
 const PhotoUploadVehicle = () => {
   const [photos, setPhotos] = useState([]);
   const [photoError, setPhotoError] = useState("");
+  const [buttonClicked, setButtonClicked] = useState(false);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
-    // Trigger file input on component mount
-    fileInputRef.current.click();
-  }, []);
+    // Trigger file input only when the button is clicked
+    if (fileInputRef.current && buttonClicked) {
+      fileInputRef.current.click();
+      setButtonClicked(false); // Reset the buttonClicked state after triggering click
+    }
+  }, [buttonClicked]);
 
   const handlePhotoChange = (e) => {
     const selectedPhoto = e.target.files[0];
@@ -48,12 +52,9 @@ const PhotoUploadVehicle = () => {
     setPhotos(updatedPhotos);
   };
 
-  const handleUpload = (e) => {
-    e.preventDefault();
+  const handleUpload = () => {
     // Programmatically click the file input
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
+    setButtonClicked(true);
   };
 
   return (
