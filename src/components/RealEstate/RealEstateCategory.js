@@ -33,14 +33,18 @@ const RealEstateCategory = () => {
     setSelectedWordsConditionalTuristTesis,
   ] = useState([]);
 
-  const [backToSelectionVisible, setBackToSelectionVisible] = useState(true);
-
   const handleFirstBoxClick = (value) => {
     if (value === "Kiralik Oda") {
       setSelectedWordsFromBox1([value]);
-
+      setSelectedWordsFromBox2([""]);
+      setSelectedWordsFromBox3([""]);
+      setSelectedWordsConditionalBoxThree([""]);
+      setSelectedWordsConditionalTuristTesis([""]);
       setOpenBox2(false);
       setOpenBox3(true);
+      setConditionalBoxThreeOpen(false);
+      setOpenBox4(false);
+      setConditionalTuristTesisBox(false);
     } else {
       setSelectedWordsFromBox1([value]);
       setSelectedWordsFromBox2([""]);
@@ -107,7 +111,6 @@ const RealEstateCategory = () => {
     setOpenBox2(false);
     setOpenBox3(false);
     setOpenBox4(false);
-    setBackToSelectionVisible(false);
     handleNext();
     navigate("/advertisement/realestate/cellaprv_s2");
   };
@@ -134,32 +137,46 @@ const RealEstateCategory = () => {
               <div>
                 <h3 id="emlak_category-selection">1-Kategori Secimi</h3>
                 <h4 className="stepbystep">Adim adim kategori seciniz</h4>
-                {backToSelectionVisible && (
-                  <div className="backtoselection">
-                    <a href={"http://localhost:3000/advertisement"}>Emlak</a>
-                    {openBox2 && <span>&gt;</span>}
-                    {selectedWordsFromBox1.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {openBox3 && <span>&gt;</span>}
-                    {selectedWordsFromBox2.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {openBox4 && <span>&gt;</span>}
-                    {selectedWordsFromBox3.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                )}
+
+                <div className="backtoselection">
+                  <a href={"http://localhost:3000/advertisement"}>Emlak</a>
+                  <span>&gt;</span>
+                  {selectedWordsFromBox1.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {openBox2 && <span>&gt;</span>}
+
+                  {selectedWordsFromBox2.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {openBox3 && <span>&gt;</span>}
+                  {selectedWordsFromBox3.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {conditionalBoxThreeOpen && <span>&gt;</span>}
+                  {selectedWordsFromConditionalBoxThree.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {conditionalTuristTesisBox && <span>&gt;</span>}
+                  {selectedWordsConditionalTuristTesis.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                </div>
 
                 <div className="adv-emlak-body">
                   <ul>
