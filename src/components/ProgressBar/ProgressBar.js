@@ -16,12 +16,33 @@ const ProgressBar = () => {
 
   const getProgressBarColor = (step) => {
     if (step < currentStep || (buttonClicked && step === currentStep)) {
-      return "#3CB043"; // Completed steps are colored green, or current step if button clicked
+      return "#00a32a"; // Completed steps are colored green, or current step if button clicked
     } else if (step === currentStep && !buttonClicked) {
-      return "#3CB043"; // Color current step to green if not buttonClicked
+      return "#00a32a"; // Color current step to green if not buttonClicked
     } else {
       return "#eee9e9"; // Future steps are greyed out
     }
+  };
+
+  const getProgressBarStyles = (step) => {
+    const baseStyles = {
+      backgroundColor: getProgressBarColor(step.number),
+    };
+
+    if (step.number === currentStep && !buttonClicked) {
+      // Apply specific styles for the current step
+      baseStyles.color = "#fff"; // Change color for the current step
+      baseStyles.fontWeight = "bold"; // Change font weight for the current step
+    }
+
+    if (
+      step.number < currentStep ||
+      (buttonClicked && step.number === currentStep)
+    ) {
+      baseStyles.completed = true; // Add completed class for completed steps
+    }
+
+    return baseStyles;
   };
 
   return (
@@ -38,8 +59,10 @@ const ProgressBar = () => {
               />
             )}
             <div
-              className="progress-step"
-              style={{ backgroundColor: getProgressBarColor(step.number) }}
+              className={`progress-step${
+                getProgressBarStyles(step).completed ? " completed" : ""
+              }`}
+              style={getProgressBarStyles(step)}
             >
               <div className="step-number">{step.number}</div>
               <div className="step-name">{step.name}</div>

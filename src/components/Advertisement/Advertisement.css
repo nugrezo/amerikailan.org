@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 12px;
 }
 
 .category-select-header {
@@ -42,6 +43,7 @@ body {
 
 .category-select-header h2 {
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .category-select-body {
@@ -115,10 +117,6 @@ body {
   width: 50px;
 }
 
-.electronic-icon img {
-  margin-top: 15px;
-}
-
 .vehicle-icon img {
   margin-top: 5px;
 }
@@ -176,4 +174,20 @@ body {
 .emlak-content button:hover {
   background-color: orangered;
   color: white;
+}
+
+.category-select-body-sirketler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-select-body-sirketler {
+  border-top: 8px solid black;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
 }

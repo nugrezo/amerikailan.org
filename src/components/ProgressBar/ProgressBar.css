@@ -18,6 +18,7 @@
   border: 1px solid #ccc;
   border-radius: 50%;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .step-number {
@@ -38,4 +39,9 @@
   height: 3px;
   background-color: #ccc;
   transition: background-color 0.3s ease;
+}
+
+.progress-step.completed {
+  color: #fff;
+  font-weight: bold;
 }

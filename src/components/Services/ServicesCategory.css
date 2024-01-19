@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.services-stepbystep {
+  padding-top: 40px;
+  padding-left: 25px;
+}
+
+.services-backtoselection {
+  display: flex;
+  padding: 20px 0 20px 10px;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.services-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#services_category-selection {
+  background-color: rgb(109, 151, 170);
+  color: white;
+  padding: 7.5px;
+}
+
+.services-backtoselection {
+  display: flex;
+  padding: 20px 0 20px 10px;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.services-backtoselection a {
+  margin-right: 5px;
+}
+
+.services-backtoselection span {
+  margin-right: 5px;
+}
+.services-backtoselection p {
+  margin-right: 5px;
+}
+
+.adv-services-body {
+  display: flex;
+}
+
+.adv-services-body ul {
+  list-style: none;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  margin-left: 20px;
+  overflow-y: scroll;
+  background-color: rgb(204, 230, 242);
+  border: solid 1px #dedede;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.adv-services-body ul li {
+  color: #624848;
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #ddd;
+}
+
+.adv-services-body ul li:hover {
+  background-color: rgb(109, 151, 170);
+  color: white;
+  font-weight: bold;
+}
+
+.veh_selected {
+  background-color: rgb(109, 151, 170);
+  border-radius: 0 50% 50% 0;
+}
+
+.adv-services-body ul .veh_selected {
+  color: white;
+  font-weight: bold;
+}
+
+.adv-services-body ul li:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.services-content {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(236, 36, 36, 0.2) inset; /* Add an inset box shadow around the border */
+}
+
+.adv-services-body .lastchild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 1rem;
+}
+
+.adv-services-body p {
+  color: #624848;
+  text-align: center;
+  font-size: 13px;
+}
+
+.adv-services-body button {
+  text-align: center;
+  font-size: 13px;
+  background-color: rgb(109, 151, 170);
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  opacity: 1;
+  color: black;
+  box-shadow: 1px 0 2px 0 rgb(109, 151, 170);
+  border: 2px solid rgb(109, 151, 170);
+}
+
+.adv-services-body button:hover {
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+  color: #fff;
+  font-weight: bold;
+}
+
+.adv-services-body .lastchild img {
+  height: 50px;
+  width: 50px;
+}

@@ -33,6 +33,16 @@ const ContextProvider = ({ children }) => {
   }, [currentStep, setButtonClicked, formSubmitted]);
 
   useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      if (currentStep > 0 && !formSubmitted) {
+        const message =
+          "Are you sure you want to leave? Your progress will be lost.";
+        event.returnValue = message; // Standard for most browsers
+
+        return message; // For some older browsers
+      }
+    };
+
     const handlePopstate = () => {
       // Handle popstate event (user clicks back button)
       handleBack();
@@ -41,15 +51,16 @@ const ContextProvider = ({ children }) => {
       // Handle hashchange event (user navigates using anchor links)
       handleBack();
     };
-
+    window.addEventListener("beforeunload", handleBeforeUnload);
     window.addEventListener("popstate", handlePopstate);
     window.addEventListener("hashchange", handleHashchange);
 
     return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
       window.removeEventListener("popstate", handlePopstate);
       window.removeEventListener("hashchange", handleHashchange);
     };
-  }, [handleBack]);
+  }, [currentStep, formSubmitted, handleBack]);
 
   return (
     <AppContext.Provider

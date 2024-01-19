@@ -18,7 +18,7 @@ const Nav = () => {
           <form action="#" method="get">
             <input
               className="search-input-field"
-              type="text"
+              type="search"
               name="search"
               placeholder="Aranacak kelimeyi giriniz"
             />
