@@ -43,6 +43,11 @@ const ServicesCategory = () => {
     setSelectedWordFromPrivateLessonBox3,
   ] = useState([]);
 
+  const [openHelperBox3, setOpenHelperBox3] = useState(false);
+  const [selectedWordFromHelperBox3, setSelectedWordFromHelperBox3] = useState(
+    []
+  );
+
   const [openLanguageBox, setOpenLanguageBox] = useState(false);
   const [selectedWordFromLanguageBox, setSelectedWordFromLanguageBox] =
     useState([]);
@@ -58,27 +63,22 @@ const ServicesCategory = () => {
   console.log(selectedWordsFromBox4);
   useState([]);
 
-  const [backToSelectionVisible, setBackToSelectionVisible] = useState(true);
   const [advServicesBodyVisible, setAdvServicesBodyVisible] = useState(true);
 
   const handleFirstBoxClick = (value) => {
     setSelectedWordsFromBox1([value]);
-    setSelectedWordsFromBox2([""]);
-    setSelectedWordsNakliyeFromBox3([""]);
-    setSelectedWordsFromEvTadilatiBox3([""]);
-    setSelectedWordsFromAracServisBakimBox([""]);
-    setSelectedWordFromTechService([""]);
-    setSelectedWordFromLanguageBox([""]);
-    setSelectedWordFromArtBox([""]);
     setOpenBox2(true);
     setOpenEvTadilatiDekorasyonOpenBox3(false);
+    setSelectedWordsFromEvTadilatiBox3([""]);
     setOpenAracServisBakimBox3(false);
     setOpenNakliyeBox3(false);
+    setSelectedWordsNakliyeFromBox3([""]);
     setOpenTechServiceBox3(false);
     setOpenPrivateLessonBox3(false);
     setOpenLanguageBox(false);
     setOpenArtBox(false);
     setOpenSportBox(false);
+    setOpenHelperBox3(false);
     setOpenBox4(false);
   };
 
@@ -88,48 +88,40 @@ const ServicesCategory = () => {
       setSelectedWordsFromBox2([value]);
       setOpenAracServisBakimBox3(false);
       setOpenBox4(false);
-      setSelectedWordsFromEvTadilatiBox3([""]);
-      setSelectedWordsFromAracServisBakimBox([""]);
-      setSelectedWordFromTechService([""]);
     } else if (selectedWordsFromBox1.includes("Nakliye")) {
       setOpenNakliyeBox3(true);
       setOpenEvTadilatiDekorasyonOpenBox3(false);
       setSelectedWordsFromBox2([value]);
-      setSelectedWordsNakliyeFromBox3([""]);
-      setSelectedWordsFromAracServisBakimBox([""]);
-      setSelectedWordFromTechService([""]);
       setOpenBox4(false);
     } else if (selectedWordsFromBox1.includes("Arac Servis Bakim")) {
       setOpenAracServisBakimBox3(true);
       setSelectedWordsFromBox2([value]);
       setOpenBox4(false);
-      setSelectedWordsFromEvTadilatiBox3([""]);
-      setSelectedWordsNakliyeFromBox3([""]);
     } else if (selectedWordsFromBox1.includes("Teknik Servis")) {
       setOpenTechServiceBox3(true);
       setSelectedWordsFromBox2([value]);
       setOpenBox4(false);
-      setSelectedWordsFromEvTadilatiBox3([""]);
-      setSelectedWordsNakliyeFromBox3([""]);
     } else if (selectedWordsFromBox1.includes("Ozel Ders")) {
       setOpenPrivateLessonBox3(true);
       setOpenLanguageBox(false);
       setSelectedWordsFromBox2([value]);
-      setSelectedWordsFromEvTadilatiBox3([""]);
-      setSelectedWordsFromAracServisBakimBox([""]);
-      setSelectedWordFromTechService([""]);
-      setSelectedWordFromPrivateLessonBox3([""]);
-      setSelectedWordFromArtBox([""]);
       setOpenBox4(false);
       setOpenEvTadilatiDekorasyonOpenBox3(false);
       setOpenAracServisBakimBox3(false);
       setOpenNakliyeBox3(false);
       setOpenTechServiceBox3(false);
+    } else if (selectedWordsFromBox1.includes("Yardimci Arayanlar")) {
+      setOpenHelperBox3(true);
+      setOpenBox4(false);
+      setOpenEvTadilatiDekorasyonOpenBox3(false);
+      setOpenAracServisBakimBox3(false);
+      setOpenNakliyeBox3(false);
+      setOpenTechServiceBox3(false);
+      setOpenLanguageBox(false);
+      setSelectedWordsFromBox2([value]);
     } else {
       setSelectedWordsFromBox2([value]);
-      setSelectedWordsFromBox4([""]);
       setOpenBox4(false);
-      setSelectedWordsFromEvTadilatiBox3([""]);
     }
   };
 
@@ -207,12 +199,16 @@ const ServicesCategory = () => {
     setSelectedWordFromSportBox([value]);
   };
 
+  const handleHelperBox = (value) => {
+    setSelectedWordFromHelperBox3([value]);
+    setOpenSportBox(false);
+  };
+
   const handleFourtBoxClick = (value) => {
     setSelectedWordsFromBox4([value]);
     console.log("button is clicked");
     setOpenBox2(false);
     setOpenBox4(false);
-    setBackToSelectionVisible(false);
     setAdvServicesBodyVisible(false);
     handleNext();
     navigate("/advertisement/services/cellaprv_s2");
@@ -242,146 +238,163 @@ const ServicesCategory = () => {
                 <h4 className="services-stepbystep">
                   Adim adim kategori seciniz
                 </h4>
-                {backToSelectionVisible && (
-                  <div className="backtoselection">
-                    <a href={"http://localhost:3000/advertisement"}>
-                      Hizletler
-                    </a>
-                    {openBox2 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox1.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {openEvTadilatiBox3 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox2.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
 
-                    {openNakliyeBox3 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox2.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
+                <div className="backtoselection">
+                  <a href={"http://localhost:3000/advertisement"}>Hizletler</a>
+                  {openBox2 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox1.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openEvTadilatiBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
 
-                    {openAracServisBakimBox3 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox2.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {openTechServiceBox3 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox2.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {openPrivateLessonBox3 && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordsFromBox2.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {openArtBox && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordFromArtBox.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {openSportBox && (
-                      <>
-                        <span>&gt;</span>
-                        {selectedWordFromSportBox.map((word, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0 && <span>&gt;</span>}
-                            <p>{word}</p>
-                          </React.Fragment>
-                        ))}
-                      </>
-                    )}
-                    {<span>&gt;</span>}
-                    {selectedWordsFromEvtatiladiBox3.map((word, index) => (
+                  {openNakliyeBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+
+                  {openAracServisBakimBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openTechServiceBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openPrivateLessonBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openArtBox && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openSportBox && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+                  {openHelperBox3 && (
+                    <>
+                      <span>&gt;</span>
+                      {selectedWordsFromBox2.map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && <span>&gt;</span>}
+                          <p>{word}</p>
+                        </React.Fragment>
+                      ))}
+                    </>
+                  )}
+
+                  {<span>&gt;</span>}
+                  {selectedWordsFromEvtatiladiBox3.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {openNakliyeBox3 &&
+                    selectedWordsNakliyeFromBox3.map((word, index) => (
                       <React.Fragment key={index}>
                         {index > 0 && <span>&gt;</span>}
                         <p>{word}</p>
                       </React.Fragment>
                     ))}
-                    {selectedWordsNakliyeFromBox3.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {selectedWordsFromAracServisBakimBox.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {selectedWordFromTechService.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {selectedWordFromLanguageBox.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {selectedWordFromArtBox.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                    {selectedWordFromSportBox.map((word, index) => (
-                      <React.Fragment key={index}>
-                        {index > 0 && <span>&gt;</span>}
-                        <p>{word}</p>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                )}
+                  {selectedWordsFromAracServisBakimBox.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {selectedWordFromTechService.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {selectedWordFromLanguageBox.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {selectedWordFromArtBox.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {selectedWordFromSportBox.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                  {selectedWordFromHelperBox3.map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <span>&gt;</span>}
+                      <p>{word}</p>
+                    </React.Fragment>
+                  ))}
+                </div>
+
                 {advServicesBodyVisible && (
                   <div className="adv-services-body">
                     <ul>
@@ -393,7 +406,7 @@ const ServicesCategory = () => {
                           selectedWordsFromBox1.includes(
                             "Ev Tadilati & Dekorasyon"
                           )
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -403,7 +416,7 @@ const ServicesCategory = () => {
                         onClick={() => handleFirstBoxClick("Nakliye")}
                         className={
                           selectedWordsFromBox1.includes("Nakliye")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -413,7 +426,7 @@ const ServicesCategory = () => {
                         onClick={() => handleFirstBoxClick("Arac Servis Bakim")}
                         className={
                           selectedWordsFromBox1.includes("Arac Servis Bakim")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -423,7 +436,7 @@ const ServicesCategory = () => {
                         onClick={() => handleFirstBoxClick("Teknik Servis")}
                         className={
                           selectedWordsFromBox1.includes("Teknik Servis")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -433,7 +446,7 @@ const ServicesCategory = () => {
                         onClick={() => handleFirstBoxClick("Ozel Ders")}
                         className={
                           selectedWordsFromBox1.includes("Ozel Ders")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -445,7 +458,7 @@ const ServicesCategory = () => {
                         }
                         className={
                           selectedWordsFromBox1.includes("Yardimci Arayanlar")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -455,7 +468,7 @@ const ServicesCategory = () => {
                         onClick={() => handleFirstBoxClick(" Diger")}
                         className={
                           selectedWordsFromBox1.includes(" Diger")
-                            ? "veh_selected"
+                            ? "serv_selected"
                             : ""
                         }
                       >
@@ -470,7 +483,7 @@ const ServicesCategory = () => {
                           }
                           className={
                             selectedWordsFromBox2.includes("Hizmet Saglayan")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -482,7 +495,7 @@ const ServicesCategory = () => {
                           }
                           className={
                             selectedWordsFromBox2.includes("Hizmet Talep Eden")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -500,7 +513,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Alarm & Guvenlik"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -514,7 +527,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Alci & Kartonpiyer"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -528,7 +541,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Bahce & Peyzaj"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -542,7 +555,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Boya & Badana"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -552,7 +565,7 @@ const ServicesCategory = () => {
                           onClick={() => handleEvTadilatiBox3Click("Cilingir")}
                           className={
                             selectedWordsFromEvtatiladiBox3.includes("Cilingir")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -566,7 +579,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Elektrik & Aydinlatma"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -580,7 +593,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Isitma & Sogutma"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -594,7 +607,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Insaat & Hafriyat"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -608,7 +621,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Marangonzluk"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -622,7 +635,7 @@ const ServicesCategory = () => {
                             selectedWordsFromEvtatiladiBox3.includes(
                               "Mimarlik & Muhendislik"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -640,7 +653,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Evden Eve Nakliyat"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -650,7 +663,7 @@ const ServicesCategory = () => {
                           onClick={() => handleNakliyeBox3Click("Gumrukleme")}
                           className={
                             selectedWordsNakliyeFromBox3.includes("Gumrukleme")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -664,7 +677,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Kurye & Kargo"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -680,7 +693,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Lojistik & Deoplama & Paketleme"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -694,7 +707,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Soforlu Arac Transfer"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -708,7 +721,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Yuk Tasimaciligi"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -718,7 +731,7 @@ const ServicesCategory = () => {
                           onClick={() => handleNakliyeBox3Click("Diger")}
                           className={
                             selectedWordsNakliyeFromBox3.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -736,7 +749,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Cekici & Yol Yardim"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -762,7 +775,7 @@ const ServicesCategory = () => {
                             selectedWordsNakliyeFromBox3.includes(
                               "Dogrultma & Boyama"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -780,7 +793,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Altin & Gumus Tamiri"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -794,7 +807,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Beyaz Esya Servisi"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -808,7 +821,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Dogrultma & Boyama"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -822,7 +835,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Bisiklet Tamiri"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -836,7 +849,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Cep Telefonu Tamiri"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -850,7 +863,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Ev Elektronigi Tamiri"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -864,7 +877,7 @@ const ServicesCategory = () => {
                             selectedWordFromTechService.includes(
                               "Mobilya Tamiri"
                             )
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -874,7 +887,7 @@ const ServicesCategory = () => {
                           onClick={() => handleTechServiceBox3Click("Diger")}
                           className={
                             selectedWordFromTechService.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -888,7 +901,7 @@ const ServicesCategory = () => {
                           onClick={() => handlePrivateLessonBox3("Dil")}
                           className={
                             selectedWordFromPrivateLessonBox3.includes("Dil")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -898,7 +911,7 @@ const ServicesCategory = () => {
                           onClick={() => handlePrivateLessonBox3("Sanat")}
                           className={
                             selectedWordFromPrivateLessonBox3.includes("Sanat")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -908,7 +921,7 @@ const ServicesCategory = () => {
                           onClick={() => handlePrivateLessonBox3("Spor")}
                           className={
                             selectedWordFromPrivateLessonBox3.includes("Spor")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -918,7 +931,7 @@ const ServicesCategory = () => {
                           onClick={() => handlePrivateLessonBox3("Diger")}
                           className={
                             selectedWordFromPrivateLessonBox3.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -932,7 +945,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Turkce")}
                           className={
                             selectedWordFromLanguageBox.includes("Turkce")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -942,7 +955,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Ingilizce")}
                           className={
                             selectedWordFromLanguageBox.includes("Ingilizce")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -952,7 +965,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Ispanyolca")}
                           className={
                             selectedWordFromLanguageBox.includes("Ispanyolca")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -962,7 +975,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Almanca")}
                           className={
                             selectedWordFromLanguageBox.includes("Almanca")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -973,7 +986,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Fransizca")}
                           className={
                             selectedWordFromLanguageBox.includes("Fransizca")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -983,7 +996,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Italyanca")}
                           className={
                             selectedWordFromLanguageBox.includes("Italyanca")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -993,7 +1006,7 @@ const ServicesCategory = () => {
                           onClick={() => handleLanguageBox("Diger")}
                           className={
                             selectedWordFromLanguageBox.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1007,7 +1020,7 @@ const ServicesCategory = () => {
                           onClick={() => handleArtBox("Muzik")}
                           className={
                             selectedWordFromArtBox.includes("Muzik")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1017,7 +1030,7 @@ const ServicesCategory = () => {
                           onClick={() => handleArtBox("Resim")}
                           className={
                             selectedWordFromArtBox.includes("Resim")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1027,7 +1040,7 @@ const ServicesCategory = () => {
                           onClick={() => handleArtBox("Diger")}
                           className={
                             selectedWordFromArtBox.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1041,7 +1054,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Fitness")}
                           className={
                             selectedWordFromSportBox.includes("Fitness")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1051,7 +1064,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Basketbol")}
                           className={
                             selectedWordFromSportBox.includes("Basketbol")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1061,7 +1074,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Futbol")}
                           className={
                             selectedWordFromSportBox.includes("Futbol")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1071,7 +1084,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Golf")}
                           className={
                             selectedWordFromSportBox.includes("Golf")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1081,7 +1094,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Plates")}
                           className={
                             selectedWordFromSportBox.includes("Plates")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1091,7 +1104,7 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Yoga")}
                           className={
                             selectedWordFromSportBox.includes("Yoga")
-                              ? "veh_selected"
+                              ? "serv_selected"
                               : ""
                           }
                         >
@@ -1101,7 +1114,67 @@ const ServicesCategory = () => {
                           onClick={() => handleSportBox("Diger")}
                           className={
                             selectedWordFromSportBox.includes("Diger")
-                              ? "veh_selected"
+                              ? "serv_selected"
+                              : ""
+                          }
+                        >
+                          Diger
+                        </li>
+                      </ul>
+                    )}
+                    {openHelperBox3 && (
+                      <ul>
+                        <li
+                          onClick={() => handleHelperBox("Ev Temizligi")}
+                          className={
+                            selectedWordFromHelperBox3.includes("Ev Temizligi")
+                              ? "serv_selected"
+                              : ""
+                          }
+                        >
+                          Ev Temizligi
+                        </li>
+                        <li
+                          onClick={() => handleHelperBox("Bebek Bakiciligi")}
+                          className={
+                            selectedWordFromHelperBox3.includes(
+                              "Bebek Bakiciligi"
+                            )
+                              ? "serv_selected"
+                              : ""
+                          }
+                        >
+                          Bebek Bakiciligi
+                        </li>
+                        <li
+                          onClick={() => handleHelperBox("Yasli Refakatciligi")}
+                          className={
+                            selectedWordFromHelperBox3.includes(
+                              "Yasli Refakatciligi"
+                            )
+                              ? "serv_selected"
+                              : ""
+                          }
+                        >
+                          Yasli Refakatciligi
+                        </li>
+                        <li
+                          onClick={() => handleHelperBox("Hasta Refakatciligi")}
+                          className={
+                            selectedWordFromHelperBox3.includes(
+                              "Hasta Refakatciligi"
+                            )
+                              ? "serv_selected"
+                              : ""
+                          }
+                        >
+                          Hasta Refakatciligi
+                        </li>
+                        <li
+                          onClick={() => handleHelperBox("Diger")}
+                          className={
+                            selectedWordFromHelperBox3.includes("Diger")
+                              ? "serv_selected"
                               : ""
                           }
                         >

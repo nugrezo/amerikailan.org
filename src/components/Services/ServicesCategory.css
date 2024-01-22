@@ -27,7 +27,7 @@ body {
 }
 
 #services_category-selection {
-  background-color: rgb(109, 151, 170);
+  background-color: rgb(16, 88, 146);
   color: white;
   padding: 7.5px;
 }
@@ -61,7 +61,7 @@ body {
   height: 300px;
   margin-left: 20px;
   overflow-y: scroll;
-  background-color: rgb(204, 230, 242);
+  background-color: rgb(16, 88, 146, 0.1);
   border: solid 1px #dedede;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -79,17 +79,17 @@ body {
 }
 
 .adv-services-body ul li:hover {
-  background-color: rgb(109, 151, 170);
+  background-color: rgb(16, 88, 146);
   color: white;
   font-weight: bold;
 }
 
-.veh_selected {
-  background-color: rgb(109, 151, 170);
+.serv_selected {
+  background-color: rgb(16, 88, 146);
   border-radius: 0 50% 50% 0;
 }
 
-.adv-services-body ul .veh_selected {
+.adv-services-body ul .serv_selected {
   color: white;
   font-weight: bold;
 }
@@ -104,7 +104,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(236, 36, 36, 0.2) inset; /* Add an inset box shadow around the border */
+  box-shadow: 0 0 10px rgb(16, 88, 146, 0.1); /* Add an inset box shadow around the border */
 }
 
 .adv-services-body .lastchild {
@@ -131,8 +131,6 @@ body {
   cursor: pointer;
   opacity: 1;
   color: black;
-  box-shadow: 1px 0 2px 0 rgb(109, 151, 170);
-  border: 2px solid rgb(109, 151, 170);
 }
 
 .adv-services-body button:hover {
@@ -140,6 +138,7 @@ body {
   transition: opacity 0.3 ease;
   color: #fff;
   font-weight: bold;
+  background-color: rgb(16, 88, 146);
 }
 
 .adv-services-body .lastchild img {

@@ -104,17 +104,17 @@ const Register = () => {
     console.log("Name:", userName);
     console.log("Lastname:", userLastname);
     if (email.trim() === "" || password.trim() === "") {
-      alert("Lutfen gecerli bir email adresi veya sifre giriniz");
+      alert("Enter valid email or password");
     } else if (emailIsValid && passwordIsValid) {
       updateUserEmail(email);
       updateUserName(userName);
       updateUserLastname(userLastname);
       alert(
-        "Kayit isleminiz basariyla gerceklestirilmistir. Giris yapmak icin email adresinize gonderilen aktivasyon linkini tiklayiniz."
+        "Successfully registered. Please confirm the activation link sent to your email"
       );
       navigate("/Login");
     } else {
-      alert("Girilen bilgiler hatalidir.Lutfen tekrar deneyiniz");
+      alert("Please enter correct crdidentials");
     }
     setEmail("");
     setPassword("");
@@ -140,7 +140,7 @@ const Register = () => {
               type="text"
               value={email}
               onChange={handleEmailChange}
-              placeholder="Email adresinizi giriniz"
+              placeholder="enter your e-mail"
               style={{
                 backgroundColor: emailIsValid
                   ? "rgb(232, 240, 254)"
@@ -159,7 +159,7 @@ const Register = () => {
                 type="text"
                 value={userName}
                 onChange={handleNameChange}
-                placeholder="Isminizi giriniz"
+                placeholder="Enter your name"
               />
             </div>
             <div className="user-lastname">
@@ -168,7 +168,7 @@ const Register = () => {
                 type="text"
                 value={userLastname}
                 onChange={handleLastnameChange}
-                placeholder="Soy isminizi giriniz"
+                placeholder="Enter your lastname"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ const Register = () => {
               type="password"
               value={password}
               onChange={handlePasswordChange}
-              placeholder="Sifrenizi giriniz"
+              placeholder="Enter your password"
               style={{
                 backgroundColor: passwordIsValid
                   ? "rgb(232, 240, 254)"
@@ -197,39 +197,38 @@ const Register = () => {
                   color: getTickColor(password.length >= 6),
                 }}
               >
-                Sifre minimum 6 karakter uzunlugunda olmalidir
+                Password must be min 6 character long
               </li>
               <li style={{ color: getTickColor(/[a-zA-Z]/.test(password)) }}>
-                Sifre en az 1 harf icermelidir
+                Password must contain min 1 letter
               </li>
               <li style={{ color: getTickColor(/[0-9]/.test(password)) }}>
-                Sifre minimum 1 rakam icermelidir
+                Password must contain min 1 number
               </li>
               <li style={{ color: getTickColor(/[!@#$%^&*]/.test(password)) }}>
-                Sifre minimum 1 ozel karakter icermelidir[!@#$%^&*]
+                Password must contain min 1 special character[!@#$%^&*]
               </li>
             </ul>
           </div>
 
           <div className="email-giris-button">
             <button className="email-giris-button btn" type="submit">
-              E-mail adresiniz ile kayit olun
+              Register with your e-mail
             </button>
           </div>
         </form>
         <div className="register">
           <p>
-            Eger uye iseniz
+            you already registered?
             <Link to="/login">
               <span className="custom-space">
-                giris yapin{" "}
-                <span className="arrow right-arrow">{"\u25B6"}</span>
+                Login <span className="arrow right-arrow">{"\u25B6"}</span>
               </span>
             </Link>
           </p>
           <div className="split-line">
             <span className="line"></span>
-            <span className="split-text">VEYA</span>
+            <span className="split-text">OR</span>
             <span className="line"></span>
           </div>
         </div>
@@ -240,7 +239,7 @@ const Register = () => {
               alt="google-icon"
               className="google-icon"
             ></img>
-            Google ile giriş yap
+            Login with Google
           </button>
         </div>
       </div>

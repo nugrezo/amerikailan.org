@@ -4,22 +4,22 @@ import "./RealEstateSubDetails.css";
 const RealEstateSubDetails = () => {
   return (
     <div className="adv_realestate_details">
-      <h4>Detay Bilgiler</h4>
+      <h4>Commercial Details</h4>
       <div className="adv_realestate_details_main_wrapper">
         <div className="adv_realestate_details_wrapper">
           <div className="realestate_row">
-            <label htmlFor="select_whose_adv">Kimden </label>
+            <label htmlFor="select_whose_adv">From </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Sahibinden</option>
-              <option value="2">Emlak Ofisinden</option>
-              <option value="3">Bankadan</option>
+              <option value="">Select</option>
+              <option value="1">Owner</option>
+              <option value="2">Real Estate Broker</option>
+              <option value="3">Bank</option>
             </select>
           </div>
           <div className="realestate_row">
-            <label htmlFor="roomnumber_label">Oda Sayisi </label>
+            <label htmlFor="roomnumber_label">How many room? </label>
             <select>
-              <option value="">Seciniz</option>
+              <option value="">Select</option>
               <option value="1">Studio</option>
               <option value="2">1+1</option>
               <option value="3">2+1</option>
@@ -38,91 +38,94 @@ const RealEstateSubDetails = () => {
             <input className="size_gross_input"></input>
           </div>
           <div className="realestate_row">
-            <label htmlFor="floor_label">Bulundugu Kat </label>
+            <label htmlFor="floor_label">Floor </label>
             <input className="floor_input"></input>
           </div>
           <div className="realestate_row">
             <label htmlFor="parking_label">Otopark </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Var</option>
-              <option value="2">Yok</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
             </select>
           </div>
           <div className="realestate_row">
-            <label htmlFor="elevator_label">Asansor </label>
+            <label htmlFor="elevator_label">Elevator </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Var</option>
-              <option value="2">Yok</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
             </select>
           </div>
           <div className="realestate_row">
-            <label htmlFor="furniture_label">Esya Durumu </label>
+            <label htmlFor="furniture_label">Furniture </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Var</option>
-              <option value="2">Yok</option>
-              <option value="3">Kismen Esyali</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+              <option value="3">Partially Furnished</option>
             </select>
           </div>
           <div className="realestate_row">
-            <label htmlFor="site_label">Site Icerisinde </label>
+            <label htmlFor="site_label">Inside the site </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Evet</option>
-              <option value="2">Hayir</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
             </select>
           </div>
         </div>
         <div className="adv_realestate_details_wrapper_right">
           <div className="exterior_future_wrapper">
-            <p>Dis Ozellikler</p>
+            <p>Exterior Futures</p>
             <div className="exterior_futures">
               <div className="exterior_futures_group1">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Kapici</label>
+                  <label htmlFor="exterior_futures_label"> Doorman</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Spor Salonu</label>
+                  <label htmlFor="exterior_futures_label"> Fitness</label>
                 </div>
               </div>
               <div className="exterior_futures_group2">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Oyun Parki</label>
+                  <label htmlFor="exterior_futures_label"> Park</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Spor Salonu</label>
+                  <label htmlFor="exterior_futures_label"> Tenis Court</label>
                 </div>
               </div>
               <div className="exterior_futures_group3">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Yuzme Havuzu</label>
+                  <label htmlFor="exterior_futures_label"> Pool</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Ses Yalitimi</label>
+                  <label htmlFor="exterior_futures_label"> Sound Proof</label>
                 </div>
               </div>
               <div className="exterior_futures_group4">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Isi Yalitimi</label>
+                  <label htmlFor="exterior_futures_label"> Heat Proof</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Tenis Kortu</label>
+                  <label htmlFor="exterior_futures_label">
+                    {" "}
+                    Basketball Court
+                  </label>
                 </div>
               </div>
             </div>
           </div>
           <div className="interior_future_wrapper">
-            <p>Ic Ozellikler</p>
+            <p>Interior Futures</p>
             <div className="interior_futures">
               <div className="interior_futures_group1">
                 <div className="interior_futures_row">
@@ -131,27 +134,23 @@ const RealEstateSubDetails = () => {
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Boyali</label>
+                  <label htmlFor="interior_futures_label"> Painted</label>
                 </div>
               </div>
               <div className="interior_futures_group2">
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Gomme Dolap</label>
+                  <label htmlFor="interior_futures_label"> Closet</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">
-                    Bulasik Makinesi
-                  </label>
+                  <label htmlFor="interior_futures_label">Dish Washer</label>
                 </div>
               </div>
               <div className="interior_futures_group3">
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">
-                    Camasir Makinesi
-                  </label>
+                  <label htmlFor="interior_futures_label">Washer & Drier</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
@@ -161,17 +160,17 @@ const RealEstateSubDetails = () => {
               <div className="interior_futures_group4">
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Klima</label>
+                  <label htmlFor="interior_futures_label"> AC</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">Beyaz Esya</label>
+                  <label htmlFor="interior_futures_label">White Goods</label>
                 </div>
               </div>
             </div>
           </div>
           <div className="realestate_type_future_wrapper">
-            <p>Konut Tipi</p>
+            <p>Type</p>
             <div className="realestate_type_futures">
               <div className="realestate_type_futures_group1">
                 <div className="realestate_type_futures_row">
@@ -213,7 +212,7 @@ const RealEstateSubDetails = () => {
                 <div className="realestate_type_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="realestate_type_futures_label">
-                    Mobil Ev
+                    Mobil House
                   </label>
                 </div>
                 <div className="realestate_type_futures_row">
@@ -224,7 +223,7 @@ const RealEstateSubDetails = () => {
             </div>
           </div>
           <div className="region_future_wrapper">
-            <p>Muhit</p>
+            <p>Neighborhood</p>
             <div className="region_futures">
               <div className="region_futures_group1">
                 <div className="region_futures_row">
@@ -233,7 +232,7 @@ const RealEstateSubDetails = () => {
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">Hastane</label>
+                  <label htmlFor="region_futures_label">Hospital</label>
                 </div>
               </div>
               <div className="region_futures_group2">
@@ -243,7 +242,7 @@ const RealEstateSubDetails = () => {
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">Okul</label>
+                  <label htmlFor="region_futures_label">School</label>
                 </div>
               </div>
               <div className="region_futures_group3">
@@ -253,17 +252,17 @@ const RealEstateSubDetails = () => {
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">Spor Salonu</label>
+                  <label htmlFor="region_futures_label">Fitness Center</label>
                 </div>
               </div>
               <div className="region_futures_group4">
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">Tren Istasyonu</label>
+                  <label htmlFor="region_futures_label">Train Station</label>
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">Otobus Duragi</label>
+                  <label htmlFor="region_futures_label">Bus Station</label>
                 </div>
               </div>
             </div>

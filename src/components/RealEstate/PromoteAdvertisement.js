@@ -66,17 +66,17 @@ const PromoteAdvertisement = () => {
       </div>
       <ProgressBar />
       <div className="adv-realestate_step_four_main">
-        <h2>Ilaninizi On Plana Cikartin</h2>
+        <h2>Promote Your Commercial</h2>
         <div className="adv-realestate_step_four_main_wrapper">
           <div className="populer_adv_container">
             <h4>Populer Ilanlar</h4>
             <div className="populer_adv_container_main">
               <ul>
                 <li>
-                  Ilaninizi ana sayfada populer ilanlar bolumunde sergiler
+                  Advertise your commercial inside the popular commercial screen
                 </li>
-                <li>Ilaniniz ana sayfada hizlica hedef kitleye erisir</li>
-                <li>Populer Ilan haftalik veya aylik olarak sergilenir</li>
+                <li>You can reach easly to max audience right away</li>
+                <li>Advertise weekly and monthly</li>
               </ul>
             </div>
             <div className="populer_select_container">
@@ -86,26 +86,27 @@ const PromoteAdvertisement = () => {
                 onChange={handlePopulerSelectChange}
               >
                 <option value="" disabled={vitrinSelectValue !== ""}>
-                  Seciniz
+                  Select
                 </option>
                 <option value="5.99" disabled={vitrinSelectValue !== ""}>
-                  Haftalik $5.99
+                  Weekly $5.99
                 </option>
                 <option value="15.99" disabled={vitrinSelectValue !== ""}>
-                  Aylik $15.99
+                  Monthly $15.99
                 </option>
               </select>
             </div>
           </div>
           <div className="vitrin_adv_container">
-            <h4>Vitrin Ilanlari</h4>
+            <h4>Showcase Commercial</h4>
             <div className="populer_adv_container_main">
               <ul>
                 <li>
-                  Ilaninizi ana sayfada populer ilanlar bolumunde sergiler
+                  Advertise your commercial inside the showcase commercial
+                  screen
                 </li>
-                <li>Ilaniniz ana sayfada hedef kitleye erisir</li>
-                <li>Populer Ilan haftalik olarak sergilenir</li>
+                <li>You can reach easly to max audience right away</li>
+                <li>Advertise weekly and monthly</li>
               </ul>
             </div>
             <div className="vitrin_select_container">
@@ -115,17 +116,17 @@ const PromoteAdvertisement = () => {
                 onChange={handleVitrinSelectChange}
               >
                 <option value="" disabled={populerSelectValue !== ""}>
-                  Seciniz
+                  Select
                 </option>
                 <option value="3.99" disabled={populerSelectValue !== ""}>
-                  Haftalik $3.99
+                  Weekly $3.99
                 </option>
               </select>
             </div>
           </div>
         </div>
         <div className="adv_realestate_continue_btn">
-          <button onClick={handleNavigateNext}>Devam</button>
+          <button onClick={handleNavigateNext}>Continue</button>
         </div>
       </div>
     </div>

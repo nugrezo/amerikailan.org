@@ -47,7 +47,7 @@ const MapComponentVehicle = ({ country, state, city, zip }) => {
 
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyAeptmzMg-hsMzKn-MAhSo5LDeiS3DwTzM"
+      googleMapsApiKey=""
       onLoad={() => console.log("Google Maps script loaded successfully")}
     >
       <GoogleMap

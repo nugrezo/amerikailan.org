@@ -115,7 +115,9 @@ const PhoneApprovalElectronic = () => {
       </div>
       <ProgressBar />
       <div className="adv-electronic_step_two_main">
-        <h3 id="electronic_cellphoneapr">2-Cep Telefon Numarasi Onayi</h3>
+        <h3 id="electronic_cellphoneapr">
+          2-Please enter your cell phone number
+        </h3>
         <div className="wrapper">
           {!isCodeMatched ? (
             <aside className="cellphone_images">
@@ -133,7 +135,7 @@ const PhoneApprovalElectronic = () => {
             <main className="cellphone_approval">
               <header>
                 <h3 className="step_two_header">
-                  Ilan verebilmeniz icin cep telefon numaranizi onaylayin
+                  You must approve your cell phone number to publish commercial
                 </h3>
               </header>
               <form
@@ -141,7 +143,7 @@ const PhoneApprovalElectronic = () => {
                 onSubmit={handleCellPhoneFormSubmit}
               >
                 <ul>
-                  <li>Lutfen Ilgili alana cep telefon numaranizi giriniz</li>
+                  <li>Please enter your mobile number</li>
                   <li>
                     <input
                       type="tel"
@@ -159,7 +161,7 @@ const PhoneApprovalElectronic = () => {
                       type="submit"
                       className="submit_cellphone_btn_electronic"
                     >
-                      Devam ediniz
+                      Continue
                     </button>
                   </li>
                 </ul>
@@ -183,7 +185,7 @@ const PhoneApprovalElectronic = () => {
               {!isCodeMatched ? (
                 <header>
                   <h3 className="step_two_header">
-                    Lutfen Cep telefonunuza gelen text mesaj onay kodunu giriniz
+                    Please enter the 6 digit code you received
                   </h3>
                 </header>
               ) : (
@@ -204,7 +206,7 @@ const PhoneApprovalElectronic = () => {
                   onSubmit={handleTextCodeFormSubmit}
                 >
                   <ul>
-                    <li>ilgili alana onay kodunu giriniz</li>
+                    <li>Enter the code(123456 for demo purpose)</li>
                     <li>
                       <input
                         type="text"
@@ -221,7 +223,7 @@ const PhoneApprovalElectronic = () => {
                         className="change_cellphone_btn"
                         onClick={handleChangeCellPhoneNo}
                       >
-                        Numarayi degistir
+                        Change Number
                       </button>
                       {isTimerZero ? (
                         <button
@@ -229,14 +231,14 @@ const PhoneApprovalElectronic = () => {
                           className="approve_cellphone_btn_electronic"
                           onClick={handleResendCode}
                         >
-                          Tekrar gonder
+                          Sent again
                         </button>
                       ) : (
                         <button
                           type="submit"
                           className="approve_cellphone_btn_electronic"
                         >
-                          Onayla
+                          Approve
                         </button>
                       )}
                     </li>

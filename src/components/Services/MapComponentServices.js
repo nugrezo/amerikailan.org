@@ -22,7 +22,7 @@ const MapComponentServices = ({ country, state, city, zip }) => {
   }, [country, state, city, zip]);
 
   const fetchCoordinates = async (country, state, city, zip) => {
-    const apiKey = "AIzaSyAeptmzMg-hsMzKn-MAhSo5LDeiS3DwTzM";
+    const apiKey = "";
     const address = `${zip}, ${city}, ${state}, ${country}`;
     const response = await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(

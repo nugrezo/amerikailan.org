@@ -35,13 +35,13 @@ const PhoneApprovalRealEstate = () => {
   const handleCellPhoneFormSubmit = (e) => {
     e.preventDefault();
     if (!phoneNumber.trim()) {
-      setError("Lutfen gecerli bir telefon numarasi giriniz");
+      setError("Please enter valid phone number");
       return;
     }
 
     const phoneRegex = /^[0-9]{3}[0-9]{3}[0-9]{4}$/;
     if (!phoneRegex.test(phoneNumber)) {
-      setError("Girilen numara eksiktir.Lutfen tekrar deneyiniz");
+      setError("Please enter valid phone number");
       return;
     }
 
@@ -68,7 +68,7 @@ const PhoneApprovalRealEstate = () => {
       navigate("/advertisement/realestate/realestate_details_s3");
     } else {
       setIsCodeMatched(false);
-      setError("Numara eslesmedi tekrar deneyiniz");
+      setError("Code did not match. Try again");
     }
     setTextCode("");
   };
@@ -115,7 +115,7 @@ const PhoneApprovalRealEstate = () => {
       </div>
       <ProgressBar />
       <div className="adv-realestate_step_two_main">
-        <h3 id="emlak_cellphoneapr">2-Cep Telefon Numarasi Onayi</h3>
+        <h3 id="emlak_cellphoneapr">2-Cell Phone Approval</h3>
         <div className="wrapper">
           {!isCodeMatched ? (
             <aside className="cellphone_images">
@@ -133,7 +133,7 @@ const PhoneApprovalRealEstate = () => {
             <main className="cellphone_approval">
               <header>
                 <h3 className="step_two_header">
-                  Ilan verebilmeniz icin cep telefon numaranizi onaylayin
+                  You must approve your cell phone number to publish commercial
                 </h3>
               </header>
               <form
@@ -141,7 +141,9 @@ const PhoneApprovalRealEstate = () => {
                 onSubmit={handleCellPhoneFormSubmit}
               >
                 <ul>
-                  <li>Lutfen Ilgili alana cep telefon numaranizi giriniz</li>
+                  <li>
+                    Please enter your phone number(10 digits for demo purpose)
+                  </li>
                   <li>
                     <input
                       type="tel"
@@ -156,7 +158,7 @@ const PhoneApprovalRealEstate = () => {
                   </li>
                   <li>
                     <button type="submit" className="submit_cellphone_btn">
-                      Devam ediniz
+                      Continue
                     </button>
                   </li>
                 </ul>
@@ -180,7 +182,8 @@ const PhoneApprovalRealEstate = () => {
               {!isCodeMatched ? (
                 <header>
                   <h3 className="step_two_header">
-                    Lutfen Cep telefonunuza gelen text mesaj onay kodunu giriniz
+                    You must approve your cell phone number to publish
+                    commercial
                   </h3>
                 </header>
               ) : (
@@ -201,7 +204,9 @@ const PhoneApprovalRealEstate = () => {
                   onSubmit={handleTextCodeFormSubmit}
                 >
                   <ul>
-                    <li>ilgili alana onay kodunu giriniz</li>
+                    <li>
+                      Please enter the code below(123456 for demo purpose)
+                    </li>
                     <li>
                       <input
                         type="text"
@@ -218,7 +223,7 @@ const PhoneApprovalRealEstate = () => {
                         className="change_cellphone_btn"
                         onClick={handleChangeCellPhoneNo}
                       >
-                        Numarayi degistir
+                        Change Number
                       </button>
                       {isTimerZero ? (
                         <button
@@ -226,11 +231,11 @@ const PhoneApprovalRealEstate = () => {
                           className="approve_cellphone_btn"
                           onClick={handleResendCode}
                         >
-                          Tekrar gonder
+                          Resent
                         </button>
                       ) : (
                         <button type="submit" className="approve_cellphone_btn">
-                          Onayla
+                          Approve
                         </button>
                       )}
                     </li>

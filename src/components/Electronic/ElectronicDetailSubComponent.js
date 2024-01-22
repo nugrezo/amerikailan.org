@@ -8,7 +8,7 @@ const ElectronicDetailSubComponent = () => {
       <div className="adv_electronic_details_main_wrapper">
         <div className="adv_electronic_details_wrapper">
           <div className="electronic_row">
-            <label htmlFor="make_electronic">Marka</label>
+            <label htmlFor="make_electronic">Make</label>
             <input className="make_input" placeholder="Apple vs"></input>
           </div>
           <div className="electronic_row">
@@ -17,26 +17,26 @@ const ElectronicDetailSubComponent = () => {
           </div>
 
           <div className="electronic_row">
-            <label htmlFor="furniture_label">Renk</label>
+            <label htmlFor="furniture_label">Color</label>
             <input className="color_input"></input>
           </div>
 
           <div className="electronic_row">
-            <label htmlFor="damage_label">Kullanim Durumu </label>
+            <label htmlFor="damage_label">Status </label>
             <select>
               <option value="">Seciniz</option>
-              <option value="1">Sifir</option>
-              <option value="2">Az Kullanilmis</option>
-              <option value="3">Orta Derecede Kullanilmis</option>
-              <option value="3">Cok Kullanilmis</option>
+              <option value="1">Brand New</option>
+              <option value="2">Few usage</option>
+              <option value="3">Used</option>
+              <option value="3">Used a lot</option>
             </select>
           </div>
           <div className="electronic_row">
-            <label htmlFor="guarantee_label">Garanti Durumu</label>
+            <label htmlFor="guarantee_label">Guarantee</label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Var</option>
-              <option value="2">Yok</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
             </select>
           </div>
         </div>

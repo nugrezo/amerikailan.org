@@ -49,7 +49,7 @@ const ElectronicAdvPublish = () => {
       <div className="electronic_adv_publish_main">
         <h3 id="electronic_adv_publish_header">5-Ilani Yayinla</h3>
         <div className="electronic_adv_publish_form_main_wrapper">
-          <h4>Yayinlanacak ilana ait bilgiler</h4>
+          <h4>Commercial Information</h4>
           <div>
             <div className="electronic_adv_publish_form_result_wrapper">
               <div className="electronic_adv_publish_main_wrapper">
@@ -58,11 +58,11 @@ const ElectronicAdvPublish = () => {
                   onSubmit={handlePublishFormSubmit}
                 >
                   <div className="electronic_adv_publish adv_user_name">
-                    <label htmlFor="user_name">Isim</label>
+                    <label htmlFor="user_name">Name</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_lastname">
-                    <label htmlFor="user_lastname">Soyisim</label>
+                    <label htmlFor="user_lastname">Last Name</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_email">
@@ -70,23 +70,23 @@ const ElectronicAdvPublish = () => {
                     <input type="email"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_address">
-                    <label htmlFor="adv_address">Ilan Adresi</label>
+                    <label htmlFor="adv_address">Commercial Address</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_tel">
-                    <label htmlFor="adv_tel">Telefon No</label>
+                    <label htmlFor="adv_tel">Phone No</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_category">
-                    <label htmlFor="adv_category">Ilan Kategorisi</label>
+                    <label htmlFor="adv_category">Commercial Category</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_price">
-                    <label htmlFor="adv_price">Ucret</label>
+                    <label htmlFor="adv_price">Price</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish adv_user_date">
-                    <label htmlFor="adv_date">Ilan Tarihi</label>
+                    <label htmlFor="adv_date">Date</label>
                     <input type="text"></input>
                   </div>
                   <div className="electronic_adv_publish_btn">
@@ -95,7 +95,7 @@ const ElectronicAdvPublish = () => {
                       className="electronic_publish_btn"
                       disabled={formSubmitted}
                     >
-                      Ilani Yayinla
+                      Publish
                     </button>
                   </div>
                 </form>
@@ -104,19 +104,16 @@ const ElectronicAdvPublish = () => {
                 <div className="electronic_adv_publish_result_main_wrapper">
                   <img src={checkmark} alt="checkmark" />
 
-                  <h4>Ilan Yayinlama talebiniz basariyla kaydedilmistir</h4>
-                  <p>
-                    Ilaniniz editorlerimiz tarafindan incelendikten sonra yayina
-                    alinacaktir.
-                  </p>
+                  <h4>Successfully published</h4>
+                  <p>We will check your adv and will approve shortly.</p>
                   <div>
-                    <label htmlFor="publish_number">Ilan Yayin Numarasi</label>
+                    <label htmlFor="publish_number">Adv publis number</label>
                     <input type="text" value={publishNumber}></input>
                   </div>
                   <div className="electronic_publish_result_btn_container">
                     <Link to="/">
                       <button className="electronic_publish_result_btn">
-                        Tamam
+                        Continue
                       </button>
                     </Link>
                   </div>

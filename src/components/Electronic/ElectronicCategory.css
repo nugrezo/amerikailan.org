@@ -83,12 +83,12 @@ body {
   font-weight: bold;
 }
 
-.veh_selected {
+.elc_selected {
   background-color: rgb(109, 151, 170);
   border-radius: 0 50% 50% 0;
 }
 
-.adv-electronic-body ul .veh_selected {
+.adv-electronic-body ul .elc_selected {
   color: white;
   font-weight: bold;
 }

@@ -6,7 +6,7 @@
   padding: 0;
 }
 a {
-  color: blue;
+  color: rgb(128, 0, 255);
 }
 
 #main-body {
@@ -19,7 +19,7 @@ a {
 }
 
 .left-menu {
-  background-color: #f1efef;
+  background-color: #f6e6fc;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
   line-height: 2rem;
   display: flex;
@@ -28,6 +28,14 @@ a {
   margin-top: 5px;
   padding: 1rem;
   width: 25%;
+}
+
+.left-menu h3 {
+  color: #3a0163;
+}
+
+.left-menu-alt h4 {
+  color: #3a0163;
 }
 
 .left-menu-alt ul {

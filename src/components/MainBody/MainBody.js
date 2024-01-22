@@ -13,117 +13,117 @@ const MainBody = () => {
         <div className="left-menu">
           <div className="left-menu-alt kategori">
             <div className="main left-menu-head">
-              <h3>Kategoriler</h3>
+              <h3>Categories</h3>
               <div className="left-menu-head-hizlierisim">
                 <ul>
                   <li>
-                    <a href="#">Populer Ilanlar</a>
+                    <a href="#">Popular Commercials</a>
                   </li>
                   <li>
-                    <a href="#">Son 48 saat ilanlari</a>
+                    <a href="#">Last 48 hours commercials</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="left-menu-alt icerik">
-            <h4>Emlak</h4>
+            <h4>Real Estate</h4>
             <ul>
               <li>
-                <a href="#">Konut</a>
+                <a href="#">Apartment</a>
               </li>
               <li>
-                <a href="#">Isyeri</a>
+                <a href="#">Ofis</a>
               </li>
               <li>
-                <a href="#">Arsa</a>
+                <a href="#">Land</a>
               </li>
               <li>
-                <a href="#">Bina</a>
+                <a href="#">Building</a>
               </li>
               <li>
-                <a href="#">Turistik Tesis</a>
+                <a href="#">Touristic Facility</a>
               </li>
             </ul>
-            <h4>Vasita</h4>
+            <h4>Vehicle</h4>
             <ul>
               <li>
-                <a href="#">Otomobil</a>
+                <a href="#">Car</a>
               </li>
               <li>
-                <a href="#">Motosiklet</a>
+                <a href="#">Motorbike</a>
               </li>
               <li>
-                <a href="#">Arazi & SUV & Pick-up</a>
+                <a href="#">SUV & Pick-Up</a>
               </li>
               <li>
-                <a href="#">Ticari Arac</a>
+                <a href="#">Commercial Vehicle</a>
               </li>
               <li>
-                <a href="#">Kiralik Arac</a>
+                <a href="#">Rental</a>
               </li>
             </ul>
-            <h4>Elektronik Cihaz</h4>
+            <h4>Electronic</h4>
             <ul>
               <li>
-                <a href="#">Bilgisayar</a>
+                <a href="#">Computer</a>
               </li>
               <li>
-                <a href="#">Cep Telefonu</a>
+                <a href="#">Mobile Phone</a>
               </li>
               <li>
-                <a href="#">Diger</a>
+                <a href="#">Other</a>
               </li>
             </ul>
-            <h4>Hizmet</h4>
+            <h4>Services</h4>
             <ul>
               <li>
-                <a href="#">Insaat & Dekorasyon</a>
+                <a href="#">Construction & Decoration</a>
               </li>
               <li>
-                <a href="#">Turizm & Seyahat & Otel</a>
+                <a href="#">Tourism & Travel & Hotel</a>
               </li>
               <li>
-                <a href="#">Teknik Servis</a>
+                <a href="#">Technical Service</a>
               </li>
               <li>
-                <a href="#">Kisisel Egitim</a>
+                <a href="#">Personal Development</a>
               </li>
               <li>
-                <a href="#">Kuyumculuk</a>
+                <a href="#">Jewellery</a>
               </li>
               <li></li>
               <li>
-                <a href="#">Saglik</a>
+                <a href="#">Health</a>
               </li>
               <li>
-                <a href="#">Gastronomi</a>
+                <a href="#">Gastronomy</a>
               </li>
               <li>
-                <a href="#">Market & Pastane</a>
+                <a href="#">Market & Bakery</a>
               </li>
             </ul>
-            <h4>Is Ilanlari</h4>
+            <h4>Job</h4>
             <ul>
               <li>
-                <a href="#">Is Arayanlar</a>
+                <a href="#">Seeking Job</a>
               </li>
               <li>
-                <a href="#">Is Verenler</a>
+                <a href="#">Offering Job</a>
               </li>
             </ul>
             <h3>
-              <a href="#">Sohbet & Tanisma</a>
+              <a href="#">Chat & Meet</a>
             </h3>
           </div>
         </div>
         <div className="vitrin">
           <div className="vitrin vitrin-row1">
-            <h3 className="h3-vitrin-row1">POPULER ILANLAR</h3>
+            <h3 className="h3-vitrin-row1">POPULAR COMMERCIALS</h3>
             <Slider />
           </div>
           <div className="vitrin vitrin-row2">
-            <h3 className="h3-vitrin-row2">VITRIN ILANLARI</h3>
+            <h3 className="h3-vitrin-row2">SHOWCASE COMMERCIALS</h3>
             <VitrinIlan />
           </div>
         </div>

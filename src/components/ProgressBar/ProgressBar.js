@@ -7,11 +7,11 @@ const ProgressBar = () => {
   const { currentStep, buttonClicked } = useContext(AppContext);
   console.log("ProgressBar is rendering with currentStep:", currentStep);
   const steps = [
-    { number: 1, name: "Kategori Sec" },
-    { number: 2, name: "Telefon onayi" },
-    { number: 3, name: "Ilan Aciklamalari" },
-    { number: 4, name: "Promosyon" },
-    { number: 5, name: "Ilan Yayinla" },
+    { number: 1, name: "Select Category" },
+    { number: 2, name: "Phone Approval" },
+    { number: 3, name: " Details" },
+    { number: 4, name: "Promosion" },
+    { number: 5, name: "Publish" },
   ];
 
   const getProgressBarColor = (step) => {

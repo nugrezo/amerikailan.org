@@ -65,14 +65,14 @@ const ElectronicCategory = () => {
           <div className="electronic-content">
             <main>
               <div>
-                <h3 id="electronic_category-selection">1-Kategori Secimi</h3>
+                <h3 id="electronic_category-selection">1-Category selection</h3>
                 <h4 className="electronic-stepbystep">
-                  Adim adim kategori seciniz
+                  Step by step category selection
                 </h4>
                 {backToSelectionVisible && (
                   <div className="backtoselection">
                     <a href={"http://localhost:3000/advertisement"}>
-                      Elektronik Urunler
+                      Electronic
                     </a>
                     {openBox2 && <span>&gt;</span>}
                     {selectedWordsFromBox1.map((word, index) => (
@@ -97,31 +97,31 @@ const ElectronicCategory = () => {
                         onClick={() => handleFirstBoxClick(" Bilgisayar")}
                         className={
                           selectedWordsFromBox1.includes(" Bilgisayar")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Bilgisayar
+                        Computer
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Beyaz Esya")}
                         className={
                           selectedWordsFromBox1.includes("Beyaz Esya")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Beyaz Esya
+                        White Goods
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Cep Telefonu")}
                         className={
                           selectedWordsFromBox1.includes("Cep Telefonu")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Cep Telefonu
+                        Mobile Phone
                       </li>
                       <li
                         onClick={() =>
@@ -129,31 +129,31 @@ const ElectronicCategory = () => {
                         }
                         className={
                           selectedWordsFromBox1.includes(" Fotograf & Kamera")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Fotograf & Kamera
+                        Foto & Camera
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Ev Elektronigi")}
                         className={
                           selectedWordsFromBox1.includes("Ev Elektronigi")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Ev Elektronigi
+                        House Electronics
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick(" Diger")}
                         className={
                           selectedWordsFromBox1.includes(" Diger")
-                            ? "veh_selected"
+                            ? "elc_selected"
                             : ""
                         }
                       >
-                        Diger
+                        Other
                       </li>
                     </ul>
                     {openBox2 && (
@@ -162,32 +162,32 @@ const ElectronicCategory = () => {
                           onClick={() => handleSecondBoxClick(" Yeni Urun")}
                           className={
                             selectedWordsFromBox2.includes(" Yeni Urun")
-                              ? "veh_selected"
+                              ? "elc_selected"
                               : ""
                           }
                         >
-                          Yeni Urun
+                          Brand new
                         </li>
                         <li
                           onClick={() => handleSecondBoxClick("Ikinci El Urun")}
                           className={
                             selectedWordsFromBox2.includes("Ikinci El Urun")
-                              ? "veh_selected"
+                              ? "elc_selected"
                               : ""
                           }
                         >
-                          Ikinci El Urun
+                          Used
                         </li>
                       </ul>
                     )}
                     {openBox3 && (
                       <ul className="lastchild">
                         <img src={checkmark} alt="checkmark" />
-                        <p>Kategori secimi tamamlanmistir</p>
+                        <p>Category selection is completed</p>
                         <button
                           onClick={() => handleThirdBoxClick("Devam edin")}
                         >
-                          Devam ediniz
+                          Continue
                         </button>
                       </ul>
                     )}

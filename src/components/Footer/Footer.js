@@ -7,9 +7,9 @@ const Footer = () => {
     <div>
       <div className="footer">
         <div className="footer-container footer-row1">
-          <div className="footer-row">Kurumsal</div>
-          <div className="footer-row">Gizlilik ve Kullanim</div>
-          <div className="footer-row">Bizi Takip Edin</div>
+          <div className="footer-row">Corporate</div>
+          <div className="footer-row">Privacy & Use</div>
+          <div className="footer-row">Follow us</div>
         </div>
         <div className="footer-container footer-row2">
           <ul>
@@ -24,12 +24,12 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" alt="musterihizmetleri">
-                7/24 Musteri Hizmetleri
+                7/24 Customer Service
               </a>
             </li>
             <li>
               <a href="#" alt="iletisim">
-                amerikailan.org Iletisim
+                amerikailan.org contact
               </a>
             </li>
           </ul>
@@ -52,7 +52,7 @@ const Footer = () => {
           </p>
         </div>
         <p className="copyright">
-          © 2023 amerikaİlan.org - Tüm hakları saklıdır.
+          © 2023 amerikaİlan.org - All rights reserved
         </p>
       </div>
     </div>

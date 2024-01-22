@@ -60,10 +60,9 @@ const PhotoUploadRealEstate = () => {
   return (
     <div className="photo-upload_container">
       <p className="addphoto_header">
-        Fotograf Ekleyiniz{" "}
+        Add Photo{" "}
         <span className="upload-info">
-          (Maksimum 5 adet fotograf yukleyebilirsiniz. Her bir fotograf icin
-          maksimum buyukluk 5mb. dir)
+          (Max 5 photo add is allowed.Each photo size max is 5mb)
         </span>
       </p>
       <div className="photo-upload">
@@ -114,7 +113,7 @@ const PhotoUploadRealEstate = () => {
       {/* "Upload Photos" button to trigger file input */}
       <div className="upload_button_container">
         <button className="upload_button" onClick={handleUpload}>
-          <span className="uploadbutton_name">Fotograf Yukle</span>
+          <span className="uploadbutton_name">Upload</span>
           <img
             src={uploadicon}
             alt="upload_icon"

@@ -47,9 +47,9 @@ const RealEstatePublish = () => {
       </div>
       <ProgressBar />
       <div className="adv_publish_main">
-        <h3 id="adv_publish_header">5-Ilani Yayinla</h3>
+        <h3 id="adv_publish_header">5-Publish</h3>
         <div className="adv_publish_form_main_wrapper">
-          <h4>Yayinlanacak ilana ait bilgiler</h4>
+          <h4>Commercial Details </h4>
           <div>
             <div className="adv_publish_form_result_wrapper">
               <div className="adv_publish_main_wrapper">
@@ -58,11 +58,11 @@ const RealEstatePublish = () => {
                   onSubmit={handlePublishFormSubmit}
                 >
                   <div className="adv_publish adv_user_name">
-                    <label htmlFor="user_name">Isim</label>
+                    <label htmlFor="user_name">Name</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_lastname">
-                    <label htmlFor="user_lastname">Soyisim</label>
+                    <label htmlFor="user_lastname">Last Name</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_email">
@@ -70,23 +70,23 @@ const RealEstatePublish = () => {
                     <input type="email"></input>
                   </div>
                   <div className="adv_publish adv_user_address">
-                    <label htmlFor="adv_address">Ilan Adresi</label>
+                    <label htmlFor="adv_address">Address</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_tel">
-                    <label htmlFor="adv_tel">Telefon No</label>
+                    <label htmlFor="adv_tel">Phone No</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_category">
-                    <label htmlFor="adv_category">Ilan Kategorisi</label>
+                    <label htmlFor="adv_category">Commericial Category</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_price">
-                    <label htmlFor="adv_price">Ucret</label>
+                    <label htmlFor="adv_price">Price</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish adv_user_date">
-                    <label htmlFor="adv_date">Ilan Tarihi</label>
+                    <label htmlFor="adv_date">Date</label>
                     <input type="text"></input>
                   </div>
                   <div className="adv_publish_btn">
@@ -95,7 +95,7 @@ const RealEstatePublish = () => {
                       className="publish_btn"
                       disabled={formSubmitted}
                     >
-                      Ilani Yayinla
+                      Publish
                     </button>
                   </div>
                 </form>
@@ -104,18 +104,15 @@ const RealEstatePublish = () => {
                 <div className="adv_publish_result_main_wrapper">
                   <img src={checkmark} alt="checkmark" />
 
-                  <h4>Ilan Yayinlama talebiniz basariyla kaydedilmistir</h4>
-                  <p>
-                    Ilaniniz editorlerimiz tarafindan incelendikten sonra yayina
-                    alinacaktir.
-                  </p>
+                  <h4>Successfully Published</h4>
+                  <p>We will check your adv and will approve shortly.</p>
                   <div className="publish_number">
-                    <label htmlFor="publish_number">Ilan Yayin Numarasi</label>
+                    <label htmlFor="publish_number">Publish No</label>
                     <input type="text" value={publishNumber}></input>
                   </div>
                   <div className="publish_result_btn_container">
                     <Link to="/">
-                      <button className="publish_result_btn">Tamam</button>
+                      <button className="publish_result_btn">Continue</button>
                     </Link>
                   </div>
                 </div>

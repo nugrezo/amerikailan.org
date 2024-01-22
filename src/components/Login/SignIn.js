@@ -105,7 +105,7 @@ const Login = () => {
         </a>
       </div>
       <div className="login-container">
-        <h2>Giris Yapin</h2>
+        <h2>Login</h2>
         <form className="login-form" onSubmit={handleLogin}>
           <div className="email">
             <label htmlFor="email"></label>
@@ -113,7 +113,7 @@ const Login = () => {
               type="text"
               value={email}
               onChange={handleEmailChange}
-              placeholder="Email adresinizi giriniz"
+              placeholder="login with email"
               style={{
                 backgroundColor: emailIsValid
                   ? "rgb(232, 240, 254)"
@@ -131,7 +131,7 @@ const Login = () => {
               type="password"
               value={password}
               onChange={handlePasswordChange}
-              placeholder="Sifrenizi giriniz"
+              placeholder="enter password"
               style={{
                 backgroundColor: passwordIsValid
                   ? "rgb(232, 240, 254)"
@@ -145,22 +145,22 @@ const Login = () => {
           </div>
           <div className="email-giris-button">
             <button className="email-giris-button btn" type="submit">
-              E-mail adresiniz ile giris yapin
+              Login with your e-mail
             </button>
           </div>
         </form>
         <div className="register">
           <p>
-            Eger hesabinizi olusturmadiysaniz
+            still do not have an account?
             <Link to="/register">
               <span className="custom-space">
-                kayit olun <span className="arrow right-arrow">{"\u25B6"}</span>
+                Register <span className="arrow right-arrow">{"\u25B6"}</span>
               </span>
             </Link>
           </p>
           <div className="split-line">
             <span className="line"></span>
-            <span className="split-text">VEYA</span>
+            <span className="split-text">OR</span>
             <span className="line"></span>
           </div>
         </div>
@@ -171,7 +171,7 @@ const Login = () => {
               alt="google-icon"
               className="google-icon"
             ></img>
-            Google ile giriş yap
+            Login with Google
           </button>
         </div>
       </div>

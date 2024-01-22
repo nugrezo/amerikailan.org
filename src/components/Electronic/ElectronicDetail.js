@@ -41,16 +41,16 @@ const ElectronicDetail = () => {
       </div>
       <ProgressBar />
       <div className="adv-electronic_step_three_main">
-        <h3 id="electronic_description">3-Ilan Detaylari</h3>
+        <h3 id="electronic_description">3-Category Description</h3>
         {console.log("Rendering electronicSubStepThree")}
         {console.log("User Email:", userEmail)}
         {console.log("User Name:", userName)}
         {console.log("User Lastname:", userLastname)}
         <div className="adv-electronic_wrapper">
-          <h4>Ilan Iletisim Bilgileri</h4>
+          <h4>Commercial Contact Information</h4>
           <div className="adv_electronic-contact_info">
             <div className="firstname">
-              <p>Isim</p>
+              <p>Name</p>
               <input
                 className="firstname_input"
                 placeholder="isim giriniz"
@@ -60,7 +60,7 @@ const ElectronicDetail = () => {
               ></input>
             </div>
             <div className="lastname">
-              <p>Soyad</p>
+              <p>Last Name</p>
               <input
                 className="lastname_input"
                 placeholder="soyad giriniz"
@@ -78,16 +78,16 @@ const ElectronicDetail = () => {
               ></input>
             </div>
             <div className="cellPhone">
-              <p>Telefon No</p>
+              <p>Phone No</p>
               <input className="cellPhone_number_input"></input>
             </div>
           </div>
           <ElectronicDetailSubComponent />
 
-          <h4>Ilan Aciklamalari</h4>
+          <h4>Description</h4>
           <div className="adv_electronic-description_detail">
             <div className="adv_electronic-description_header">
-              <p>Ilan Basligi</p>
+              <p>Commercial Header</p>
               <input
                 className="adv_electronic-description_header_input"
                 placeholder="Ilana ait bir baslik giriniz"
@@ -95,7 +95,7 @@ const ElectronicDetail = () => {
             </div>
 
             <div className="adv_electronic-description_main">
-              <p>Ilana ait aciklamalari giriniz</p>
+              <p>Enter description regarding to commercial</p>
               <ReactQuill
                 theme="snow"
                 className="quill-container"
@@ -105,17 +105,17 @@ const ElectronicDetail = () => {
             </div>
           </div>
           <div className="adv_electronic-visuals">
-            <h4>Ilana ait Gorseller</h4>
+            <h4>Visuals</h4>
             <div className="adv_electronic_visuals_photo">
               <PhotoUploadElectronic />
             </div>
           </div>
           <div className="price_container">
-            <h4>Fiyat Bilgisi</h4>
+            <h4>Price Information</h4>
             <ul className="price_info">
               <li className="price_info_li">
                 <label htmlFor="Fiyat">
-                  <p>Fiyat</p>
+                  <p>Price</p>
                   <input
                     name="price"
                     type="text"
@@ -125,9 +125,9 @@ const ElectronicDetail = () => {
               </li>
               <li className="price_info_li">
                 <label htmlFor="price_info">
-                  <p>Para Birimi</p>
+                  <p>Currency</p>
                   <select>
-                    <option value="">Seciniz</option>
+                    <option value="">Select</option>
                     <option value="1">$ USD</option>
                   </select>
                 </label>
@@ -140,7 +140,7 @@ const ElectronicDetail = () => {
           <ElectronicAddress />
         </div>
         <div className="adv_electronic_continue_btn">
-          <button onClick={handleNavigate}>Devam</button>
+          <button onClick={handleNavigate}>Continue</button>
         </div>
       </div>
     </div>

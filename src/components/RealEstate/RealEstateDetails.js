@@ -56,10 +56,10 @@ const RealEstateDetails = () => {
         {console.log("User Name:", userName)}
         {console.log("User Lastname:", userLastname)}
         <div className="adv-realestate_wrapper">
-          <h4>Ilan Iletisim Bilgileri</h4>
+          <h4>Commercial Contact Detail</h4>
           <div className="adv_realestate-contact_info">
             <div className="firstname">
-              <p>Isim</p>
+              <p>Name</p>
               <input
                 className="firstname_input"
                 placeholder="isim giriniz"
@@ -69,7 +69,7 @@ const RealEstateDetails = () => {
               ></input>
             </div>
             <div className="lastname">
-              <p>Soyad</p>
+              <p>Last Name</p>
               <input
                 className="lastname_input"
                 placeholder="soyad giriniz"
@@ -87,14 +87,14 @@ const RealEstateDetails = () => {
               ></input>
             </div>
             <div className="cellPhone">
-              <p>Telefon No</p>
+              <p>Phone No</p>
               <input className="cellPhone_number_input"></input>
             </div>
           </div>
-          <h4>Ilan Aciklamalari</h4>
+          <h4>Commercial Detail</h4>
           <div className="adv_realestate-description_detail">
             <div className="adv_realestate-description_header">
-              <p>Ilan Basligi</p>
+              <p>Header</p>
               <input
                 className="adv_realestate-description_header_input"
                 placeholder="Ilana ait bir baslik giriniz"
@@ -102,7 +102,7 @@ const RealEstateDetails = () => {
             </div>
 
             <div className="adv_realestate-description_main">
-              <p>Ilana ait aciklamalari giriniz</p>
+              <p>Enter commerical details</p>
               <ReactQuill
                 theme="snow"
                 className="quill-container"
@@ -112,17 +112,17 @@ const RealEstateDetails = () => {
             </div>
           </div>
           <div className="adv_realestate-visuals">
-            <h4>Ilana ait Gorseller</h4>
+            <h4>Visuals</h4>
             <div className="adv_realestate_visuals_photo">
               <PhotoUpload />
             </div>
           </div>
           <div className="price_container">
-            <h4>Fiyat Bilgisi</h4>
+            <h4>Price Information</h4>
             <ul className="price_info">
               <li className="price_info_li">
                 <label htmlFor="Fiyat">
-                  <p>Fiyat</p>
+                  <p>Price</p>
                   <input
                     name="price"
                     type="text"
@@ -132,9 +132,9 @@ const RealEstateDetails = () => {
               </li>
               <li className="price_info_li">
                 <label htmlFor="price_info">
-                  <p>Para Birimi</p>
+                  <p>Currency</p>
                   <select>
-                    <option value="">Seciniz</option>
+                    <option value="">Select</option>
                     <option value="1">$ USD</option>
                   </select>
                 </label>
@@ -143,11 +143,11 @@ const RealEstateDetails = () => {
                 <label htmlFor="price_info">
                   <p>Sure</p>
                   <select>
-                    <option value="">Seciniz</option>
-                    <option value="1">$ Gunluk</option>
-                    <option value="2">$ Haftalik</option>
-                    <option value="3">$ Aylik</option>
-                    <option value="4">$ Yillik</option>
+                    <option value="">Select</option>
+                    <option value="1">$ Daily</option>
+                    <option value="2">$ Weekly</option>
+                    <option value="3">$ Monthly</option>
+                    <option value="4">$ Yearly</option>
                   </select>
                 </label>
               </li>
@@ -157,7 +157,7 @@ const RealEstateDetails = () => {
           <Address />
         </div>
         <div className="adv_realestate_continue_btn">
-          <button onClick={handleNavigate}>Devam</button>
+          <button onClick={handleNavigate}>Continue</button>
         </div>
       </div>
     </div>

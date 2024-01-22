@@ -54,7 +54,7 @@
 .adv_publish label {
   display: flex;
   justify-content: flex-end;
-  width: 150px;
+  width: 250px;
 }
 
 .adv_publish input {

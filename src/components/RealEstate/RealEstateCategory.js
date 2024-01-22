@@ -135,11 +135,13 @@ const RealEstateCategory = () => {
           <div className="emlak-content">
             <main>
               <div>
-                <h3 id="emlak_category-selection">1-Kategori Secimi</h3>
-                <h4 className="stepbystep">Adim adim kategori seciniz</h4>
+                <h3 id="emlak_category-selection">1-Select Category</h3>
+                <h4 className="stepbystep">Step by step category selection</h4>
 
                 <div className="backtoselection">
-                  <a href={"http://localhost:3000/advertisement"}>Emlak</a>
+                  <a href={"http://localhost:3000/advertisement"}>
+                    Real Estate
+                  </a>
                   <span>&gt;</span>
                   {selectedWordsFromBox1.map((word, index) => (
                     <React.Fragment key={index}>
@@ -188,7 +190,7 @@ const RealEstateCategory = () => {
                           : ""
                       }
                     >
-                      Kiralik Oda
+                      Rent room
                     </li>
                     <li
                       onClick={() => handleFirstBoxClick("Konut")}
@@ -198,7 +200,7 @@ const RealEstateCategory = () => {
                           : ""
                       }
                     >
-                      Konut
+                      Apartment
                     </li>
                     <li
                       onClick={() => handleFirstBoxClick("Isyeri")}
@@ -208,7 +210,7 @@ const RealEstateCategory = () => {
                           : ""
                       }
                     >
-                      Isyeri
+                      Ofis
                     </li>
                     <li
                       onClick={() => handleFirstBoxClick("Arsa")}
@@ -216,7 +218,7 @@ const RealEstateCategory = () => {
                         selectedWordsFromBox1.includes("Arsa") ? "selected" : ""
                       }
                     >
-                      Arsa
+                      Land
                     </li>
                     <li
                       onClick={() => handleFirstBoxClick("Bina")}
@@ -224,7 +226,7 @@ const RealEstateCategory = () => {
                         selectedWordsFromBox1.includes("Bina") ? "selected" : ""
                       }
                     >
-                      Bina
+                      Building
                     </li>
                     <li
                       onClick={() => handleFirstBoxClick("Turistik Tesis")}
@@ -234,7 +236,7 @@ const RealEstateCategory = () => {
                           : ""
                       }
                     >
-                      Turistik Tesis
+                      Touristic
                     </li>
                   </ul>
                   {openBox2 && (
@@ -247,7 +249,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Satilik
+                        For Sale
                       </li>
                       <li
                         onClick={() => handleSecondBoxClick("Kiralik")}
@@ -257,7 +259,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Kiralik
+                        For Rent
                       </li>
                     </ul>
                   )}
@@ -271,7 +273,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Daire
+                        Apartment
                       </li>
                       <li
                         onClick={() => handleThirdBoxClick("Residence")}
@@ -291,7 +293,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Mustakil Ev
+                        House
                       </li>
                       <li
                         onClick={() => handleThirdBoxClick("Villa")}
@@ -311,7 +313,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Yazlik
+                        Summer House
                       </li>
                       <li
                         onClick={() => handleThirdBoxClick("Ciftlik Evi")}
@@ -321,7 +323,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Ciftlik Evi
+                        Farm House
                       </li>
                     </ul>
                   )}
@@ -533,7 +535,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Otel
+                        Hotel
                       </li>
                       <li
                         onClick={() =>
@@ -569,7 +571,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Kamp Yeri
+                        Camping
                       </li>
                       <li
                         onClick={() =>
@@ -583,7 +585,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Tatil Koyu
+                        Holiday resort
                       </li>
                       <li
                         onClick={() =>
@@ -597,7 +599,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Dag Evi
+                        Mountain House
                       </li>
                       <li
                         onClick={() => handleConditionalTuristTesisBox("Depo")}
@@ -607,7 +609,7 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Depo
+                        Warehouse
                       </li>
                       <li
                         onClick={() => handleConditionalTuristTesisBox("Diger")}
@@ -617,18 +619,18 @@ const RealEstateCategory = () => {
                             : ""
                         }
                       >
-                        Diger
+                        Other
                       </li>
                     </ul>
                   )}
                   {openBox4 && (
                     <ul className="lastchild">
                       <img src={checkmark} alt="checkmark" />
-                      <p>Kategori secimi tamamlanmistir</p>{" "}
+                      <p>Category selection is completed</p>{" "}
                       <button
                         onClick={() => handleFourthBoxClick("Devam edin")}
                       >
-                        Devam ediniz
+                        Continue
                       </button>
                     </ul>
                   )}

@@ -16,11 +16,11 @@ const Address = () => {
   return (
     <div>
       <div className="address_container">
-        <h4>Ilana Ait Adres Bilgileri</h4>
+        <h4>Commercial Address Information</h4>
         <div className="map_address_container_wrapper">
           <div className="address_container_wrapper">
             <div className="country_wrapper">
-              <h6>Ulke</h6>
+              <h6>Country</h6>
               <CountrySelect
                 onChange={(e) => {
                   setCountryid(e.id);
@@ -28,42 +28,42 @@ const Address = () => {
                   setCityid(0);
                   setZip("");
                 }}
-                placeHolder="Ulke seciniz"
+                placeHolder="enter country"
               />
             </div>
             <div className="state_wrapper">
-              <h6>Eyalet</h6>
+              <h6>State</h6>
               <StateSelect
                 countryid={countryid}
                 onChange={(e) => {
                   setStateid(e.id);
                   setCityid(0);
                 }}
-                placeHolder="Eyalet seciniz"
+                placeHolder="enter state"
               />
             </div>
             <div className="city_wrapper">
-              <h6>Sehir</h6>
+              <h6>City</h6>
               <CitySelect
                 countryid={countryid}
                 stateid={stateid}
                 onChange={(e) => {
                   setCityid(e.id);
                 }}
-                placeHolder="Sehir seciniz"
+                placeHolder="enter city"
               />
             </div>
             <div className="address_wrapper">
               <h6>Address</h6>
               <div className="address_wrapper_main">
-                <input placeholder="Adres giriniz"></input>
+                <input placeholder="enter address"></input>
               </div>
             </div>
             <div className="zipcode_wrapper">
-              <h6>Posta Kodu</h6>
+              <h6>Zip Code</h6>
               <div className="zipcode_wrapper_main">
                 <input
-                  placeholder="Posta kodu giriniz"
+                  placeholder="Zip Code"
                   onChange={(e) => setZip(e.target.value)}
                 ></input>
               </div>

@@ -16,11 +16,11 @@ const ElectronicAddress = () => {
   return (
     <div>
       <div className="address_container">
-        <h4>Ilana Ait Adres Bilgileri</h4>
+        <h4>Commercial Address Information</h4>
         <div className="map_address_container_wrapper">
           <div className="address_container_wrapper">
             <div className="country_wrapper">
-              <h6>Ulke</h6>
+              <h6>Country</h6>
               <CountrySelect
                 onChange={(e) => {
                   setCountryid(e.id);
@@ -32,7 +32,7 @@ const ElectronicAddress = () => {
               />
             </div>
             <div className="state_wrapper">
-              <h6>Eyalet</h6>
+              <h6>State</h6>
               <StateSelect
                 countryid={countryid}
                 onChange={(e) => {
@@ -43,7 +43,7 @@ const ElectronicAddress = () => {
               />
             </div>
             <div className="city_wrapper">
-              <h6>Sehir</h6>
+              <h6>City</h6>
               <CitySelect
                 countryid={countryid}
                 stateid={stateid}
@@ -60,7 +60,7 @@ const ElectronicAddress = () => {
               </div>
             </div>
             <div className="zipcode_wrapper">
-              <h6>Posta Kodu</h6>
+              <h6>Zip Code</h6>
               <div className="zipcode_wrapper_main">
                 <input
                   placeholder="Posta kodu giriniz"

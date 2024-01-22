@@ -95,7 +95,7 @@ export default function Form(props) {
           <label className="price">${amount || ""}</label>
         </div>
       </header>
-      <main>
+      <main className="payment_main">
         {meta.isTouched && meta.error ? (
           <span className="span">Error: {meta.error}</span>
         ) : (

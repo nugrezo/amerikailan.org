@@ -30,7 +30,7 @@ const Advertisement = () => {
         <main className="advertisement_main">
           <div>
             <div className="category-select-header">
-              <h2>Ilan vermek istediginiz kategoriyi secin</h2>
+              <h2>Please select the category</h2>
             </div>
             <div className="category-select-body">
               <a
@@ -41,7 +41,7 @@ const Advertisement = () => {
                   <i className="icon emlak-icon">
                     <img src={emlakicon} alt="emlak-icon" />
                   </i>
-                  <h3>Emlak</h3>
+                  <h3>Real Estate</h3>
                 </div>
               </a>
               <a
@@ -52,7 +52,7 @@ const Advertisement = () => {
                   <i className="icon vehicle-icon">
                     <img src={vehicleicon} alt="vehicle-icon" />
                   </i>
-                  <h3>Vasita</h3>
+                  <h3>Vehicle</h3>
                 </div>
               </a>
               <a
@@ -63,7 +63,7 @@ const Advertisement = () => {
                   <i className="icon electronic-icon">
                     <img src={electronicicon} alt="electronic-icon" />
                   </i>
-                  <h3>Elektronik Cihaz</h3>
+                  <h3>Electronic</h3>
                 </div>
               </a>
               <a
@@ -74,7 +74,7 @@ const Advertisement = () => {
                   <i className="icon services-icon">
                     <img src={servicesicon} alt="services-icon" />
                   </i>
-                  <h3> Hizmetler</h3>
+                  <h3> Services</h3>
                 </div>
               </a>
               <a href="#" alt="isilanlari">
@@ -82,7 +82,7 @@ const Advertisement = () => {
                   <i className="icon job-icon">
                     <img src={jobicon} alt="job-icon" />
                   </i>
-                  <h3>Is Ilanlari</h3>
+                  <h3>Job</h3>
                 </div>
               </a>
               <a href="#" alt="sirketler">
@@ -90,7 +90,7 @@ const Advertisement = () => {
                   <i className="icon company-icon">
                     <img src={corporate} alt="company-icon" />
                   </i>
-                  <h3>Sirket Reklamlari</h3>
+                  <h3>Company</h3>
                 </div>
               </a>
             </div>
