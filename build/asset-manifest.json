@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b6b384b.css",
+    "main.js": "/static/js/main.02b144b4.js",
+    "static/js/787.1d7c7409.chunk.js": "/static/js/787.1d7c7409.chunk.js",
+    "static/media/populerilan3.png": "/static/media/populerilan3.300366ea3036a61ebee2.png",
+    "static/media/populerilan1.png": "/static/media/populerilan1.ac8b162f5cddd04965fe.png",
+    "static/media/populerilan2.png": "/static/media/populerilan2.7241b52906cfd899dc32.png",
+    "static/media/header.png": "/static/media/header.9a99f9b6895e00f3caa7.png",
+    "static/media/americanflag.png": "/static/media/americanflag.b4cae090c4a5c3220105.png",
+    "static/media/phone.png": "/static/media/phone.95807236a569d226fc24.png",
+    "static/media/photo1.jpg": "/static/media/photo1.ce2109238c9dedb530e1.jpg",
+    "static/media/services-icon.png": "/static/media/services-icon.061867b304cf5bfc225e.png",
+    "static/media/logo.png": "/static/media/logo.08888cb55e2c0d3b8caa.png",
+    "static/media/trash_icon.png": "/static/media/trash_icon.87200934d68cc0db6af8.png",
+    "static/media/greencheckmark.png": "/static/media/greencheckmark.879cc847420df9065fcd.png",
+    "static/media/visasecure.png": "/static/media/visasecure.8a9fec0b34ddf9310230.png",
+    "static/media/mastersecure.png": "/static/media/mastersecure.a1aae88e73ee1ed7cf5a.png",
+    "static/media/visa.png": "/static/media/visa.901c88a6080a5570b20d.png",
+    "static/media/mastercard.png": "/static/media/mastercard.0a26508806a8769589c8.png",
+    "static/media/google.png": "/static/media/google.e12914ad8afda3f6f2e8.png",
+    "static/media/electronic-icon.png": "/static/media/electronic-icon.a813f9ed8db56a024cbb.png",
+    "static/media/timer_icon.png": "/static/media/timer_icon.8145df16819f5d2a500b.png",
+    "static/media/upload-icon.png": "/static/media/upload-icon.a8c076701b4c299ab983.png",
+    "static/media/lock.png": "/static/media/lock.e3a9b43263eaccce45d9.png",
+    "static/media/job-icon.png": "/static/media/job-icon.ea1a153d84cc95601527.png",
+    "static/media/corporate.png": "/static/media/corporate.15d7355b1dca1efaecc2.png",
+    "index.html": "/index.html",
+    "main.2b6b384b.css.map": "/static/css/main.2b6b384b.css.map",
+    "main.02b144b4.js.map": "/static/js/main.02b144b4.js.map",
+    "787.1d7c7409.chunk.js.map": "/static/js/787.1d7c7409.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b6b384b.css",
+    "static/js/main.02b144b4.js"
+  ]
+}
