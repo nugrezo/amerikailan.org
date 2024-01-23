@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 
 const MainBody = () => {
   return (
-    <div className>
+    <div>
       <div id="main-body">
         <div className="left-menu">
           <div className="left-menu-alt kategori">
