@@ -41,16 +41,16 @@ const VehicleDetail = () => {
       </div>
       <ProgressBar />
       <div className="adv-vehicle_step_three_main">
-        <h3 id="vehicle_description">3-Ilan Detaylari</h3>
+        <h3 id="vehicle_description">3-Commercial Detail</h3>
         {console.log("Rendering vehicleSubStepThree")}
         {console.log("User Email:", userEmail)}
         {console.log("User Name:", userName)}
         {console.log("User Lastname:", userLastname)}
         <div className="adv-vehicle_wrapper">
-          <h4>Ilan Iletisim Bilgileri</h4>
+          <h4>Commercial Contact Information</h4>
           <div className="adv_vehicle-contact_info">
             <div className="firstname">
-              <p>Isim</p>
+              <p>Name</p>
               <input
                 className="firstname_input"
                 placeholder="isim giriniz"
@@ -60,7 +60,7 @@ const VehicleDetail = () => {
               ></input>
             </div>
             <div className="lastname">
-              <p>Soyad</p>
+              <p>Last Name</p>
               <input
                 className="lastname_input"
                 placeholder="soyad giriniz"
@@ -78,14 +78,14 @@ const VehicleDetail = () => {
               ></input>
             </div>
             <div className="cellPhone">
-              <p>Telefon No</p>
+              <p>Phone No</p>
               <input className="cellPhone_number_input"></input>
             </div>
           </div>
-          <h4>Ilan Aciklamalari</h4>
+          <h4>Commercial Details</h4>
           <div className="adv_vehicle-description_detail">
             <div className="adv_vehicle-description_header">
-              <p>Ilan Basligi</p>
+              <p>Header</p>
               <input
                 className="adv_vehicle-description_header_input"
                 placeholder="Ilana ait bir baslik giriniz"
@@ -93,7 +93,7 @@ const VehicleDetail = () => {
             </div>
 
             <div className="adv_vehicle-description_main">
-              <p>Ilana ait aciklamalari giriniz</p>
+              <p>Enter Details</p>
               <ReactQuill
                 theme="snow"
                 className="quill-container"
@@ -103,17 +103,17 @@ const VehicleDetail = () => {
             </div>
           </div>
           <div className="adv_vehicle-visuals">
-            <h4>Ilana ait Gorseller</h4>
+            <h4>Visuals</h4>
             <div className="adv_vehicle_visuals_photo">
               <PhotoUpload />
             </div>
           </div>
           <div className="price_container">
-            <h4>Fiyat Bilgisi</h4>
+            <h4>Price Information</h4>
             <ul className="price_info">
               <li className="price_info_li">
                 <label htmlFor="Fiyat">
-                  <p>Fiyat</p>
+                  <p>Price</p>
                   <input
                     name="price"
                     type="text"
@@ -123,9 +123,9 @@ const VehicleDetail = () => {
               </li>
               <li className="price_info_li">
                 <label htmlFor="price_info">
-                  <p>Para Birimi</p>
+                  <p>Currency</p>
                   <select>
-                    <option value="">Seciniz</option>
+                    <option value="">Select</option>
                     <option value="1">$ USD</option>
                   </select>
                 </label>

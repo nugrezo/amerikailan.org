@@ -132,7 +132,7 @@ const Register = () => {
         </a>
       </div>
       <div className="register-container">
-        <h2>Kayit Olun</h2>
+        <h2>Register</h2>
         <form className="register-form" onSubmit={handleRegister}>
           <div className="email">
             <label htmlFor="email"></label>

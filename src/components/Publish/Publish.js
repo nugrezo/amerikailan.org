@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { AppContext } from "../ContextProvider"; // Import the ContextProvider
-
-import { Link } from "react-router-dom";
 import "./Publish.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
@@ -13,6 +12,7 @@ const Publish = () => {
     useContext(AppContext); // Access handleNext from context
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
+  const navigate = useNavigate();
 
   const generateRandomNumber = () => {
     const randomNumber = Math.floor(Math.random() * 9) + 1; // Generates a random number between 1 and 9
@@ -29,6 +29,12 @@ const Publish = () => {
     setPublish(true);
     handleNext();
     setFormSubmitted(true);
+  };
+
+  const handleNavigate = (e) => {
+    e.preventDefault();
+    navigate("/");
+    handleNext();
   };
 
   return (
@@ -111,9 +117,12 @@ const Publish = () => {
                     <input type="text" value={publishNumber}></input>
                   </div>
                   <div className="publish_result_btn_container">
-                    <Link to="/">
-                      <button className="publish_result_btn">Continue</button>
-                    </Link>
+                    <button
+                      className="publish_result_btn"
+                      onClick={handleNavigate}
+                    >
+                      Continue
+                    </button>
                   </div>
                 </div>
               )}

@@ -35,13 +35,13 @@ const PhoneApproval = () => {
   const handleCellPhoneFormSubmit = (e) => {
     e.preventDefault();
     if (!phoneNumber.trim()) {
-      setError("Lutfen gecerli bir telefon numarasi giriniz");
+      setError("Please enter valid 10 digits valid phone number");
       return;
     }
 
     const phoneRegex = /^[0-9]{3}[0-9]{3}[0-9]{4}$/;
     if (!phoneRegex.test(phoneNumber)) {
-      setError("Girilen numara eksiktir.Lutfen tekrar deneyiniz");
+      setError("Please enter valid phone number");
       return;
     }
 
@@ -68,7 +68,7 @@ const PhoneApproval = () => {
       navigate("/advertisement/electronic/electronic_details_s3");
     } else {
       setIsCodeMatched(false);
-      setError("Numara eslesmedi tekrar deneyiniz");
+      setError("The code did not match");
     }
     setTextCode("");
   };
@@ -82,7 +82,7 @@ const PhoneApproval = () => {
     } else {
       // Disable the input field after three attempts
       setShowContent(false);
-      setError("Maksimum numara degisiklik sayisina erisilmistir.");
+      setError("Max allowed changes made. Try again tomorrow");
     }
   };
 

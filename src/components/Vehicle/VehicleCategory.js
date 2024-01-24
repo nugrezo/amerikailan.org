@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./VehicleCategory.css";
@@ -52,9 +52,9 @@ const VehicleCategory = () => {
           <div className="container">
             <nav className="navbar">
               <div className="nav-logo">
-                <a className="navbar-brand" href="http://localhost:3000">
+                <Link to="/">
                   <img src={logo} width="200px;" height="60px;" alt="logo" />
-                </a>
+                </Link>
               </div>
               <div className="nav-userProfile">
                 <Usermenu />
@@ -99,7 +99,7 @@ const VehicleCategory = () => {
                             : ""
                         }
                       >
-                        Otomobil
+                        Car
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Motosiklet")}
@@ -109,7 +109,7 @@ const VehicleCategory = () => {
                             : ""
                         }
                       >
-                        Motosiklet
+                        Motorbike
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Arazi&SUV&Pick-Up")}
@@ -119,7 +119,7 @@ const VehicleCategory = () => {
                             : ""
                         }
                       >
-                        Arazi & SUV & Pick-Up
+                        SUV & Pick -Up
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Ticari Arac")}
@@ -129,7 +129,7 @@ const VehicleCategory = () => {
                             : ""
                         }
                       >
-                        Ticari Arac
+                        Commercial Vehicle
                       </li>
                       <li
                         onClick={() => handleFirstBoxClick("Kiralik Arac")}
@@ -139,7 +139,7 @@ const VehicleCategory = () => {
                             : ""
                         }
                       >
-                        Kiralik Arac
+                        Rent A Car
                       </li>
                     </ul>
                     {openBox2 && (
@@ -152,7 +152,7 @@ const VehicleCategory = () => {
                               : ""
                           }
                         >
-                          Satilik
+                          For Sale
                         </li>
                         <li
                           onClick={() => handleSecondBoxClick("Kiralik")}
@@ -162,7 +162,7 @@ const VehicleCategory = () => {
                               : ""
                           }
                         >
-                          Kiralik
+                          For Rent
                         </li>
                       </ul>
                     )}
@@ -173,7 +173,7 @@ const VehicleCategory = () => {
                         <button
                           onClick={() => handleThirdBoxClick("Devam edin")}
                         >
-                          Devam ediniz
+                          Continue
                         </button>
                       </ul>
                     )}

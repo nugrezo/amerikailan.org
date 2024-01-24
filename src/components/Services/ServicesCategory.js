@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./ServicesCategory.css";
@@ -221,9 +221,9 @@ const ServicesCategory = () => {
           <div className="container">
             <nav className="navbar">
               <div className="nav-logo">
-                <a className="navbar-brand" href="http://localhost:3000">
+                <Link to="/">
                   <img src={logo} width="200px;" height="60px;" alt="logo" />
-                </a>
+                </Link>
               </div>
               <div className="nav-userProfile">
                 <Usermenu />

@@ -10,16 +10,16 @@ const VehicleDetailSubComponent = () => {
           <div className="vehicle_row">
             <label htmlFor="select_whose_adv">Kimden </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Sahibinden</option>
-              <option value="2">Bayiden</option>
-              <option value="3">Bankadan</option>
+              <option value="">Select</option>
+              <option value="1">Owner</option>
+              <option value="2">Dealership</option>
+              <option value="3">Short Sale</option>
             </select>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="vehicle_label">Marka </label>
+            <label htmlFor="vehicle_label">Make </label>
             <select>
-              <option value="">Seciniz</option>
+              <option value="">Select</option>
               <option value="1">Acura</option>
               <option value="2">Alfa Romeo</option>
               <option value="3">Alpina</option>
@@ -114,40 +114,40 @@ const VehicleDetailSubComponent = () => {
             <input className="year_input"></input>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="gastype_label">Yakit Turu </label>
+            <label htmlFor="gastype_label">Gas Type </label>
             <select>
               <option value="">Seciniz</option>
-              <option value="1">Benzin</option>
+              <option value="1">Gasolin</option>
               <option value="2">Dizel</option>
             </select>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="mile_label">Mil </label>
+            <label htmlFor="mile_label">Mile </label>
             <input className="mile_input"></input>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="furniture_label">Renk</label>
+            <label htmlFor="furniture_label">Color</label>
             <input className="color_input"></input>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="power_label">Motor Hacmi </label>
+            <label htmlFor="power_label">Engine Power </label>
             <input className="power_input"></input>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="damage_label">Hasar Durumu </label>
+            <label htmlFor="damage_label">Damage </label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Hasarsiz</option>
-              <option value="2">Hasarli</option>
-              <option value="3">Kismi Hasarli</option>
+              <option value="">Select</option>
+              <option value="1">No Damage</option>
+              <option value="2">Damged</option>
+              <option value="3">Partially Damaged</option>
             </select>
           </div>
           <div className="vehicle_row">
-            <label htmlFor="guarantee_label">Garanti Durumu</label>
+            <label htmlFor="guarantee_label">Guarantee</label>
             <select>
-              <option value="">Seciniz</option>
-              <option value="1">Var</option>
-              <option value="2">Yok</option>
+              <option value="">Select</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
             </select>
           </div>
         </div>
@@ -158,51 +158,58 @@ const VehicleDetailSubComponent = () => {
               <div className="exterior_futures_group1">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Acilir Tavan</label>
+                  <label htmlFor="exterior_futures_label">
+                    {" "}
+                    Glass Sun Roof
+                  </label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Far Yikama</label>
+                  <label htmlFor="exterior_futures_label">
+                    {" "}
+                    headlight cleaner
+                  </label>
                 </div>
               </div>
               <div className="exterior_futures_group2">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label">Sis Fari</label>
+                  <label htmlFor="exterior_futures_label">Fog lights</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Isitmali Ayna</label>
+                  <label htmlFor="exterior_futures_label">
+                    {" "}
+                    Heatet mirrors
+                  </label>
                 </div>
               </div>
               <div className="exterior_futures_group3">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="exterior_futures_label">
-                    Yan Ayna Sinyali
+                    Signal on Mirror
                   </label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label">
-                    Yagmur-Kar Sensoru
-                  </label>
+                  <label htmlFor="exterior_futures_label">Rain sensor</label>
                 </div>
               </div>
               <div className="exterior_futures_group4">
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Isi Yalitimi</label>
+                  <label htmlFor="exterior_futures_label"> Heat proof</label>
                 </div>
                 <div className="exterior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="exterior_futures_label"> Tenis Kortu</label>
+                  <label htmlFor="exterior_futures_label"> Sound proof</label>
                 </div>
               </div>
             </div>
           </div>
           <div className="interior_future_wrapper">
-            <p>Ic Donanim</p>
+            <p>Interior Futures</p>
             <div className="interior_futures">
               <div className="interior_futures_group1">
                 <div className="interior_futures_row">
@@ -211,28 +218,30 @@ const VehicleDetailSubComponent = () => {
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Deri Koltuk</label>
+                  <label htmlFor="interior_futures_label"> Leather seats</label>
+                </div>
+                <div className="interior_futures_row">
+                  <input type="checkbox"></input>
+                  <label htmlFor="interior_futures_label">
+                    Adjustable chairs
+                  </label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="interior_futures_label">
                     {" "}
-                    Direksyon Ayari
+                    Parking sensor
                   </label>
-                </div>
-                <div className="interior_futures_row">
-                  <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Park Sensoru</label>
                 </div>
               </div>
               <div className="interior_futures_group2">
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label"> Klima</label>
+                  <label htmlFor="interior_futures_label"> AC</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">Koltuk Isitma</label>
+                  <label htmlFor="interior_futures_label">Heated Seats</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
@@ -241,7 +250,7 @@ const VehicleDetailSubComponent = () => {
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="interior_futures_label">
-                    Otomatik Far Ayari
+                    Auto headlights
                   </label>
                 </div>
               </div>
@@ -250,30 +259,28 @@ const VehicleDetailSubComponent = () => {
                   <input type="checkbox"></input>
                   <label htmlFor="interior_futures_label">
                     {" "}
-                    On Kolutuk Ayari-Surucu
+                    Chairs dashboard
                   </label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="interior_futures_label">
-                    On Koltuk Ayari- Yolcu
+                    Charis dashboard(p)
                   </label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">
-                    Yol Bilgisayari
-                  </label>
+                  <label htmlFor="interior_futures_label">Navigation</label>
                 </div>
                 <div className="interior_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="interior_futures_label">Serit Kontrol</label>
+                  <label htmlFor="interior_futures_label">Lane Alarm</label>
                 </div>
               </div>
             </div>
           </div>
           <div className="vehicle_type_future_wrapper">
-            <p>Teknik Ozellikler</p>
+            <p>Technical Futures</p>
             <div className="vehicle_type_futures">
               <div className="vehicle_type_futures_group1">
                 <div className="vehicle_type_futures_row">
@@ -287,48 +294,42 @@ const VehicleDetailSubComponent = () => {
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="vehicle_type_futures_label">
-                    Emniyet Kemer Ikazi
+                    Seat Belt Alarm
                   </label>
                 </div>
               </div>
               <div className="vehicle_type_futures_group2">
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
+                  <label htmlFor="vehicle_type_futures_label">Radar</label>
+                </div>
+                <div className="vehicle_type_futures_row">
+                  <input type="checkbox"></input>
                   <label htmlFor="vehicle_type_futures_label">
-                    Hiz Sabitleyici
+                    Tire Sensor
                   </label>
                 </div>
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="vehicle_type_futures_label">
-                    Lastik Basinc Sensoru
-                  </label>
-                </div>
-                <div className="vehicle_type_futures_row">
-                  <input type="checkbox"></input>
-                  <label htmlFor="vehicle_type_futures_label">
-                    Merkezi Kilit
+                    Central Lock
                   </label>
                 </div>
               </div>
               <div className="vehicle_type_futures_group3">
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="vehicle_type_futures_label">
-                    On Hava Yastigi
-                  </label>
+                  <label htmlFor="vehicle_type_futures_label">Airbags</label>
                 </div>
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
                   <label htmlFor="vehicle_type_futures_label">
-                    Yan Hava Yastigi
+                    Airbags side
                   </label>
                 </div>
                 <div className="vehicle_type_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="vehicle_type_futures_label">
-                    Yedek Lastik
-                  </label>
+                  <label htmlFor="vehicle_type_futures_label">Spare tire</label>
                 </div>
               </div>
             </div>
@@ -343,43 +344,37 @@ const VehicleDetailSubComponent = () => {
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">CD Calar</label>
+                  <label htmlFor="region_futures_label">CD Player</label>
                 </div>
               </div>
               <div className="region_futures_group2">
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">AUX Giris On</label>
+                  <label htmlFor="region_futures_label">AUX</label>
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">AUX giris arka</label>
+                  <label htmlFor="region_futures_label">AUX back</label>
                 </div>
               </div>
               <div className="region_futures_group3">
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">
-                    Bluetooth Baglanti
-                  </label>
+                  <label htmlFor="region_futures_label">Bluetooth</label>
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">HDMI Girisi</label>
+                  <label htmlFor="region_futures_label">HDMI</label>
                 </div>
               </div>
               <div className="region_futures_group4">
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">
-                    Digital Medya Girisi
-                  </label>
+                  <label htmlFor="region_futures_label">USB</label>
                 </div>
                 <div className="region_futures_row">
                   <input type="checkbox"></input>
-                  <label htmlFor="region_futures_label">
-                    Navigasyon Alicisi
-                  </label>
+                  <label htmlFor="region_futures_label">Reciever</label>
                 </div>
               </div>
             </div>
