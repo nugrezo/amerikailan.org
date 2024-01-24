@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login/SignIn";
 import Register from "./components/Register/Register";
 import Advertisement from "./components/Advertisement/Advertisement";
@@ -20,7 +20,7 @@ import Publish from "./components/Publish/Publish";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           {/* Renders the <Login /> component when the path is the root URL ("/"). */}
@@ -114,7 +114,7 @@ function App() {
             element={<Publish />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
