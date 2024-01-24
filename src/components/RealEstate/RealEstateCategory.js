@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import "./RealEstateCategory.css";
 import { AppContext } from "../ContextProvider"; // Import the ContextProvider
-
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";

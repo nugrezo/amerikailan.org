@@ -17,7 +17,10 @@ const Advertisement = () => {
       <div className="container">
         <nav className="navbar">
           <div className="nav-logo">
-            <a className="navbar-brand" href="http://localhost:3000">
+            <a
+              className="navbar-brand"
+              href="https://nugrezo.github.io/amerikailan.org/"
+            >
               <img src={logo} width="200px;" height="60px;" alt="logo" />
             </a>
           </div>
@@ -34,7 +37,7 @@ const Advertisement = () => {
             </div>
             <div className="category-select-body">
               <a
-                href="http://localhost:3000/advertisement/realestate/category_s1"
+                href="https://nugrezo.github.io/amerikailan.org/advertisement/realestate/category_s1"
                 alt="emlak_stepone"
               >
                 <div className="category category-select-body-emlak">
@@ -45,7 +48,7 @@ const Advertisement = () => {
                 </div>
               </a>
               <a
-                href="http://localhost:3000/advertisement/vehicle"
+                href="https://nugrezo.github.io/amerikailan.org/advertisement/vehicle"
                 alt="vehicle"
               >
                 <div className="category category-select-body-vasita">
@@ -56,7 +59,7 @@ const Advertisement = () => {
                 </div>
               </a>
               <a
-                href="http://localhost:3000/advertisement/electronic/category_s1"
+                href="https://nugrezo.github.io/amerikailan.org/advertisement/electronic/category_s1"
                 alt="elektronikcihaz"
               >
                 <div className="category category-select-body-elektronikcihaz">
@@ -67,7 +70,7 @@ const Advertisement = () => {
                 </div>
               </a>
               <a
-                href="http://localhost:3000/advertisement/services/category_s1"
+                href="https://nugrezo.github.io/amerikailan.org/advertisement/services/category_s1"
                 alt="hizmet"
               >
                 <div className="category category-select-body-hizmet">
