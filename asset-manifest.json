@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/amerikailan.org/static/css/main.cc3a7504.css",
-    "main.js": "/amerikailan.org/static/js/main.52f8e6e4.js",
+    "main.js": "/amerikailan.org/static/js/main.01c890e1.js",
     "static/js/787.1d7c7409.chunk.js": "/amerikailan.org/static/js/787.1d7c7409.chunk.js",
     "static/media/populerilan3.png": "/amerikailan.org/static/media/populerilan3.300366ea3036a61ebee2.png",
     "static/media/populerilan1.png": "/amerikailan.org/static/media/populerilan1.ac8b162f5cddd04965fe.png",
@@ -27,11 +27,11 @@
     "static/media/corporate.png": "/amerikailan.org/static/media/corporate.15d7355b1dca1efaecc2.png",
     "index.html": "/amerikailan.org/index.html",
     "main.cc3a7504.css.map": "/amerikailan.org/static/css/main.cc3a7504.css.map",
-    "main.52f8e6e4.js.map": "/amerikailan.org/static/js/main.52f8e6e4.js.map",
+    "main.01c890e1.js.map": "/amerikailan.org/static/js/main.01c890e1.js.map",
     "787.1d7c7409.chunk.js.map": "/amerikailan.org/static/js/787.1d7c7409.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc3a7504.css",
-    "static/js/main.52f8e6e4.js"
+    "static/js/main.01c890e1.js"
   ]
 }
