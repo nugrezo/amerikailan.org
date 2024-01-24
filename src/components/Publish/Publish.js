@@ -1,16 +1,16 @@
 import React, { useState, useContext } from "react";
+import { AppContext } from "../ContextProvider"; // Import the ContextProvider
+
 import { Link } from "react-router-dom";
-import "./ElectronicAdvPublish.css";
+import "./Publish.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import checkmark from "../../library/advicons/greencheckmark.png";
 import ProgressBar from "../ProgressBar/ProgressBar";
-import { AppContext } from "../ContextProvider";
 
-const ElectronicAdvPublish = () => {
+const Publish = () => {
   const { handleNext, setFormSubmitted, formSubmitted } =
     useContext(AppContext); // Access handleNext from context
-
   const [publish, setPublish] = useState(false);
   const [publishNumber, setPublishNumber] = useState("");
 
@@ -46,53 +46,53 @@ const ElectronicAdvPublish = () => {
         </nav>
       </div>
       <ProgressBar />
-      <div className="electronic_adv_publish_main">
-        <h3 id="electronic_adv_publish_header">5-Ilani Yayinla</h3>
-        <div className="electronic_adv_publish_form_main_wrapper">
-          <h4>Commercial Information</h4>
+      <div className="adv_publish_main">
+        <h3 id="adv_publish_header">5-Publish</h3>
+        <div className="adv_publish_form_main_wrapper">
+          <h4>Commercial Details </h4>
           <div>
-            <div className="electronic_adv_publish_form_result_wrapper">
-              <div className="electronic_adv_publish_main_wrapper">
+            <div className="adv_publish_form_result_wrapper">
+              <div className="adv_publish_main_wrapper">
                 <form
-                  className="electronic_adv_publish_form"
+                  className="adv_publish_form"
                   onSubmit={handlePublishFormSubmit}
                 >
-                  <div className="electronic_adv_publish adv_user_name">
+                  <div className="adv_publish adv_user_name">
                     <label htmlFor="user_name">Name</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_lastname">
+                  <div className="adv_publish adv_user_lastname">
                     <label htmlFor="user_lastname">Last Name</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_email">
+                  <div className="adv_publish adv_user_email">
                     <label htmlFor="adv_email">E-mail</label>
                     <input type="email"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_address">
-                    <label htmlFor="adv_address">Commercial Address</label>
+                  <div className="adv_publish adv_user_address">
+                    <label htmlFor="adv_address">Address</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_tel">
+                  <div className="adv_publish adv_user_tel">
                     <label htmlFor="adv_tel">Phone No</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_category">
-                    <label htmlFor="adv_category">Commercial Category</label>
+                  <div className="adv_publish adv_user_category">
+                    <label htmlFor="adv_category">Commericial Category</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_price">
+                  <div className="adv_publish adv_user_price">
                     <label htmlFor="adv_price">Price</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish adv_user_date">
+                  <div className="adv_publish adv_user_date">
                     <label htmlFor="adv_date">Date</label>
                     <input type="text"></input>
                   </div>
-                  <div className="electronic_adv_publish_btn">
+                  <div className="adv_publish_btn">
                     <button
                       type="submit"
-                      className="electronic_publish_btn"
+                      className="publish_btn"
                       disabled={formSubmitted}
                     >
                       Publish
@@ -101,20 +101,18 @@ const ElectronicAdvPublish = () => {
                 </form>
               </div>
               {publish && (
-                <div className="electronic_adv_publish_result_main_wrapper">
+                <div className="adv_publish_result_main_wrapper">
                   <img src={checkmark} alt="checkmark" />
 
-                  <h4>Successfully published</h4>
+                  <h4>Successfully Published</h4>
                   <p>We will check your adv and will approve shortly.</p>
-                  <div>
-                    <label htmlFor="publish_number">Adv publis number</label>
+                  <div className="publish_number">
+                    <label htmlFor="publish_number">Publish No</label>
                     <input type="text" value={publishNumber}></input>
                   </div>
-                  <div className="electronic_publish_result_btn_container">
+                  <div className="publish_result_btn_container">
                     <Link to="/">
-                      <button className="electronic_publish_result_btn">
-                        Continue
-                      </button>
+                      <button className="publish_result_btn">Continue</button>
                     </Link>
                   </div>
                 </div>
@@ -127,4 +125,4 @@ const ElectronicAdvPublish = () => {
   );
 };
 
-export default ElectronicAdvPublish;
+export default Publish;

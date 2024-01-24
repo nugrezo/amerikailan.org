@@ -5,11 +5,11 @@ import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 import "./VehicleDetail.css";
-import PhotoUploadVehicle from "./PhotoUploadVehicle";
 import VehicleDetailSubComponent from "./VehicleDetailSubComponent";
 import { AppContext } from "../ContextProvider";
-import VehicleAddress from "./VehicleAddress";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import PhotoUpload from "../PhotoUpload/PhotoUpload";
+import Address from "../Address/Address";
 
 // import Footer from "../Footer/Footer";
 
@@ -105,7 +105,7 @@ const VehicleDetail = () => {
           <div className="adv_vehicle-visuals">
             <h4>Ilana ait Gorseller</h4>
             <div className="adv_vehicle_visuals_photo">
-              <PhotoUploadVehicle />
+              <PhotoUpload />
             </div>
           </div>
           <div className="price_container">
@@ -136,7 +136,7 @@ const VehicleDetail = () => {
             </ul>
           </div>
           <VehicleDetailSubComponent />
-          <VehicleAddress />
+          <Address />
         </div>
         <div className="adv_vehicle_continue_btn">
           <button onClick={handleNavigate}>Devam</button>

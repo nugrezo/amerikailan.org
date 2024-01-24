@@ -5,11 +5,11 @@ import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 import "./ServicesDetail.css";
-import PhotoUploadServices from "./PhotoUploadServices";
 import ServicesDetailSubComponent from "./ServicesDetailSubComponent";
 import { AppContext } from "../ContextProvider";
-import ServicesAddress from "./ServicesAddress";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import PhotoUpload from "../PhotoUpload/PhotoUpload";
+import Address from "../Address/Address";
 
 // import Footer from "../Footer/Footer";
 
@@ -107,7 +107,7 @@ const ServicesDetail = () => {
           <div className="adv_services-visuals">
             <h4>Ilana ait Gorseller</h4>
             <div className="adv_services_visuals_photo">
-              <PhotoUploadServices />
+              <PhotoUpload />
             </div>
           </div>
           <div className="price_container">
@@ -137,7 +137,7 @@ const ServicesDetail = () => {
               </li>
             </ul>
           </div>
-          <ServicesAddress />
+          <Address />
         </div>
         <div className="adv_services_continue_btn">
           <button onClick={handleNavigate}>Devam</button>

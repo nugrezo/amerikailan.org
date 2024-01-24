@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../ContextProvider"; // Import the ContextProvider
 
-import "./PhoneApprovalRealEstate.css";
+import "./PhoneApproval.css";
 import Usermenu from "../Usermenu/Usermenu";
 import logo from "../../library/logo.png";
 import cellphoneimage from "../../library/advicons/phone.png";
@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import CountDownTimer from "../CountDownTimer/CountDownTimer";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
-const PhoneApprovalRealEstate = () => {
+const PhoneApproval = () => {
   const { handleNext } = useContext(AppContext); // Access handleNext from context
 
   const [showContent, setShowContent] = useState(true);
@@ -35,13 +35,13 @@ const PhoneApprovalRealEstate = () => {
   const handleCellPhoneFormSubmit = (e) => {
     e.preventDefault();
     if (!phoneNumber.trim()) {
-      setError("Please enter valid phone number");
+      setError("Lutfen gecerli bir telefon numarasi giriniz");
       return;
     }
 
     const phoneRegex = /^[0-9]{3}[0-9]{3}[0-9]{4}$/;
     if (!phoneRegex.test(phoneNumber)) {
-      setError("Please enter valid phone number");
+      setError("Girilen numara eksiktir.Lutfen tekrar deneyiniz");
       return;
     }
 
@@ -65,10 +65,10 @@ const PhoneApprovalRealEstate = () => {
       setError("");
       setShowContent(false);
       handleNext();
-      navigate("/advertisement/realestate/realestate_details_s3");
+      navigate("/advertisement/electronic/electronic_details_s3");
     } else {
       setIsCodeMatched(false);
-      setError("Code did not match. Try again");
+      setError("Numara eslesmedi tekrar deneyiniz");
     }
     setTextCode("");
   };
@@ -100,7 +100,7 @@ const PhoneApprovalRealEstate = () => {
   };
 
   return (
-    <div className="adv-realestate_step_two">
+    <div className="adv-electronic_step_two">
       <div className="container">
         <nav className="navbar">
           <div className="nav-logo">
@@ -114,8 +114,10 @@ const PhoneApprovalRealEstate = () => {
         </nav>
       </div>
       <ProgressBar />
-      <div className="adv-realestate_step_two_main">
-        <h3 id="emlak_cellphoneapr">2-Cell Phone Approval</h3>
+      <div className="adv-electronic_step_two_main">
+        <h3 id="electronic_cellphoneapr">
+          2-Please enter your cell phone number
+        </h3>
         <div className="wrapper">
           {!isCodeMatched ? (
             <aside className="cellphone_images">
@@ -141,9 +143,7 @@ const PhoneApprovalRealEstate = () => {
                 onSubmit={handleCellPhoneFormSubmit}
               >
                 <ul>
-                  <li>
-                    Please enter your phone number(10 digits for demo purpose)
-                  </li>
+                  <li>Please enter your mobile number</li>
                   <li>
                     <input
                       type="tel"
@@ -157,7 +157,10 @@ const PhoneApprovalRealEstate = () => {
                     />
                   </li>
                   <li>
-                    <button type="submit" className="submit_cellphone_btn">
+                    <button
+                      type="submit"
+                      className="submit_cellphone_btn_electronic"
+                    >
                       Continue
                     </button>
                   </li>
@@ -182,8 +185,7 @@ const PhoneApprovalRealEstate = () => {
               {!isCodeMatched ? (
                 <header>
                   <h3 className="step_two_header">
-                    You must approve your cell phone number to publish
-                    commercial
+                    Please enter the 6 digit code you received
                   </h3>
                 </header>
               ) : (
@@ -204,9 +206,7 @@ const PhoneApprovalRealEstate = () => {
                   onSubmit={handleTextCodeFormSubmit}
                 >
                   <ul>
-                    <li>
-                      Please enter the code below(123456 for demo purpose)
-                    </li>
+                    <li>Enter the code(123456 for demo purpose)</li>
                     <li>
                       <input
                         type="text"
@@ -228,13 +228,16 @@ const PhoneApprovalRealEstate = () => {
                       {isTimerZero ? (
                         <button
                           type="button"
-                          className="approve_cellphone_btn"
+                          className="approve_cellphone_btn_electronic"
                           onClick={handleResendCode}
                         >
-                          Resent
+                          Sent again
                         </button>
                       ) : (
-                        <button type="submit" className="approve_cellphone_btn">
+                        <button
+                          type="submit"
+                          className="approve_cellphone_btn_electronic"
+                        >
                           Approve
                         </button>
                       )}
@@ -298,4 +301,4 @@ const PhoneApprovalRealEstate = () => {
   );
 };
 
-export default PhoneApprovalRealEstate;
+export default PhoneApproval;

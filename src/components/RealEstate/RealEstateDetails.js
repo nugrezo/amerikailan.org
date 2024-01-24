@@ -7,10 +7,10 @@ import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 
-import PhotoUpload from "./PhotoUpload/PhotoUploadRealEstate";
 import RealEstateSubDetails from "./RealEstateSubDetails/RealEstateSubDetails";
 import Address from "../Address/Address";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import PhotoUpload from "../PhotoUpload/PhotoUpload";
 // import Footer from "../Footer/Footer";
 
 const RealEstateDetails = () => {

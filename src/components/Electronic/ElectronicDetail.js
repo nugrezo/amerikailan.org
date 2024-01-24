@@ -5,11 +5,11 @@ import logo from "../../library/logo.png";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 import "./ElectronicDetail.css";
-import PhotoUploadElectronic from "./PhotoUploadElectronic";
 import ElectronicDetailSubComponent from "./ElectronicDetailSubComponent";
 import { AppContext } from "../ContextProvider";
-import ElectronicAddress from "./ElectronicAddress";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import PhotoUpload from "../PhotoUpload/PhotoUpload";
+import Address from "../Address/Address";
 
 // import Footer from "../Footer/Footer";
 
@@ -107,7 +107,7 @@ const ElectronicDetail = () => {
           <div className="adv_electronic-visuals">
             <h4>Visuals</h4>
             <div className="adv_electronic_visuals_photo">
-              <PhotoUploadElectronic />
+              <PhotoUpload />
             </div>
           </div>
           <div className="price_container">
@@ -137,7 +137,7 @@ const ElectronicDetail = () => {
               </li>
             </ul>
           </div>
-          <ElectronicAddress />
+          <Address />
         </div>
         <div className="adv_electronic_continue_btn">
           <button onClick={handleNavigate}>Continue</button>
