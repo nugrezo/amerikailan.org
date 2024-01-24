@@ -36,10 +36,7 @@ const Advertisement = () => {
               <h2>Please select the category</h2>
             </div>
             <div className="category-select-body">
-              <a
-                href="https://nugrezo.github.io/amerikailan.org/advertisement/realestate/category_s1"
-                alt="emlak_stepone"
-              >
+              <a href="/#realestate/category_s1" alt="emlak_stepone">
                 <div className="category category-select-body-emlak">
                   <i className="icon emlak-icon">
                     <img src={emlakicon} alt="emlak-icon" />
