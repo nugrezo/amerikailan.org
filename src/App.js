@@ -51,7 +51,10 @@ function App() {
             path="/advertisement/realestate/secure_payment"
             element={<Payment />}
           />
-          <Route path="/advertisement/vehicle" element={<VehicleCategory />} />
+          <Route
+            path="/advertisement/vehicle/category_s1"
+            element={<VehicleCategory />}
+          />
           <Route
             path="/advertisement/vehicle/cellaprv_s2"
             element={<PhoneApproval />}

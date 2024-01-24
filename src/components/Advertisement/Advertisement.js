@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../library/logo.png";
 import "./Advertisement.css";
 import Usermenu from "../Usermenu/Usermenu";
@@ -17,12 +18,9 @@ const Advertisement = () => {
       <div className="container">
         <nav className="navbar">
           <div className="nav-logo">
-            <a
-              className="navbar-brand"
-              href="https://nugrezo.github.io/amerikailan.org/"
-            >
+            <Link to="/">
               <img src={logo} width="200px;" height="60px;" alt="logo" />
-            </a>
+            </Link>
           </div>
           <div className="nav-userProfile">
             <Usermenu />
@@ -36,27 +34,27 @@ const Advertisement = () => {
               <h2>Please select the category</h2>
             </div>
             <div className="category-select-body">
-              <a href="/#realestate/category_s1" alt="emlak_stepone">
+              <Link
+                to="/advertisement/realestate/category_s1"
+                alt="emlak_stepone"
+              >
                 <div className="category category-select-body-emlak">
                   <i className="icon emlak-icon">
                     <img src={emlakicon} alt="emlak-icon" />
                   </i>
                   <h3>Real Estate</h3>
                 </div>
-              </a>
-              <a
-                href="https://nugrezo.github.io/amerikailan.org/advertisement/vehicle"
-                alt="vehicle"
-              >
+              </Link>
+              <Link to="/advertisement/vehicle/category_s1" alt="vehicle">
                 <div className="category category-select-body-vasita">
                   <i className="icon vehicle-icon">
                     <img src={vehicleicon} alt="vehicle-icon" />
                   </i>
                   <h3>Vehicle</h3>
                 </div>
-              </a>
-              <a
-                href="https://nugrezo.github.io/amerikailan.org/advertisement/electronic/category_s1"
+              </Link>
+              <Link
+                to="/advertisement/electronic/category_s1"
                 alt="elektronikcihaz"
               >
                 <div className="category category-select-body-elektronikcihaz">
@@ -65,18 +63,15 @@ const Advertisement = () => {
                   </i>
                   <h3>Electronic</h3>
                 </div>
-              </a>
-              <a
-                href="https://nugrezo.github.io/amerikailan.org/advertisement/services/category_s1"
-                alt="hizmet"
-              >
+              </Link>
+              <Link to="/advertisement/services/category_s1" alt="hizmet">
                 <div className="category category-select-body-hizmet">
                   <i className="icon services-icon">
                     <img src={servicesicon} alt="services-icon" />
                   </i>
                   <h3> Services</h3>
                 </div>
-              </a>
+              </Link>
               <a href="#" alt="isilanlari">
                 <div className="category category-select-body-isilanlari">
                   <i className="icon job-icon">
